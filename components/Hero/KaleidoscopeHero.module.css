@@ -122,6 +122,12 @@
   min-width: 200px;
 }
 
+.controls.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
+}
+
 .controls.minimized {
   padding: 8px;
   min-width: auto;

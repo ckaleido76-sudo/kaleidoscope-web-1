@@ -38,8 +38,8 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
       const heroRect = heroElement.getBoundingClientRect();
       const heroBottom = heroRect.bottom;
       
-      // Hide controls when hero section is scrolled past
-      setControlsVisible(heroBottom > 100);
+      // Hide controls when hero section is scrolled past (when less than 50px visible)
+      setControlsVisible(heroBottom > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -283,8 +283,8 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
         {subtitle && <p className={styles.heroSubtitle}>{subtitle}</p>}
       </div>
       
-      {showControls && controlsVisible && (
-        <div className={`${styles.controls} ${controlsMinimized ? styles.minimized : ''}`}>
+      {showControls && (
+        <div className={`${styles.controls} ${controlsMinimized ? styles.minimized : ''} ${!controlsVisible ? styles.hidden : ''}`}>
           <button 
             className={styles.toggleControls} 
             onClick={() => setControlsMinimized(!controlsMinimized)}
