@@ -1,59 +1,22 @@
-// import Header from '@/components/Navigation/Header';
-import KaleidoscopeHero from '@/components/Hero/KaleidoscopeHero';
-import AboutSection from '@/components/sections/AboutSection';
-import ProblemSection from '@/components/sections/ProblemSection';
-import ApproachSection from '@/components/sections/ApproachSection';
-import MethodSection from '@/components/sections/MethodSection';
-import TestimonialSection from '@/components/sections/TestimonialSection';
-import CTASection from '@/components/sections/CTASection';
-import BookSection from '@/components/sections/BookSection';
-import Footer from '@/components/shared/Footer';
-
 export default function Home() {
   return (
-    <div className="overflow-x-hidden">
-      {/* <Header /> */}
-      
-      {/* Hero Section - 16:9 Aspect Ratio */}
-      <section id="hero" className="w-full aspect-video relative">
-        <KaleidoscopeHero 
-          title="kaleidoscope"
-          subtitle="A radical recovery solution for those ready to be free from drinking and the pain beneath it"
-        />
-      </section>
-      
-      {/* Main Content Sections */}
-      <main className="w-full">
-        <div id="about" className="w-full">
-          <AboutSection />
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-600 via-blue-600 to-teal-500">
+      <div className="text-center">
+        <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-white via-yellow-200 to-pink-200 bg-clip-text text-transparent animate-pulse">
+          Hello World
+        </h1>
+        <p className="mt-4 text-xl md:text-2xl text-white/80">
+          Welcome to URL1234.com
+        </p>
+        <div className="mt-8">
+          <a 
+            href="/kaleidoscope"
+            className="inline-block px-8 py-4 bg-white/20 hover:bg-white/30 text-white rounded-full text-lg font-medium transition-all duration-300 backdrop-blur-sm border border-white/30 hover:scale-105"
+          >
+            Visit Kaleidoscope Project →
+          </a>
         </div>
-        
-        <div id="problem" className="w-full">
-          <ProblemSection />
-        </div>
-        
-        <div id="approach" className="w-full">
-          <ApproachSection />
-        </div>
-        
-        <div id="method" className="w-full">
-          <MethodSection />
-        </div>
-        
-        <div id="testimonial" className="w-full">
-          <TestimonialSection />
-        </div>
-        
-        <div id="cta" className="w-full">
-          <CTASection />
-        </div>
-        
-        <div id="book" className="w-full">
-          <BookSection />
-        </div>
-      </main>
-      
-      <Footer />
+      </div>
     </div>
   );
 }
