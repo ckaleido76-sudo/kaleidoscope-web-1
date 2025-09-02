@@ -20,7 +20,7 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef(0);
-  // Fixed animation values for consistent performance
+  // Fixed animation values for consistent performance (no controls)
   const speed = initialSpeed;
   const segments = initialSegments;
   const complexity = initialComplexity;
