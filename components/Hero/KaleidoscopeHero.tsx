@@ -279,7 +279,7 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [isPaused, speed, segments, complexity]);
+  }, [isPaused]); // Only depend on isPaused since speed, segments, complexity are now constants
 
   return (
     <div className={styles.heroContainer}>
