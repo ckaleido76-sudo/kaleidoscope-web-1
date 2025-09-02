@@ -23,27 +23,34 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef(0);
   const [isPaused, setIsPaused] = useState(false);
-  const [speed, setSpeed] = useState(initialSpeed);
-  const [segments, setSegments] = useState(initialSegments);
-  const [complexity, setComplexity] = useState(initialComplexity);
-  const [hideText, setHideText] = useState(false);
-  const [controlsMinimized, setControlsMinimized] = useState(true);
-  const [controlsVisible, setControlsVisible] = useState(true);
+  // Fixed values for clean UX (control panel disabled)
+  const speed = initialSpeed;
+  const segments = initialSegments;
+  const complexity = initialComplexity;
+  
+  // COMMENTED OUT - Control panel state (for future re-enablement)
+  // const [speed, setSpeed] = useState(initialSpeed);
+  // const [segments, setSegments] = useState(initialSegments);
+  // const [complexity, setComplexity] = useState(initialComplexity);
+  // const [hideText, setHideText] = useState(false);
+  // const [controlsMinimized, setControlsMinimized] = useState(true);
+  // const [controlsVisible, setControlsVisible] = useState(true);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const heroElement = canvasRef.current?.parentElement;
-      if (!heroElement) return;
-      
-      const heroRect = heroElement.getBoundingClientRect();
-      const heroBottom = heroRect.bottom;
-      
-      // Hide controls when hero section is scrolled past (when less than 50px visible)
-      setControlsVisible(heroBottom > 50);
-    };
+    // COMMENTED OUT - Scroll handler for control panel (for future re-enablement)
+    // const handleScroll = () => {
+    //   const heroElement = canvasRef.current?.parentElement;
+    //   if (!heroElement) return;
+    //   
+    //   const heroRect = heroElement.getBoundingClientRect();
+    //   const heroBottom = heroRect.bottom;
+    //   
+    //   // Hide controls when hero section is scrolled past (when less than 50px visible)
+    //   setControlsVisible(heroBottom > 50);
+    // };
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check initial position
+    // window.addEventListener('scroll', handleScroll);
+    // handleScroll(); // Check initial position
 
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -267,7 +274,7 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
     return () => {
       window.removeEventListener('resize', resize);
       document.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('scroll', handleScroll);
+      // window.removeEventListener('scroll', handleScroll); // Commented out with scroll handler
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
@@ -283,7 +290,8 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
         {subtitle && <p className={styles.heroSubtitle}>{subtitle}</p>}
       </div>
       
-      {showControls && (
+      {/* COMMENTED OUT - Control Panel (for future re-enablement) */}
+      {/* showControls && (
         <div className={`${styles.controls} ${controlsMinimized ? styles.minimized : ''} ${!controlsVisible ? styles.hidden : ''}`}>
           <button 
             className={styles.toggleControls} 
@@ -339,7 +347,7 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
             </label>
           </div>
         </div>
-      )}
+      ) */}
     </div>
   );
 };

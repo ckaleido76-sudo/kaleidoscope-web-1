@@ -1,6 +1,6 @@
 # Kaleidoscope Recovery Website
 
-A revolutionary recovery solution website built with Next.js 14, featuring trauma-informed healing approaches and the innovative 3-phase Kaleidoscope Method.
+A revolutionary recovery solution website built with Next.js 15, featuring trauma-informed healing approaches and the innovative 3-phase Kaleidoscope Method.
 
 ## 🎯 Project Overview
 
@@ -35,7 +35,7 @@ This website showcases Kaleidoscope Recovery's radical approach to alcohol recov
 
 ## 🛠 Tech Stack
 
-- **Framework**: Next.js 14+ (App Router)
+- **Framework**: Next.js 15+ (App Router)
 - **Styling**: Tailwind CSS with custom design system
 - **Typography**: Epilogue font from Google Fonts
 - **Animations**: Framer Motion + Custom CSS animations
@@ -48,18 +48,19 @@ This website showcases Kaleidoscope Recovery's radical approach to alcohol recov
 ### Prerequisites
 - Node.js 18+ 
 - npm or yarn
+- Git
 
 ### Installation
 
-1. **Install dependencies**
+1. **Clone the repository**
    ```bash
-   npm install
+   git clone https://github.com/devenspear/Kaleidoscope.git
+   cd Kaleidoscope1.0
    ```
 
-2. **Set up environment variables**
+2. **Install dependencies**
    ```bash
-   cp .env.local.example .env.local
-   # Edit .env.local with your configuration
+   npm install
    ```
 
 3. **Start development server**
@@ -80,6 +81,7 @@ npm run dev          # Start development server
 npm run build        # Build for production  
 npm run start        # Start production server
 npm run lint         # Run ESLint
+npm run typecheck    # Run TypeScript type checking
 ```
 
 ## 🎨 Design System
@@ -107,18 +109,24 @@ npm run lint         # Run ESLint
 
 ### Vercel Deployment (Recommended)
 
+The project is currently deployed at: **https://url1234.com**
+
 1. **Connect to Vercel**
    ```bash
    # Install Vercel CLI
    npm i -g vercel
    
+   # Link to existing project
+   vercel link --project url1234-com
+   
    # Deploy
    vercel --prod
    ```
 
-2. **Environment Variables**
-   - Set up environment variables in Vercel dashboard
-   - Include all variables from `.env.local.example`
+2. **GitHub Integration**
+   - Connected to GitHub repository: `devenspear/Kaleidoscope`
+   - Auto-deployment on push to main branch
+   - Branch previews for pull requests
 
 ## 🔒 Security & Performance Features
 
@@ -138,9 +146,28 @@ npm run lint         # Run ESLint
 - **Color Contrast**: WCAG AA compliant color ratios
 - **Reduced Motion**: Respects user motion preferences
 
+## 🐛 Recent Fixes & Updates
+
+### Mobile UX Improvements
+- ✅ Fixed hero animation control panel visibility on mobile
+- ✅ Control panel now starts minimized and hides when scrolling
+- ✅ Improved sign up button contrast and readability
+- ✅ Resolved TypeScript ESLint errors for production builds
+
+### Performance Optimizations
+- ✅ Removed unused imports and variables
+- ✅ Optimized scroll event handlers with proper cleanup
+- ✅ Enhanced mobile responsiveness across all sections
+
+## 🔗 Links
+
+- **Live Site**: https://url1234.com
+- **GitHub Repository**: https://github.com/devenspear/Kaleidoscope
+- **Vercel Dashboard**: https://vercel.com/deven-projects/url1234-com
+
 ## 📞 Support
 
-For technical support or questions about the Kaleidoscope Recovery website.
+For technical support or questions about the Kaleidoscope Recovery website, please open an issue on GitHub.
 
 ---
 
