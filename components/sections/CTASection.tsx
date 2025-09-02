@@ -6,7 +6,6 @@ import { Mail, Phone, CheckCircle, ArrowRight } from 'lucide-react';
 
 const CTASection: React.FC = () => {
   const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 

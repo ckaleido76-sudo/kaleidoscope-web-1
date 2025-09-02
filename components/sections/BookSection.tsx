@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, ExternalLink, Play } from 'lucide-react';
+import { Download, Play } from 'lucide-react';
 
 const VideoPlaceholder = ({ title }: { title: string }) => (
   <div className="relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 border border-white/10 mb-8">

@@ -13,7 +13,6 @@ interface Phase {
 }
 
 const MethodSection: React.FC = () => {
-  const [activePhase, setActivePhase] = useState<number>(1);
 
   const phases: Phase[] = [
     {
