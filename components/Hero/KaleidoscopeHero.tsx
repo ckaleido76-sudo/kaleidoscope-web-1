@@ -6,7 +6,6 @@ import styles from './KaleidoscopeHero.module.css';
 interface KaleidoscopeHeroProps {
   title?: string;
   subtitle?: string;
-  showControls?: boolean;
   initialSpeed?: number;
   initialSegments?: number;
   initialComplexity?: number;
@@ -15,42 +14,18 @@ interface KaleidoscopeHeroProps {
 const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
   title = '[HERO HEADLINE - AWAITING CONTENT]',
   subtitle = '',
-  showControls = false,
   initialSpeed = 1,
   initialSegments = 12,
   initialComplexity = 3,
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef(0);
-  const [isPaused, setIsPaused] = useState(false);
-  // Fixed values for clean UX (control panel disabled)
+  // Fixed animation values for consistent performance
   const speed = initialSpeed;
   const segments = initialSegments;
   const complexity = initialComplexity;
-  
-  // COMMENTED OUT - Control panel state (for future re-enablement)
-  // const [speed, setSpeed] = useState(initialSpeed);
-  // const [segments, setSegments] = useState(initialSegments);
-  // const [complexity, setComplexity] = useState(initialComplexity);
-  // const [hideText, setHideText] = useState(false);
-  // const [controlsMinimized, setControlsMinimized] = useState(true);
-  // const [controlsVisible, setControlsVisible] = useState(true);
 
   useEffect(() => {
-    // COMMENTED OUT - Scroll handler for control panel (for future re-enablement)
-    // const handleScroll = () => {
-    //   const heroElement = canvasRef.current?.parentElement;
-    //   if (!heroElement) return;
-    //   
-    //   const heroRect = heroElement.getBoundingClientRect();
-    //   const heroBottom = heroRect.bottom;
-    //   
-    //   // Hide controls when hero section is scrolled past (when less than 50px visible)
-    //   setControlsVisible(heroBottom > 50);
-    // };
-
-    // window.addEventListener('scroll', handleScroll);
-    // handleScroll(); // Check initial position
 
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -259,9 +234,7 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
     };
     
     const animate = () => {
-      if (!isPaused) {
-        time += 0.01 * speed;
-      }
+      time += 0.01 * speed;
     
       drawBackground();
       drawKaleidoscope();
@@ -274,12 +247,11 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
     return () => {
       window.removeEventListener('resize', resize);
       document.removeEventListener('mousemove', handleMouseMove);
-      // window.removeEventListener('scroll', handleScroll); // Commented out with scroll handler
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [isPaused]); // Only depend on isPaused since speed, segments, complexity are now constants
+  }, []); // No dependencies needed since all values are constants
 
   return (
     <div className={styles.heroContainer}>
@@ -290,64 +262,6 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
         {subtitle && <p className={styles.heroSubtitle}>{subtitle}</p>}
       </div>
       
-      {/* COMMENTED OUT - Control Panel (for future re-enablement) */}
-      {/* showControls && (
-        <div className={`${styles.controls} ${controlsMinimized ? styles.minimized : ''} ${!controlsVisible ? styles.hidden : ''}`}>
-          <button 
-            className={styles.toggleControls} 
-            onClick={() => setControlsMinimized(!controlsMinimized)}
-          >
-            ⚙️
-          </button>
-          <div className={styles.controlGroup}>
-            <button onClick={() => setIsPaused(!isPaused)}>
-              {isPaused ? 'Play' : 'Pause'}
-            </button>
-            <button onClick={() => setHideText(!hideText)}>
-              {hideText ? 'Show Text' : 'Hide Text'}
-            </button>
-          </div>
-          <div className={styles.controlGroup}>
-            <label>
-              Speed: 
-              <input 
-                type="range" 
-                min="0.1" 
-                max="3" 
-                step="0.1" 
-                value={speed}
-                onChange={(e) => setSpeed(parseFloat(e.target.value))}
-              />
-            </label>
-          </div>
-          <div className={styles.controlGroup}>
-            <label>
-              Segments: 
-              <input 
-                type="range" 
-                min="6" 
-                max="24" 
-                step="2" 
-                value={segments}
-                onChange={(e) => setSegments(parseInt(e.target.value))}
-              />
-            </label>
-          </div>
-          <div className={styles.controlGroup}>
-            <label>
-              Complexity: 
-              <input 
-                type="range" 
-                min="1" 
-                max="5" 
-                step="1" 
-                value={complexity}
-                onChange={(e) => setComplexity(parseInt(e.target.value))}
-              />
-            </label>
-          </div>
-        </div>
-      ) */}
     </div>
   );
 };

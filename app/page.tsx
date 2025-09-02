@@ -19,7 +19,6 @@ export default function Home() {
         <KaleidoscopeHero 
           title="kaleidoscope"
           subtitle="A radical recovery solution for those ready to be free from drinking and the pain beneath it"
-          showControls={false}
         />
       </section>
       

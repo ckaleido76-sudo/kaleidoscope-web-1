@@ -154,7 +154,7 @@ const CTASection: React.FC = () => {
                 disabled={isLoading || !email.trim()}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-xl text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-80 disabled:cursor-not-allowed flex items-center justify-center space-x-3"
+                className="w-full bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-75 disabled:cursor-not-allowed flex items-center justify-center space-x-3"
               >
                 {isLoading ? (
                   <div className="w-6 h-6 border-2 border-background/30 border-t-background rounded-full animate-spin" />
