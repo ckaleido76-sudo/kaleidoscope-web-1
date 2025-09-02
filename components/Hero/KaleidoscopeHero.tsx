@@ -27,9 +27,24 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
   const [segments, setSegments] = useState(initialSegments);
   const [complexity, setComplexity] = useState(initialComplexity);
   const [hideText, setHideText] = useState(false);
-  const [controlsMinimized, setControlsMinimized] = useState(false);
+  const [controlsMinimized, setControlsMinimized] = useState(true);
+  const [controlsVisible, setControlsVisible] = useState(true);
 
   useEffect(() => {
+    const handleScroll = () => {
+      const heroElement = canvasRef.current?.parentElement;
+      if (!heroElement) return;
+      
+      const heroRect = heroElement.getBoundingClientRect();
+      const heroBottom = heroRect.bottom;
+      
+      // Hide controls when hero section is scrolled past
+      setControlsVisible(heroBottom > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -252,6 +267,7 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
     return () => {
       window.removeEventListener('resize', resize);
       document.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('scroll', handleScroll);
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
@@ -267,7 +283,7 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
         {subtitle && <p className={styles.heroSubtitle}>{subtitle}</p>}
       </div>
       
-      {showControls && (
+      {showControls && controlsVisible && (
         <div className={`${styles.controls} ${controlsMinimized ? styles.minimized : ''}`}>
           <button 
             className={styles.toggleControls} 
