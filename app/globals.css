@@ -4,6 +4,72 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
 
+/* ==================================================
+   🎨 KALEIDOSCOPE COLOR SYSTEM
+   ==================================================
+   Change these values to update colors site-wide!
+   ================================================== */
+
+:root {
+  /* Primary Brand Colors */
+  --color-primary: #5B2CFA;
+  --color-secondary: #FFBC44;
+  
+  /* Background Colors */
+  --color-background: #3404e0;
+  --color-surface: #4a1bb8;
+  
+  /* Text Colors */
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #B8B8C8;
+  
+  /* Header Gradient Colors */
+  --color-header-from: #FFFFFF;
+  --color-header-to: #ddd6fe; /* purple-200 equivalent */
+  
+  /* Card Colors */
+  --color-card-from: #FFFFFF;
+  --color-card-to: #ede9fe; /* purple-100 equivalent - more pronounced gradient */
+  --color-card-border: #c4b5fd; /* purple-300 equivalent - more visible border */
+  
+  /* Form Colors */
+  --color-form-bg: rgba(255, 255, 255, 0.1);
+  --color-form-border: rgba(255, 255, 255, 0.2);
+  --color-form-text: #FFFFFF;
+  --color-form-placeholder: rgba(255, 255, 255, 0.6);
+  --color-form-focus-ring: #FFFFFF;
+  --color-form-focus-border: rgba(255, 255, 255, 0.4);
+  
+  /* UI Element Colors */
+  --color-accent-light: #5B2CFA;
+  --color-dark-bg: #0A0A0F;
+  --color-dark-surface: #1A1A2E;
+  
+  /* Status Colors */
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+}
+
+/* ==================================================
+   🔧 HOW TO CHANGE COLORS SITE-WIDE
+   ==================================================
+   
+   1. Update the CSS variables above in :root{}
+   2. Use corresponding Tailwind classes in components:
+   
+   EXAMPLES:
+   - Header gradients: from-header-from to-header-to
+   - Card backgrounds: from-card-from to-card-to
+   - Card borders: border-card-border
+   - Form inputs: bg-form-bg border-form-border text-form-text
+   - Main backgrounds: bg-background, bg-surface
+   - Text colors: text-text-primary, text-text-secondary
+   - Brand colors: bg-primary, text-primary, bg-secondary
+   
+   3. Save and the entire site updates instantly!
+   ================================================== */
+
 @layer base {
   * {
     @apply box-border m-0 p-0;

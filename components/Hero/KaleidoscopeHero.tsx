@@ -14,9 +14,9 @@ interface KaleidoscopeHeroProps {
 const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
   title = '[HERO HEADLINE - AWAITING CONTENT]',
   subtitle = '',
-  initialSpeed = 1,
-  initialSegments = 12,
-  initialComplexity = 3,
+  initialSpeed = 0.8,
+  initialSegments = 8,
+  initialComplexity = 2,
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef(0);
@@ -51,7 +51,12 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
     resize();
     window.addEventListener('resize', resize);
     
+    let mouseUpdateThrottle = 0;
     const handleMouseMove = (e: MouseEvent) => {
+      // Throttle mouse updates for better performance
+      if (Date.now() - mouseUpdateThrottle < 16) return; // ~60fps throttle
+      mouseUpdateThrottle = Date.now();
+      
       const rect = canvas.getBoundingClientRect();
       mouseX = (e.clientX - rect.left - centerX) / width;
       mouseY = (e.clientY - rect.top - centerY) / height;
@@ -103,8 +108,8 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
         const layerTime = time * (1 + layer * 0.3);
         const layerScale = 1 - layer * 0.15;
     
-        // Flowing shapes
-        for (let i = 0; i < 5; i++) {
+        // Flowing shapes - reduced from 5 to 3 for performance
+        for (let i = 0; i < 3; i++) {
           const shapeTime = layerTime + i * 0.5;
           const radius = maxRadius * layerScale * (0.2 + Math.sin(shapeTime) * 0.1);
           const distance = maxRadius * layerScale * (0.3 + Math.sin(shapeTime * 0.7) * 0.3);
@@ -124,10 +129,10 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
           ctx.fillStyle = gradient;
           ctx.globalAlpha = 0.6 - layer * 0.1;
     
-          // Draw organic flowing shape
+          // Draw organic flowing shape - reduced detail for performance
           ctx.beginPath();
-          for (let j = 0; j <= 20; j++) {
-            const shapeAngle = (j / 20) * Math.PI * 2;
+          for (let j = 0; j <= 12; j++) {
+            const shapeAngle = (j / 12) * Math.PI * 2;
             const shapeRadius = radius * (1 + Math.sin(shapeAngle * 3 + shapeTime) * 0.3);
             const px = x + Math.cos(shapeAngle) * shapeRadius;
             const py = y + Math.sin(shapeAngle) * shapeRadius;
@@ -150,7 +155,7 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
         ctx.lineWidth = 0.5;
         ctx.globalAlpha = 0.15;
     
-        for (let i = 0; i < 8; i++) {
+        for (let i = 0; i < 4; i++) {
           const lineRadius = maxRadius * layerScale * (0.2 + i * 0.1);
           const lineAngle = angleStep * 0.5 + Math.sin(layerTime * 0.3 + i) * 0.2;
     
@@ -221,16 +226,17 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
       ctx.fillStyle = bgGradient;
       ctx.fillRect(0, 0, width, height);
     
-      // Add subtle noise/grain effect
-      ctx.globalAlpha = 0.03;
-      for (let i = 0; i < 100; i++) {
-        const x = Math.random() * width;
-        const y = Math.random() * height;
-        const size = Math.random() * 2;
-        ctx.fillStyle = '#ffffff';
-        ctx.fillRect(x, y, size, size);
+      // Simplified noise effect for better performance
+      if (time % 0.1 < 0.02) { // Only update noise occasionally
+        ctx.globalAlpha = 0.02;
+        for (let i = 0; i < 30; i++) {
+          const x = Math.random() * width;
+          const y = Math.random() * height;
+          ctx.fillStyle = '#ffffff';
+          ctx.fillRect(x, y, 1, 1);
+        }
+        ctx.globalAlpha = 1;
       }
-      ctx.globalAlpha = 1;
     };
     
     const animate = () => {

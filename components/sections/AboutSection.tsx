@@ -3,11 +3,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const VideoPlaceholder = ({ title }: { title: string }) => (
-  <div className="aspect-square bg-gray-100 rounded-xl border-2 border-gray-200 flex items-center justify-center">
-    <div className="text-center">
-      <div className="mb-4 text-6xl text-primary">▶️</div>
-      <p className="text-text-secondary font-medium">{title}</p>
+const VimeoEmbed = () => (
+  <div className="aspect-video rounded-xl overflow-hidden">
+    <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+      <iframe 
+        src="https://player.vimeo.com/video/1118394715?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&portrait=0&title=0" 
+        frameBorder="0" 
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+        referrerPolicy="strict-origin-when-cross-origin" 
+        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+        title="Kaleidoscope - Smashed - H264 - 1920x1080P - V03"
+      />
     </div>
   </div>
 );
@@ -15,7 +21,7 @@ const VideoPlaceholder = ({ title }: { title: string }) => (
 const AboutSection: React.FC = () => {
 
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
@@ -23,55 +29,55 @@ const AboutSection: React.FC = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.3 }}
           >
-            <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">
-              What is Kaleidoscope
+            <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent">
+              What is Kaleidoscope?
             </h2>
             
             <div className="space-y-6 text-text-secondary text-lg leading-relaxed">
               <p>
-                Kaleidoscope is a radical recovery solution for those ready to be free from drinking and the pain beneath it. We guide individuals through a three-part journey—preparation, immersive healing, and ForeverCare™ support—custom-designed for lasting transformation.
+                Kaleidoscope is a radical approach for people who are truly ready to be free of their drinking problem, and the pain and trauma behind it. We guide individuals through three hyper-personalized phases: intensive preparation, immersive healing, and permanent integration support. We are purpose-built for holistic transformation.
               </p>
               
               <div className="space-y-4 mt-8">
                 <motion.div 
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
+                  transition={{ duration: 0.2, delay: 0.05 }}
                   className="text-text-primary"
                 >
                   <div className="flex items-start">
                     <div className="w-3 h-3 bg-primary rounded-full mr-4 mt-2 flex-shrink-0" />
-                    <span>Alcoholism is not a disease — it seems like the only solution to pain and trauma.</span>
+                    <span>Alcoholism is <strong>not</strong> a disease: it is a response to, often undiagnosed, pain and trauma</span>
                   </div>
                 </motion.div>
                 <motion.div 
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  transition={{ duration: 0.2, delay: 0.1 }}
                   className="text-text-primary"
                 >
                   <div className="flex items-start">
                     <div className="w-3 h-3 bg-primary rounded-full mr-4 mt-2 flex-shrink-0" />
-                    <span>Relapse is not part of recovery — the system has failed you.</span>
+                    <span>Relapse is <strong>not</strong> part of recovery: the system is what's failing, not you</span>
                   </div>
                 </motion.div>
                 <motion.div 
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
+                  transition={{ duration: 0.2, delay: 0.15 }}
                   className="text-text-primary"
                 >
                   <div className="flex items-start">
                     <div className="w-3 h-3 bg-primary rounded-full mr-4 mt-2 flex-shrink-0" />
-                    <span>Not 12 steps, 1 transformative truth: The answers are already inside you. If you're truly ready, let's go find them together.</span>
+                    <span><strong>Not</strong> 12 steps...1 transformative truth: the answers are already inside you.</span>
                   </div>
                 </motion.div>
               </div>
               
               <p className="mt-6">
-                Kaleidoscope delivers complete personal transformation for alcoholics and their loved ones. We don't just treat symptoms - we eliminate pain at the source and permanently support each soul's unique healing journey. It's not about not drinking; it's about not even wanting to.
+                At Kaleidoscope, we throw out the so-called "standard of care", addressing your issues at their core. We don't treat symptoms — we eliminate pain at the source and permanently support each soul's unique healing journey. It's not about not drinking; it's about not even wanting to.
               </p>
             </div>
           </motion.div>
@@ -81,9 +87,9 @@ const AboutSection: React.FC = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
           >
-            <VideoPlaceholder title="What is Kaleidoscope Video" />
+            <VimeoEmbed />
           </motion.div>
         </div>
       </div>

@@ -11,11 +11,11 @@ const ApproachSection: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.3 }}
           className="text-center mb-16"
         >
-          <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6 bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">
-            Alcoholism Is a Response to Pain: We Heal That Pain
+          <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent">
+            <strong>Alcoholism is a Response to Trauma: We heal that.</strong>
           </h3>
         </motion.div>
 
@@ -23,12 +23,12 @@ const ApproachSection: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.3 }}
           className="max-w-4xl mx-auto"
         >
           <div className="text-lg text-text-secondary leading-relaxed mb-8">
             <p>
-              Kaleidoscope was born from personal truth. After decades of personal and professional experiences with failed treatments and hollow promises, our founder realized what others won't say: alcoholism isn't a disease. It's a response to pain. And the pain can be extinguished. We only work with people who are truly ready - those willing to do whatever it takes to stop drinking and start living. When they are, we never let go.
+              Kaleidoscope was born from a personal truth. After decades of insider experience with failed treatment and hollow promises, our founder recognized what most refuse to admit: Alcoholism is not a disease, it's a conditioned response to pain and trauma. Even immense pain and trauma can be extinguished; then, we help you reclaim your life. We only work with people who are truly ready — those who are willing to do whatever it takes to stop drinking and start living. And, we never let go.
             </p>
           </div>
           

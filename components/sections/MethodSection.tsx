@@ -18,58 +18,56 @@ const MethodSection: React.FC = () => {
     {
       id: 1,
       title: 'Intention',
-      subtitle: 'Building and beginning a bespoke program of integrative healing',
-      description: 'Remote and on-property prep: comprehensive physical, emotional and spiritual assessments, holistic therapy, detox and education, beginning at the point of selection.',
+      subtitle: 'Building your bespoke program of integrative healing',
+      description: 'Comprehensive physical, emotional and spiritual assessments, early exposure to therapies and techniques, and clinical detox and titration begin the moment you are accepted.',
       benefits: [
-        'Begin transformation before you arrive.',
-        'Uncover root causes through guided inquiry.',
-        'Build clarity, intention, and readiness.'
+        'Transformation begins immediately',
+        'Identify prior treatment experience, results, and individual receptivity/appropriateness',
+        'Build clarity, set intentions, get ready'
       ]
     },
     {
       id: 2,
       title: 'Insight',
-      subtitle: 'Becoming open to and receiving sustainable healing and shifts',
-      description: '28-day immersive retreat: Custom healing plan tailored to each individual based on Phase 1 including: Somatic therapy, EMDR, psychedelic integration, and spiritual coaching.',
+      subtitle: 'Becoming open to and receiving sustainable healing and personal shifts',
+      description: 'Immersive retreat where your custom healing occurs. Your individual plan may include a wide variety of somatic therapies, functional nutrition and physical health, spiritually-anchored psychedelic therapies, psychology, and personalized emotional, physical, vocational and spiritual coaching.',
       benefits: [
-        'End trauma quickly and safely.',
-        'Rewire your body, mind, and spirit.',
-        'Discover who you are without pain.'
+        'Remediates trauma, rapidly and safely',
+        'Rewire your body mind and spirit',
+        'Apply the insights to your personal LifeMap™'
       ]
     },
     {
       id: 3,
-      title: 'ForeverCare™ Integration',
-      subtitle: 'Developing and embracing a personal path to emotional mastery',
+      title: 'Integration',
+      subtitle: 'Establishing your personal ForeverCare™ plan on the path to emotional mastery',
       description: '',
       benefits: [
-        'Lifetime hyper-personalized support: live coaching, Kaleidoscope telehealth services, community',
-        'TheTwist™ lifetime app subscription fusing bio feedback with technology, art and healing in the pursuit of emotional mastery.',
-        'Personal daily support.',
-        'Custom recommendations and tracking.',
-        'Real accountability. Real freedom.'
+        'Hyper-personalized support, coaching, Telehealth services, community',
+        'theTwist™ (app) is the "Mood Ring that *Changes Your Mood*" fusing art, technology and healing',
+        'Personal support…forever. The opposite of addiction isn\'t sobriety, it\'s connection.'
       ]
     }
   ];
 
   return (
-    <section id="method" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+    <section id="method" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.3 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent">
             The Kaleidoscope Method
           </h2>
           <p className="text-2xl text-text-primary font-light mb-6">
             Healing Starts Where Rehab Stops
           </p>
           <p className="text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed">
-            Kaleidoscope only works with people who are willing to do whatever it takes, facilitates sustained healing, and never lets them go. Trauma science is reshaping mental health, and the market is primed for an outcomes-based, human-first revolution. Kaleidoscope offers a 3-phase, trauma-informed recovery experience for the alcoholic soul and their family:
+            Kaleidoscope only works with people who are ready, facilitates sustained healing, and provides support to help you maintain your bliss. We don't look away from the trauma science that should be reshaping the entire mental health spectrum; we're hosting an outcomes-based, human-first, trauma-informed revolution. Kaleidoscope provides a three-phase experience for the suffering soul and their family:
           </p>
         </motion.div>
 
@@ -81,10 +79,10 @@ const MethodSection: React.FC = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              transition={{ duration: 0.3, delay: index * 0.05 }}
               className="group"
             >
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 h-full">
+              <div className="bg-gradient-to-br from-card-from to-card-to rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-card-border h-full">
                 <div className="text-center mb-6">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-primary text-white rounded-full text-xl font-bold mb-4">
                     {phase.id}
@@ -102,7 +100,7 @@ const MethodSection: React.FC = () => {
                 )}
 
                 <div className="space-y-3">
-                  <h4 className="text-lg font-medium text-text-primary text-center">Key Benefits:</h4>
+                  <h4 className="text-lg font-medium text-text-primary text-center">Why it Matters:</h4>
                   <ul className="space-y-2">
                     {phase.benefits.map((benefit, benefitIndex) => (
                       <motion.li
@@ -110,11 +108,11 @@ const MethodSection: React.FC = () => {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.3, delay: benefitIndex * 0.1 }}
+                        transition={{ duration: 0.15, delay: benefitIndex * 0.02 }}
                         className="flex items-start space-x-2 text-text-secondary text-sm"
                       >
                         <ChevronRight className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                        <span>{benefit}</span>
+                        <span dangerouslySetInnerHTML={{ __html: benefit.replace('*Changes Your Mood*', '<em>Changes Your Mood</em>') }} />
                       </motion.li>
                     ))}
                   </ul>

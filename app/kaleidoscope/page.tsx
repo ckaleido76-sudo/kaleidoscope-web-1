@@ -16,7 +16,7 @@ export default function KaleidoscopePage() {
       <section id="hero" className="w-full aspect-video relative">
         <KaleidoscopeHero 
           title="kaleidoscope"
-          subtitle="A radical recovery solution for those ready to be free from drinking and the pain beneath it"
+          subtitle="Kaleidoscope completely transforms the lives of people who struggle with alcohol, and the people who love them."
         />
       </section>
       

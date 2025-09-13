@@ -27,7 +27,7 @@ const CTASection: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <section id="cta" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-100 via-blue-50 to-indigo-100">
+      <section id="cta" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
@@ -83,7 +83,7 @@ const CTASection: React.FC = () => {
   }
 
   return (
-    <section id="cta" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+    <section id="cta" className="py-20 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse"></div>
@@ -95,24 +95,20 @@ const CTASection: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.3 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-6">
-            Are You Ready?
+          <h2 className="text-4xl md:text-6xl font-serif font-bold bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent mb-6">
+            Are <strong>You</strong> Ready for Complete Transformation?
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed mb-8">
-            Stay informed as the Kaleidoscope movement grows—sign up and we'll share updates, stories, and moments that matter.
+            Get connected to the Kaleidoscope movement — register and we'll share updates, events and moments that matter
           </p>
           
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 mb-12">
             <div className="flex items-center text-text-secondary">
               <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
               Free consultation
-            </div>
-            <div className="flex items-center text-text-secondary">
-              <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-              Insurance accepted
             </div>
             <div className="flex items-center text-text-secondary">
               <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
@@ -125,7 +121,7 @@ const CTASection: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
           className="max-w-2xl mx-auto"
         >
           <div className="p-8 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl">
@@ -135,13 +131,13 @@ const CTASection: React.FC = () => {
                   Email Address *
                 </label>
                 <div className="relative">
-                  <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-secondary" />
+                  <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-form-placeholder" />
                   <input
                     type="email"
                     id="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-xl text-text-primary placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
+                    className="w-full pl-12 pr-4 py-4 bg-form-bg backdrop-blur-sm border border-form-border rounded-xl text-form-text placeholder-form-placeholder focus:outline-none focus:ring-2 focus:ring-form-focus-ring focus:border-form-focus-border transition-all duration-300"
                     placeholder="Enter email address"
                     required
                   />
@@ -167,7 +163,7 @@ const CTASection: React.FC = () => {
               </motion.button>
 
               <p className="text-text-secondary text-sm text-center">
-                By submitting this form, you agree to receive communications from Kaleidoscope Recovery. 
+                By submitting this form, you agree to receive communications from Kaleidoscope. 
                 Your information is completely confidential and will never be shared.
               </p>
             </form>
@@ -179,14 +175,14 @@ const CTASection: React.FC = () => {
               Prefer to talk right now?
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
-              <motion.a
-                href="tel:1-800-RECOVER"
-                whileHover={{ scale: 1.05 }}
-                className="flex items-center space-x-3 bg-primary/10 backdrop-blur-sm px-6 py-3 rounded-full text-primary hover:bg-primary/20 transition-all duration-300 border border-primary/20"
-              >
-                <Phone className="w-5 h-5" />
-                <span>1-800-RECOVER</span>
-              </motion.a>
+              <div className="text-center space-y-2">
+                <p className="text-text-primary font-medium">Charlie Fiordalis</p>
+                <div className="space-y-1 text-text-secondary">
+                  <p>(e) <a href="mailto:cfiordalis@gmail.com" className="text-text-primary hover:underline hover:text-secondary">cfiordalis@gmail.com</a></p>
+                  <p>(c) <a href="tel:617-216-3990" className="text-text-primary hover:underline hover:text-secondary">617-216-3990</a></p>
+                  <p><a href="https://www.linkedin.com/in/cfiordalis" target="_blank" rel="noopener noreferrer" className="text-text-primary hover:underline hover:text-secondary">https://www.linkedin.com/in/cfiordalis</a></p>
+                </div>
+              </div>
               
               <div className="text-text-secondary">
                 Available 24/7 • Completely confidential
