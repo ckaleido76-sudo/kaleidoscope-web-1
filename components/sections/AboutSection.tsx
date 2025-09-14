@@ -7,12 +7,12 @@ const VimeoEmbed = () => (
   <div className="aspect-video rounded-xl overflow-hidden">
     <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
       <iframe 
-        src="https://player.vimeo.com/video/1118394715?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&portrait=0&title=0" 
+        src="https://player.vimeo.com/video/1118398541?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&portrait=0&title=0#t=30s" 
         frameBorder="0" 
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
         referrerPolicy="strict-origin-when-cross-origin" 
         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-        title="Kaleidoscope - Smashed - H264 - 1920x1080P - V03"
+        title="Kaleidoscope - What is Kaleidoscope - H264 - 1920x1080P - V04"
       />
     </div>
   </div>
@@ -23,18 +23,27 @@ const AboutSection: React.FC = () => {
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-6xl mx-auto">
+        {/* Centered Header */}
+        <motion.div
+          initial={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent">
+            What is Kaleidoscope?
+          </h2>
+        </motion.div>
+
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 1, x: 0 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.3 }}
           >
-            <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent">
-              What is Kaleidoscope?
-            </h2>
-            
             <div className="space-y-6 text-text-secondary text-lg leading-relaxed">
               <p>
                 Kaleidoscope is a radical approach for people who are truly ready to be free of their drinking problem, and the pain and trauma behind it. We guide individuals through three hyper-personalized phases: intensive preparation, immersive healing, and permanent integration support. We are purpose-built for holistic transformation.
@@ -42,7 +51,7 @@ const AboutSection: React.FC = () => {
               
               <div className="space-y-4 mt-8">
                 <motion.div 
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 1, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.2, delay: 0.05 }}
                   className="text-text-primary"
@@ -53,7 +62,7 @@ const AboutSection: React.FC = () => {
                   </div>
                 </motion.div>
                 <motion.div 
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 1, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
                   className="text-text-primary"
@@ -64,7 +73,7 @@ const AboutSection: React.FC = () => {
                   </div>
                 </motion.div>
                 <motion.div 
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 1, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.2, delay: 0.15 }}
                   className="text-text-primary"
@@ -82,9 +91,9 @@ const AboutSection: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Video Placeholder */}
+          {/* Video */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 1, x: 0 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.3, delay: 0.1 }}

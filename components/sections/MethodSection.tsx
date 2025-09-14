@@ -54,7 +54,7 @@ const MethodSection: React.FC = () => {
     <section id="method" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3 }}
@@ -76,40 +76,40 @@ const MethodSection: React.FC = () => {
           {phases.map((phase, index) => (
             <motion.div
               key={phase.id}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 1, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
               className="group"
             >
-              <div className="bg-gradient-to-br from-card-from to-card-to rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-card-border h-full">
+              <div className="bg-gradient-to-br from-card-from to-card-to rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-card-border h-full">
                 <div className="text-center mb-6">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-primary text-white rounded-full text-xl font-bold mb-4">
                     {phase.id}
                   </div>
-                  <h3 className="text-2xl font-serif font-bold text-text-primary mb-3">
+                  <h3 className="text-2xl font-serif font-bold text-gray-800 mb-3">
                     {phase.title}
                   </h3>
                   <p className="text-lg text-primary mb-4">{phase.subtitle}</p>
                 </div>
 
                 {phase.description && (
-                  <p className="text-text-secondary text-base leading-relaxed mb-6 text-center">
+                  <p className="text-gray-600 text-base leading-relaxed mb-6 text-center">
                     {phase.description}
                   </p>
                 )}
 
                 <div className="space-y-3">
-                  <h4 className="text-lg font-medium text-text-primary text-center">Why it Matters:</h4>
+                  <h4 className="text-lg font-medium text-gray-800 text-center">Why it Matters:</h4>
                   <ul className="space-y-2">
                     {phase.benefits.map((benefit, benefitIndex) => (
                       <motion.li
                         key={benefitIndex}
-                        initial={{ opacity: 0, x: -20 }}
+                        initial={{ opacity: 1, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.15, delay: benefitIndex * 0.02 }}
-                        className="flex items-start space-x-2 text-text-secondary text-sm"
+                        className="flex items-start space-x-2 text-gray-600 text-sm"
                       >
                         <ChevronRight className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                         <span dangerouslySetInnerHTML={{ __html: benefit.replace('*Changes Your Mood*', '<em>Changes Your Mood</em>') }} />

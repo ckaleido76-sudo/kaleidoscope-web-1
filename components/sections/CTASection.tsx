@@ -30,7 +30,7 @@ const CTASection: React.FC = () => {
       <section id="cta" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
+            initial={{ opacity: 1, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, type: "spring" }}
             className="space-y-8"
@@ -92,7 +92,7 @@ const CTASection: React.FC = () => {
 
       <div className="max-w-4xl mx-auto relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3 }}
@@ -118,13 +118,13 @@ const CTASection: React.FC = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3, delay: 0.1 }}
           className="max-w-2xl mx-auto"
         >
-          <div className="p-8 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl">
+          <div className="p-4 sm:p-8 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="email" className="block text-text-primary font-medium mb-2">
@@ -137,7 +137,7 @@ const CTASection: React.FC = () => {
                     id="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full pl-12 pr-4 py-4 bg-form-bg backdrop-blur-sm border border-form-border rounded-xl text-form-text placeholder-form-placeholder focus:outline-none focus:ring-2 focus:ring-form-focus-ring focus:border-form-focus-border transition-all duration-300"
+                    className="w-full pl-12 pr-4 py-3 sm:py-4 bg-form-bg backdrop-blur-sm border border-form-border rounded-xl text-form-text placeholder-form-placeholder focus:outline-none focus:ring-2 focus:ring-form-focus-ring focus:border-form-focus-border transition-all duration-300 text-base"
                     placeholder="Enter email address"
                     required
                   />
@@ -150,7 +150,7 @@ const CTASection: React.FC = () => {
                 disabled={isLoading || !email.trim()}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-75 disabled:cursor-not-allowed flex items-center justify-center space-x-3"
+                className="w-full bg-primary hover:bg-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-75 disabled:cursor-not-allowed flex items-center justify-center space-x-3"
               >
                 {isLoading ? (
                   <div className="w-6 h-6 border-2 border-background/30 border-t-background rounded-full animate-spin" />
@@ -180,7 +180,7 @@ const CTASection: React.FC = () => {
                 <div className="space-y-1 text-text-secondary">
                   <p>(e) <a href="mailto:cfiordalis@gmail.com" className="text-text-primary hover:underline hover:text-secondary">cfiordalis@gmail.com</a></p>
                   <p>(c) <a href="tel:617-216-3990" className="text-text-primary hover:underline hover:text-secondary">617-216-3990</a></p>
-                  <p><a href="https://www.linkedin.com/in/cfiordalis" target="_blank" rel="noopener noreferrer" className="text-text-primary hover:underline hover:text-secondary">https://www.linkedin.com/in/cfiordalis</a></p>
+                  <p><a href="https://www.linkedin.com/in/cfiordalis" target="_blank" rel="noopener noreferrer" className="text-text-primary hover:underline hover:text-secondary break-all">https://www.linkedin.com/in/cfiordalis</a></p>
                 </div>
               </div>
               

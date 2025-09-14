@@ -218,10 +218,10 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
         centerX, centerY, Math.max(width, height) * 1.5
       );
     
-      // Purple gradient variations
-      bgGradient.addColorStop(0, '#6B3CFF');   // Lighter purple in center
-      bgGradient.addColorStop(0.5, '#5B2CFA'); // Main purple color
-      bgGradient.addColorStop(1, '#3A1BA0');   // Darker purple at edges
+      // Use exact site purple color (#3404e0)
+      bgGradient.addColorStop(0, '#4214f0');   // Slightly lighter center
+      bgGradient.addColorStop(0.5, '#3404e0'); // Exact site purple
+      bgGradient.addColorStop(1, '#2a03c0');   // Slightly darker edges
     
       ctx.fillStyle = bgGradient;
       ctx.fillRect(0, 0, width, height);

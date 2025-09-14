@@ -9,7 +9,7 @@ const ProblemSection: React.FC = () => {
     <section id="problem" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface">
       <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3 }}
@@ -26,14 +26,14 @@ const ProblemSection: React.FC = () => {
         {/* Statistics List */}
         <div className="max-w-4xl mx-auto mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 1, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.3 }}
             className="space-y-8"
           >
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 1, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.2, delay: 0.05 }}
               className="flex items-start p-6 bg-white/50 backdrop-blur-sm rounded-2xl border border-primary/10 shadow-lg"
@@ -45,7 +45,7 @@ const ProblemSection: React.FC = () => {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 1, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.2, delay: 0.1 }}
               className="flex items-start p-6 bg-white/50 backdrop-blur-sm rounded-2xl border border-primary/10 shadow-lg"
@@ -57,7 +57,7 @@ const ProblemSection: React.FC = () => {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 1, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.2, delay: 0.15 }}
               className="flex items-start p-6 bg-white/50 backdrop-blur-sm rounded-2xl border border-primary/10 shadow-lg"
@@ -72,7 +72,7 @@ const ProblemSection: React.FC = () => {
 
         {/* Closing Statement */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3 }}

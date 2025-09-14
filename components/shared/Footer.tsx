@@ -181,7 +181,6 @@ const Footer: React.FC = () => {
 
             <div className="text-sm text-text-secondary text-center lg:text-right">
               <p>© {currentYear} Kaleidoscope Recovery. All rights reserved.</p>
-              <p className="mt-1">Licensed healthcare facility • HIPAA compliant</p>
             </div>
           </div>
 

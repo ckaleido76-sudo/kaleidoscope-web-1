@@ -8,7 +8,7 @@ const ApproachSection: React.FC = () => {
     <section id="approach" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-surface to-background">
       <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3 }}
@@ -20,7 +20,7 @@ const ApproachSection: React.FC = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3 }}

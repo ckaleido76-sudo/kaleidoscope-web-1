@@ -8,7 +8,7 @@ const VimeoEmbed = () => (
   <div className="aspect-video rounded-2xl overflow-hidden mb-8">
     <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
       <iframe 
-        src="https://player.vimeo.com/video/1118394715?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&portrait=0&title=0" 
+        src="https://player.vimeo.com/video/1118398858?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&portrait=0&title=0#t=10s" 
         frameBorder="0" 
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
         referrerPolicy="strict-origin-when-cross-origin" 
@@ -24,7 +24,7 @@ const BookSection: React.FC = () => {
     <section id="book" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3 }}
@@ -36,7 +36,7 @@ const BookSection: React.FC = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3 }}
