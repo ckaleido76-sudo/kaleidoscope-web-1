@@ -110,11 +110,11 @@ const CTASection: React.FC = () => {
           </p>
           
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 mb-12">
-            <Badge variant="secondary" className="bg-green-500/20 text-green-300 border-green-500/30 hover:bg-green-500/30">
+            <Badge variant="secondary" className="bg-secondary/20 text-secondary border-secondary/30 hover:bg-secondary/30">
               <CheckCircle className="w-4 h-4 mr-2" />
               Free consultation
             </Badge>
-            <Badge variant="secondary" className="bg-blue-500/20 text-blue-300 border-blue-500/30 hover:bg-blue-500/30">
+            <Badge variant="secondary" className="bg-accent/20 text-accent border-accent/30 hover:bg-accent/30">
               <CheckCircle className="w-4 h-4 mr-2" />
               100% confidential
             </Badge>

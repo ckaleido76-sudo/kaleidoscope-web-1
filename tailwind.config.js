@@ -72,10 +72,15 @@ module.exports = {
         sm: 'calc(var(--radius) - 4px)',
       },
       fontFamily: {
+        // Primary brand font (Heveria) - fallback to Inter for now
+        'brand-primary': ['Heveria', 'Inter', 'system-ui', 'sans-serif'],
+        // Secondary brand font (Epilogue) - fallback to system fonts
+        'brand-secondary': ['Epilogue', 'Inter', 'system-ui', 'sans-serif'],
+        // Legacy font support
         sans: ['Inter', 'system-ui', 'sans-serif'],
         serif: ['Playfair Display', 'Georgia', 'serif'],
-        display: ['Playfair Display', 'Georgia', 'serif'],
-        body: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Heveria', 'Inter', 'system-ui', 'sans-serif'],
+        body: ['Epilogue', 'Inter', 'system-ui', 'sans-serif'],
       },
     },
   },

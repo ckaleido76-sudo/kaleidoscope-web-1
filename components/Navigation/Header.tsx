@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { cn } from '@/lib/utils/cn';
+import { cn } from '@/lib/utils';
+import KaleidoscopeLogo from '@/components/shared/KaleidoscopeLogo';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,11 +44,15 @@ const Header: React.FC = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <button 
+              <button
                 onClick={() => scrollToSection('#hero')}
-                className="text-2xl font-light text-white hover:text-accent-light transition-colors duration-300"
+                className="hover:opacity-80 transition-opacity duration-300"
               >
-                kaleidoscope
+                <KaleidoscopeLogo
+                  size="md"
+                  showText={true}
+                  className="hover:scale-105 transition-transform duration-300"
+                />
               </button>
             </div>
 

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './KaleidoscopeHero.module.css';
+import KaleidoscopeLogo from '@/components/shared/KaleidoscopeLogo';
 
 interface KaleidoscopeHeroProps {
   title?: string;
@@ -218,10 +219,10 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
         centerX, centerY, Math.max(width, height) * 1.5
       );
     
-      // Use exact site purple color (#3404e0)
-      bgGradient.addColorStop(0, '#4214f0');   // Slightly lighter center
-      bgGradient.addColorStop(0.5, '#3404e0'); // Exact site purple
-      bgGradient.addColorStop(1, '#2a03c0');   // Slightly darker edges
+      // Use official brand purple color (#5B2CFA)
+      bgGradient.addColorStop(0, '#7A4DFF');   // Slightly lighter center
+      bgGradient.addColorStop(0.5, '#5B2CFA'); // Official brand purple
+      bgGradient.addColorStop(1, '#4A1FE0');   // Slightly darker edges
     
       ctx.fillStyle = bgGradient;
       ctx.fillRect(0, 0, width, height);
@@ -264,8 +265,15 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
       <canvas ref={canvasRef} className={styles.canvas} />
       
       <div className={styles.heroContent}>
-        <h1 className={styles.heroTitle}>{title}</h1>
-        {subtitle && <p className={styles.heroSubtitle}>{subtitle}</p>}
+        <div className="flex flex-col items-center justify-center space-y-8">
+          <KaleidoscopeLogo
+            size="xl"
+            showText={false}
+            className="mb-4"
+          />
+          <h1 className={styles.heroTitle}>kaleidoscope</h1>
+          {subtitle && <p className={styles.heroSubtitle}>{subtitle}</p>}
+        </div>
       </div>
       
     </div>
