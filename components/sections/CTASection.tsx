@@ -3,6 +3,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, CheckCircle, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Input } from '@/components/ui/input';
 
 const CTASection: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -106,14 +110,14 @@ const CTASection: React.FC = () => {
           </p>
           
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 mb-12">
-            <div className="flex items-center text-text-secondary">
-              <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+            <Badge variant="secondary" className="bg-green-500/20 text-green-300 border-green-500/30 hover:bg-green-500/30">
+              <CheckCircle className="w-4 h-4 mr-2" />
               Free consultation
-            </div>
-            <div className="flex items-center text-text-secondary">
-              <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+            </Badge>
+            <Badge variant="secondary" className="bg-blue-500/20 text-blue-300 border-blue-500/30 hover:bg-blue-500/30">
+              <CheckCircle className="w-4 h-4 mr-2" />
               100% confidential
-            </div>
+            </Badge>
           </div>
         </motion.div>
 
@@ -124,20 +128,21 @@ const CTASection: React.FC = () => {
           transition={{ duration: 0.3, delay: 0.1 }}
           className="max-w-2xl mx-auto"
         >
-          <div className="p-4 sm:p-8 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl">
+          <Card className="p-4 sm:p-8 bg-white/10 backdrop-blur-lg border-white/20 shadow-2xl">
+            <CardContent className="p-0">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="email" className="block text-text-primary font-medium mb-2">
                   Email Address *
                 </label>
                 <div className="relative">
-                  <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-form-placeholder" />
-                  <input
+                  <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-form-placeholder z-10" />
+                  <Input
                     type="email"
                     id="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 sm:py-4 bg-form-bg backdrop-blur-sm border border-form-border rounded-xl text-form-text placeholder-form-placeholder focus:outline-none focus:ring-2 focus:ring-form-focus-ring focus:border-form-focus-border transition-all duration-300 text-base"
+                    className="w-full pl-12 pr-4 py-3 sm:py-4 bg-form-bg backdrop-blur-sm border-form-border text-form-text placeholder-form-placeholder h-auto text-base"
                     placeholder="Enter email address"
                     required
                   />
@@ -145,29 +150,31 @@ const CTASection: React.FC = () => {
               </div>
 
 
-              <motion.button
-                type="submit"
-                disabled={isLoading || !email.trim()}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full bg-primary hover:bg-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-75 disabled:cursor-not-allowed flex items-center justify-center space-x-3"
-              >
-                {isLoading ? (
-                  <div className="w-6 h-6 border-2 border-background/30 border-t-background rounded-full animate-spin" />
-                ) : (
-                  <>
-                    <span>Sign Up</span>
-                    <ArrowRight className="w-5 h-5" />
-                  </>
-                )}
-              </motion.button>
+              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                <Button
+                  type="submit"
+                  disabled={isLoading || !email.trim()}
+                  className="w-full bg-primary hover:bg-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg font-medium shadow-lg hover:shadow-xl"
+                  size="lg"
+                >
+                  {isLoading ? (
+                    <div className="w-6 h-6 border-2 border-background/30 border-t-background rounded-full animate-spin" />
+                  ) : (
+                    <>
+                      <span>Sign Up</span>
+                      <ArrowRight className="w-5 h-5 ml-2" />
+                    </>
+                  )}
+                </Button>
+              </motion.div>
 
               <p className="text-text-secondary text-sm text-center">
                 By submitting this form, you agree to receive communications from Kaleidoscope. 
                 Your information is completely confidential and will never be shared.
               </p>
             </form>
-          </div>
+            </CardContent>
+          </Card>
 
           {/* Alternative Contact Options */}
           <div className="mt-12 text-center">

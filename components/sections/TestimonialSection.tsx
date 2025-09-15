@@ -2,7 +2,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Play } from 'lucide-react';
+import { Play, Quote } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
 const VimeoEmbed = () => (
   <div className="aspect-video rounded-2xl overflow-hidden">
@@ -35,15 +37,44 @@ const TestimonialSection: React.FC = () => {
           </h2>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 1, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3 }}
-          className="max-w-4xl mx-auto"
-        >
-          <VimeoEmbed />
-        </motion.div>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 1, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3 }}
+          >
+            <Card className="bg-white/10 backdrop-blur-lg border-white/20 shadow-2xl">
+              <CardContent className="p-8">
+                <div className="flex items-start space-x-4">
+                  <Quote className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <blockquote className="text-xl text-white leading-relaxed mb-6">
+                      "Kaleidoscope didn't just help me get sober—it helped me rediscover who I was beneath the addiction. The personalized approach made all the difference."
+                    </blockquote>
+                    <div className="flex items-center space-x-3">
+                      <div>
+                        <p className="font-semibold text-white">Bill</p>
+                        <Badge variant="secondary" className="bg-primary/20 text-primary-foreground border-primary/30">
+                          2 Years Sober
+                        </Badge>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 1, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+          >
+            <VimeoEmbed />
+          </motion.div>
+        </div>
       </div>
     </section>
   );

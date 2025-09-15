@@ -2,7 +2,10 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Target, Lightbulb, Users } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Separator } from '@/components/ui/separator';
 
 interface Phase {
   id: number;
@@ -13,6 +16,7 @@ interface Phase {
 }
 
 const MethodSection: React.FC = () => {
+  const phaseIcons = [Target, Lightbulb, Users];
 
   const phases: Phase[] = [
     {
@@ -71,55 +75,78 @@ const MethodSection: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* All Phases Display - Horizontal Layout */}
+        {/* All Phases Display - Enhanced Layout */}
         <div className="grid md:grid-cols-3 gap-8">
-          {phases.map((phase, index) => (
-            <motion.div
-              key={phase.id}
-              initial={{ opacity: 1, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: index * 0.05 }}
-              className="group"
-            >
-              <div className="bg-gradient-to-br from-card-from to-card-to rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-card-border h-full">
-                <div className="text-center mb-6">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-primary text-white rounded-full text-xl font-bold mb-4">
-                    {phase.id}
-                  </div>
-                  <h3 className="text-2xl font-serif font-bold text-gray-800 mb-3">
-                    {phase.title}
-                  </h3>
-                  <p className="text-lg text-primary mb-4">{phase.subtitle}</p>
-                </div>
+          {phases.map((phase, index) => {
+            const IconComponent = phaseIcons[index];
+            return (
+              <motion.div
+                key={phase.id}
+                initial={{ opacity: 1, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+                className="group"
+              >
+                <Card className="bg-gradient-to-br from-card-from to-card-to shadow-lg hover:shadow-xl transition-all duration-300 border-card-border h-full group-hover:scale-[1.02]">
+                  <CardHeader className="text-center pb-4">
+                    <div className="flex flex-col items-center space-y-4">
+                      <div className="relative">
+                        <div className="inline-flex items-center justify-center w-16 h-16 bg-primary text-primary-foreground rounded-full shadow-lg">
+                          <IconComponent className="w-8 h-8" />
+                        </div>
+                        <Badge
+                          variant="secondary"
+                          className="absolute -top-2 -right-2 bg-secondary text-secondary-foreground border-secondary/30"
+                        >
+                          {phase.id}
+                        </Badge>
+                      </div>
+                      <div>
+                        <CardTitle className="text-2xl font-serif font-bold text-gray-800 mb-2">
+                          {phase.title}
+                        </CardTitle>
+                        <p className="text-lg text-primary font-medium">{phase.subtitle}</p>
+                      </div>
+                    </div>
+                  </CardHeader>
 
-                {phase.description && (
-                  <p className="text-gray-600 text-base leading-relaxed mb-6 text-center">
-                    {phase.description}
-                  </p>
-                )}
+                  <CardContent className="space-y-4">
+                    {phase.description && (
+                      <>
+                        <p className="text-gray-600 text-base leading-relaxed text-center">
+                          {phase.description}
+                        </p>
+                        <Separator />
+                      </>
+                    )}
 
-                <div className="space-y-3">
-                  <h4 className="text-lg font-medium text-gray-800 text-center">Why it Matters:</h4>
-                  <ul className="space-y-2">
-                    {phase.benefits.map((benefit, benefitIndex) => (
-                      <motion.li
-                        key={benefitIndex}
-                        initial={{ opacity: 1, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.15, delay: benefitIndex * 0.02 }}
-                        className="flex items-start space-x-2 text-gray-600 text-sm"
-                      >
-                        <ChevronRight className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                        <span dangerouslySetInnerHTML={{ __html: benefit.replace('*Changes Your Mood*', '<em>Changes Your Mood</em>') }} />
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+                    <div className="space-y-3">
+                      <h4 className="text-lg font-semibold text-gray-800 text-center">Why it Matters:</h4>
+                      <ul className="space-y-3">
+                        {phase.benefits.map((benefit, benefitIndex) => (
+                          <motion.li
+                            key={benefitIndex}
+                            initial={{ opacity: 1, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.15, delay: benefitIndex * 0.05 }}
+                            className="flex items-start space-x-3 text-gray-700 text-sm"
+                          >
+                            <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></div>
+                            <span
+                              className="leading-relaxed"
+                              dangerouslySetInnerHTML={{ __html: benefit.replace('*Changes Your Mood*', '<em>Changes Your Mood</em>') }}
+                            />
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            );
+          })}
         </div>
 
       </div>
