@@ -264,16 +264,11 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
     <div className={styles.heroContainer}>
       <canvas ref={canvasRef} className={styles.canvas} />
       
-      <div className={styles.heroContent}>
-        <div className="flex flex-col items-center justify-center space-y-8">
-          <KaleidoscopeLogo
-            size="xl"
-            showText={false}
-            className="mb-4"
-          />
-          <h1 className={styles.heroTitle}>kaleidoscope</h1>
-          {subtitle && <p className={styles.heroSubtitle}>{subtitle}</p>}
-        </div>
+      <div className="absolute inset-0 flex items-center justify-center z-20">
+        <KaleidoscopeLogo
+          size="xl"
+          showText={false}
+        />
       </div>
       
     </div>

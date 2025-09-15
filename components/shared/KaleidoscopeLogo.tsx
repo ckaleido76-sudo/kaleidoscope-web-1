@@ -15,7 +15,7 @@ const KaleidoscopeLogo: React.FC<KaleidoscopeLogoProps> = ({
     sm: { width: 24, height: 14, textSize: 'text-sm' },
     md: { width: 40, height: 22, textSize: 'text-lg' },
     lg: { width: 64, height: 36, textSize: 'text-2xl' },
-    xl: { width: 96, height: 54, textSize: 'text-4xl' }
+    xl: { width: 1000, height: 562, textSize: 'text-4xl' }
   };
 
   const { width, height, textSize } = sizeMap[size];
@@ -29,6 +29,7 @@ const KaleidoscopeLogo: React.FC<KaleidoscopeLogoProps> = ({
         width={width}
         height={height}
         className="flex-shrink-0"
+        style={{ maxWidth: 'none' }}
       />
 
       {showText && (
