@@ -18,116 +18,125 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Keep items in visible site order
   const navItems = [
-    { name: 'Method', href: '#method' },
     { name: 'About', href: '#about' },
-    { name: 'Resources', href: '#resources' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Problem', href: '#problem' },
+    { name: 'Approach', href: '#approach' },
+    { name: 'Method', href: '#method' },
+    { name: 'Testimonial', href: '#testimonial' },
+    { name: 'Book', href: '#book' },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const el = document.querySelector(href);
+    if (el) {
+      e.preventDefault();
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setIsMenuOpen(false);
     }
-    setIsMenuOpen(false);
   };
 
   return (
     <header className={cn(
       'fixed top-0 left-0 right-0 z-[90] transition-all duration-300',
-        isScrolled 
-          ? 'bg-black/30 backdrop-blur-lg border-b border-white/10' 
-          : 'bg-transparent'
-      )}>
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <div className="flex-shrink-0">
-              <button
-                onClick={() => scrollToSection('#hero')}
-                className="hover:opacity-80 transition-opacity duration-300"
-              >
-                <KaleidoscopeLogo
-                  size="md"
-                  showText={true}
-                  className="hover:scale-105 transition-transform duration-300"
-                />
-              </button>
-            </div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-8">
-                {navItems.map((item) => (
-                  <button
-                    key={item.name}
-                    onClick={() => scrollToSection(item.href)}
-                    className="text-white hover:text-accent-light px-3 py-2 text-sm font-light transition-colors duration-300 relative group"
-                  >
-                    {item.name}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent-light transition-all duration-300 group-hover:w-full" />
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* CTA Button - Desktop */}
-            <div className="hidden md:block">
-              <button
-                onClick={() => scrollToSection('#cta')}
-                className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25"
-              >
-                Are You Ready?
-              </button>
-            </div>
-
-            {/* Mobile menu button */}
-            <div className="md:hidden">
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-white hover:text-accent-light transition-colors duration-300"
-                aria-expanded={isMenuOpen}
-                aria-label="Toggle navigation menu"
-              >
-                {isMenuOpen ? (
-                  <X className="h-6 w-6" />
-                ) : (
-                  <Menu className="h-6 w-6" />
-                )}
-              </button>
-            </div>
+      isScrolled 
+        ? 'bg-white/70 backdrop-blur-md border-b border-border' 
+        : 'bg-transparent'
+    )}>
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <a
+              href="#hero"
+              onClick={(e) => handleAnchorClick(e, '#hero')}
+              className="hover:opacity-80 transition-opacity duration-300"
+            >
+              <KaleidoscopeLogo
+                size="md"
+                showText={true}
+                className="hover:scale-105 transition-transform duration-300"
+              />
+            </a>
           </div>
-        </nav>
 
-        {/* Mobile Navigation Menu */}
-        <div className={cn(
-          'md:hidden transition-all duration-300 ease-in-out',
-          isMenuOpen 
-            ? 'max-h-96 opacity-100 visible' 
-            : 'max-h-0 opacity-0 invisible overflow-hidden'
-        )}>
-          <div className="px-4 pt-2 pb-6 bg-black/40 backdrop-blur-lg border-t border-white/10">
-            <div className="flex flex-col space-y-4">
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-6">
               {navItems.map((item) => (
-                <button
+                <a
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-white hover:text-accent-light text-base font-light transition-colors duration-300 text-left py-2"
+                  href={item.href}
+                  onClick={(e) => handleAnchorClick(e, item.href)}
+                  className="text-foreground/80 hover:text-primary px-3 py-2 text-sm font-normal transition-colors duration-300 relative group"
                 >
                   {item.name}
-                </button>
+                  <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
+                </a>
               ))}
-              <button
-                onClick={() => scrollToSection('#cta')}
-                className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full text-base font-medium transition-all duration-300 w-full mt-4"
-              >
-                Are You Ready?
-              </button>
             </div>
           </div>
+
+          {/* CTA Button - Desktop */}
+          <div className="hidden md:block">
+            <a
+              href="#cta"
+              onClick={(e) => handleAnchorClick(e, '#cta')}
+              className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25"
+            >
+              Are You Ready?
+            </a>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-foreground hover:text-primary transition-colors duration-300"
+              aria-expanded={isMenuOpen}
+              aria-label="Toggle navigation menu"
+            >
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
         </div>
-      </header>
+      </nav>
+
+      {/* Mobile Navigation Menu */}
+      <div className={cn(
+        'md:hidden transition-all duration-300 ease-in-out',
+        isMenuOpen 
+          ? 'max-h-96 opacity-100 visible' 
+          : 'max-h-0 opacity-0 invisible overflow-hidden'
+      )}>
+        <div className="px-4 pt-2 pb-6 bg-white/90 backdrop-blur-md border-t border-border">
+          <div className="flex flex-col space-y-2">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={(e) => handleAnchorClick(e, item.href)}
+                className="text-foreground hover:text-primary text-base font-normal transition-colors duration-300 py-2"
+              >
+                {item.name}
+              </a>
+            ))}
+            <a
+              href="#cta"
+              onClick={(e) => handleAnchorClick(e, '#cta')}
+              className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full text-base font-medium transition-all duration-300 w-full mt-2 text-center"
+            >
+              Are You Ready?
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
   );
 };
 

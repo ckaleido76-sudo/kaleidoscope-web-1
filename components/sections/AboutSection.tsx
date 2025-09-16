@@ -21,17 +21,17 @@ const VimeoEmbed = () => (
 const AboutSection: React.FC = () => {
 
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+    <section id="about" className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-6xl mx-auto">
         {/* Centered Header */}
         <motion.div
-          initial={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-normal py-4">
             What is Kaleidoscope?
           </h2>
         </motion.div>
@@ -39,10 +39,10 @@ const AboutSection: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <motion.div
-            initial={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -16 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.35, ease: 'easeOut' }}
           >
             <div className="space-y-6 text-text-secondary text-lg leading-relaxed">
               <p>
@@ -51,9 +51,10 @@ const AboutSection: React.FC = () => {
               
               <div className="space-y-4 mt-8">
                 <motion.div 
-                  initial={{ opacity: 1, x: -20 }}
+                  initial={{ opacity: 0, x: -12 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.2, delay: 0.05 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.2, delay: 0.05, ease: 'easeOut' }}
                   className="text-text-primary"
                 >
                   <div className="flex items-start">
@@ -62,9 +63,10 @@ const AboutSection: React.FC = () => {
                   </div>
                 </motion.div>
                 <motion.div 
-                  initial={{ opacity: 1, x: -20 }}
+                  initial={{ opacity: 0, x: -12 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.2, delay: 0.1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.2, delay: 0.1, ease: 'easeOut' }}
                   className="text-text-primary"
                 >
                   <div className="flex items-start">
@@ -73,9 +75,10 @@ const AboutSection: React.FC = () => {
                   </div>
                 </motion.div>
                 <motion.div 
-                  initial={{ opacity: 1, x: -20 }}
+                  initial={{ opacity: 0, x: -12 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.2, delay: 0.15 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.2, delay: 0.15, ease: 'easeOut' }}
                   className="text-text-primary"
                 >
                   <div className="flex items-start">
@@ -93,10 +96,10 @@ const AboutSection: React.FC = () => {
 
           {/* Video */}
           <motion.div
-            initial={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 16 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: 0.1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.35, delay: 0.1, ease: 'easeOut' }}
           >
             <VimeoEmbed />
           </motion.div>

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, CheckCircle, ArrowRight } from 'lucide-react';
+import { Mail, CheckCircle, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -31,55 +31,48 @@ const CTASection: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <section id="cta" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+      <section id="cta" className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 1, scale: 0.5 }}
+            initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, type: "spring" }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
             className="space-y-8"
           >
             <div className="inline-flex items-center justify-center w-24 h-24 bg-green-500 rounded-full mb-8">
               <CheckCircle className="w-12 h-12 text-white" />
             </div>
             
-            <h2 className="text-4xl md:text-6xl font-light text-white mb-6">
+            <h2 className="text-4xl md:text-6xl font-light bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent mb-6">
               You're One Step Closer
             </h2>
             
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-foreground/80 mb-8 max-w-2xl mx-auto">
               Thank you for taking this important step. A member of our care team will reach out within 24 hours 
               to discuss your personalized recovery journey.
             </p>
             
-            <div className="p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-light text-white mb-4">What happens next?</h3>
+            <div className="p-8 rounded-2xl bg-white border border-border max-w-2xl mx-auto">
+              <h3 className="text-2xl font-light text-foreground mb-4">What happens next?</h3>
               <div className="space-y-4 text-left">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-white/80">Confidential consultation call (30 minutes)</span>
+                  <div className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-foreground/80">Confidential consultation call (30 minutes)</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-white/80">Personalized assessment and treatment plan</span>
+                  <div className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-foreground/80">Personalized assessment and treatment plan</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-white/80">Insurance verification and financial options</span>
+                  <div className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-foreground/80">Insurance verification and financial options</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-white/80">Immediate support resources</span>
+                  <div className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-foreground/80">Immediate support resources</span>
                 </div>
               </div>
             </div>
-            
-            <p className="text-white/70 text-lg">
-              Need immediate support? Call our 24/7 helpline: 
-              <a href="tel:1-800-RECOVER" className="text-white font-medium ml-2 hover:underline">
-                1-800-RECOVER
-              </a>
-            </p>
           </motion.div>
         </div>
       </section>
@@ -87,22 +80,22 @@ const CTASection: React.FC = () => {
   }
 
   return (
-    <section id="cta" className="py-20 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
-      {/* Background Animation */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-accent-light rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+    <section id="cta" className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
+      {/* Background Animation (subtle) */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none" aria-hidden>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-secondary/30 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-4xl mx-auto relative z-10">
         <motion.div
-          initial={{ opacity: 1, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent mb-6">
+          <h2 className="text-4xl md:text-6xl font-serif font-bold bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent mb-6 leading-tight pt-2">
             Are <strong>You</strong> Ready for Complete Transformation?
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed mb-8">
@@ -122,13 +115,13 @@ const CTASection: React.FC = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 1, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3, delay: 0.1 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.05, ease: 'easeOut' }}
           className="max-w-2xl mx-auto"
         >
-          <Card className="p-4 sm:p-8 bg-white/10 backdrop-blur-lg border-white/20 shadow-2xl">
+          <Card className="p-4 sm:p-8 bg-white border border-border shadow-xl">
             <CardContent className="p-0">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>

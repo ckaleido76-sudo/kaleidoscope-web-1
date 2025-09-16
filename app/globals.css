@@ -2,216 +2,134 @@
 @tailwind components;  
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
-/* Note: Heveria and Epilogue fonts would need to be licensed from Piotr Lapa.
-   Using system fallbacks for now, but brand fonts should be added for production. */
+/* Fonts are loaded via next/font in app/layout.tsx */
 
 /* ==================================================
-   🎨 KALEIDOSCOPE COLOR SYSTEM
+   🎨 KALEIDOSCOPE COLOR SYSTEM (HSL-based)
    ==================================================
-   Change these values to update colors site-wide!
+   Prefer shadcn/ui HSL variables; legacy tokens map to them.
    ================================================== */
 
 :root {
-  /* Official Kaleidoscope Brand Colors */
-  --color-primary: #5B2CFA; /* Brand Purple HEX: #5B2CFA */
-  --color-secondary: #FFBC44; /* Brand Orange HEX: #FFBC44 */
+  /* Core brand colors */
+  --primary: 254 95% 58%; /* #5B2CFA */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 43 100% 64%; /* #FFBC44 */
+  --secondary-foreground: 254 95% 20%;
 
-  /* Tertiary Brand Colors */
-  --color-tertiary-1: #8F6DDE; /* Light Purple */
-  --color-tertiary-2: #9823DE; /* Medium Purple */
-  --color-tertiary-3: #FF7024; /* Orange Red */
+  /* Neutral UI palette (light mode) */
+  --background: 0 0% 100%;
+  --foreground: 222.2 47.4% 11.2%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 47.4% 11.2%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 40%;
+  --accent: 254 70% 80%;
+  --accent-foreground: 254 95% 20%;
+  --destructive: 15 100% 57%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: var(--secondary);
+  --radius: 0.75rem;
 
-  /* Background Colors - Updated for brand consistency */
-  --color-background: #5B2CFA; /* Primary brand purple */
-  --color-surface: #8F6DDE; /* Light purple for surfaces */
+  /* Legacy CSS variable bridge for existing classes */
+  --color-primary: #5B2CFA;
+  --color-secondary: #FFBC44;
+  --color-tertiary-1: #8F6DDE;
+  --color-tertiary-2: #9823DE;
+  --color-tertiary-3: #FF7024;
 
-  /* Text Colors */
-  --color-text-primary: #FFFFFF;
-  --color-text-secondary: #E5E7EB;
+  --color-background: #ffffff; /* Light background for content readability */
+  --color-surface: #f8fafc; /* Light surface */
 
-  /* Header Gradient Colors */
-  --color-header-from: #FFFFFF;
-  --color-header-to: #FFBC44; /* Brand secondary color */
+  --color-text-primary: #0b1020;
+  --color-text-secondary: #475569;
 
-  /* Card Colors */
-  --color-card-from: #FFFFFF;
-  --color-card-to: #FEF3E2; /* Light orange tint */
-  --color-card-border: #FFBC44; /* Brand secondary */
+  --color-header-from: #6B46C1;
+  --color-header-to: #5B2CFA;
 
-  /* Form Colors */
-  --color-form-bg: rgba(255, 255, 255, 0.15);
-  --color-form-border: rgba(255, 188, 68, 0.3); /* Secondary color with opacity */
-  --color-form-text: #FFFFFF;
-  --color-form-placeholder: rgba(255, 255, 255, 0.7);
+  --color-card-from: #ffffff;
+  --color-card-to: #fff7ed;
+  --color-card-border: #FFBC44;
+
+  --color-form-bg: rgba(255, 255, 255, 0.65);
+  --color-form-border: rgba(255, 188, 68, 0.3);
+  --color-form-text: #0b1020;
+  --color-form-placeholder: rgba(71, 85, 105, 0.8);
   --color-form-focus-ring: #FFBC44;
   --color-form-focus-border: rgba(255, 188, 68, 0.5);
 
-  /* UI Element Colors */
   --color-accent-light: #9823DE;
   --color-dark-bg: #1F1B2E;
   --color-dark-surface: #2D2A3A;
 
-  /* Status Colors */
   --color-success: #10B981;
-  --color-warning: #FFBC44; /* Use brand secondary for warnings */
-  --color-error: #FF7024; /* Use tertiary-3 for errors */
-
-  /* shadcn/ui variables - Updated for brand colors */
-  --background: 254 95% 58%; /* Primary purple */
-  --foreground: 0 0% 100%;
-  --card: 251 55% 75%; /* Light purple */
-  --card-foreground: 254 95% 20%; /* Dark purple for text */
-  --popover: 254 95% 20%;
-  --popover-foreground: 0 0% 100%;
-  --primary: 254 95% 58%; /* Brand purple */
-  --primary-foreground: 0 0% 100%;
-  --secondary: 43 100% 64%; /* Brand orange */
-  --secondary-foreground: 254 95% 20%;
-  --muted: 251 55% 85%;
-  --muted-foreground: 254 95% 30%;
-  --accent: 279 79% 67%; /* Tertiary purple */
-  --accent-foreground: 0 0% 100%;
-  --destructive: 15 100% 57%; /* Tertiary orange-red */
-  --destructive-foreground: 0 0% 100%;
-  --border: 43 100% 85%; /* Light orange border */
-  --input: 0 0% 100% / 0.15;
-  --ring: 43 100% 64%; /* Secondary orange for focus rings */
-  --radius: 0.75rem; /* Slightly more rounded for modern look */
+  --color-warning: #FFBC44;
+  --color-error: #FF7024;
 }
 
-/* ==================================================
-   🔧 HOW TO CHANGE COLORS SITE-WIDE
-   ==================================================
-   
-   1. Update the CSS variables above in :root{}
-   2. Use corresponding Tailwind classes in components:
-   
-   EXAMPLES:
-   - Header gradients: from-header-from to-header-to
-   - Card backgrounds: from-card-from to-card-to
-   - Card borders: border-card-border
-   - Form inputs: bg-form-bg border-form-border text-form-text
-   - Main backgrounds: bg-background, bg-surface
-   - Text colors: text-text-primary, text-text-secondary
-   - Brand colors: bg-primary, text-primary, bg-secondary
-   
-   3. Save and the entire site updates instantly!
-   ================================================== */
-
 @layer base {
-  * {
-    @apply box-border m-0 p-0;
-  }
+  * { @apply box-border m-0 p-0; }
 
-  html {
-    @apply scroll-smooth overflow-x-hidden w-full relative;
-  }
+  html { @apply scroll-smooth overflow-x-hidden w-full relative; }
 
   body {
     @apply bg-background text-foreground font-body font-normal leading-relaxed overflow-x-hidden w-full relative min-h-screen;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply text-foreground font-brand-primary;
-  }
+  h1, h2, h3, h4, h5, h6 { @apply text-foreground font-brand-primary; }
 }
 
 /* Mobile optimizations */
 @media (max-width: 768px) {
-  html, body {
-    overflow-x: hidden !important;
-    width: 100vw !important;
-    max-width: 100vw !important;
-  }
-  
-  * {
-    max-width: 100vw !important;
-  }
-  
-  /* Improve touch targets */
-  button, a, input, textarea, select {
-    min-height: 44px;
-  }
-  
-  /* Better text rendering on mobile */
-  body {
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  /* Prevent zoom on input focus (iOS Safari) */
-  input[type="email"], 
-  input[type="text"], 
-  input[type="tel"],
-  textarea,
-  select {
-    font-size: 16px !important;
-  }
+  html, body { overflow-x: hidden !important; width: 100vw !important; max-width: 100vw !important; }
+  * { max-width: 100vw !important; }
+  button, a, input, textarea, select { min-height: 44px; }
+  body { -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  input[type="email"], input[type="text"], input[type="tel"], textarea, select { font-size: 16px !important; }
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
-  line-height: 1.3;
-  color: var(--text-primary);
-}
+h1, h2, h3, h4, h5, h6 { font-weight: 300; line-height: 1.25; color: var(--color-text-primary); }
 
 .hero-title {
-  font-family: 'Heveria', 'Inter', system-ui, sans-serif;
+  font-family: 'Heveria', var(--font-inter), system-ui, sans-serif;
   font-size: clamp(3rem, 8vw, 6rem);
-  font-weight: 700; /* Heveria Bold equivalent */
+  font-weight: 700;
   letter-spacing: 0.02em;
   text-transform: lowercase;
-  background: linear-gradient(135deg, #FFFFFF 0%, #FFBC44 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(135deg, #0b1020 0%, #5B2CFA 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
 
 .hero-subtitle {
-  font-family: 'Epilogue', 'Inter', system-ui, sans-serif;
+  font-family: var(--font-epilogue), var(--font-inter), system-ui, sans-serif;
   font-size: clamp(1rem, 2.5vw, 1.375rem);
-  font-weight: 400; /* Epilogue Medium equivalent */
+  font-weight: 400;
   opacity: 0.95;
   letter-spacing: 0.005em;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(15, 23, 42, 0.95);
 }
 
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
 
 /* Focus indicators */
-button:focus-visible,
-input:focus-visible,
-[tabindex]:focus-visible {
-  outline: 2px solid var(--accent-light);
+button:focus-visible, input:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--color-accent-light);
   outline-offset: 2px;
 }
 
 /* Selection colors */
-::selection {
-  background: var(--accent-light);
-  color: var(--background);
-}
+::selection { background: var(--color-accent-light); color: hsl(var(--background)); }
 
 /* Safe area support for notched devices */
 @supports (padding: max(0px)) {
-  body {
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-  }
+  body { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
 }

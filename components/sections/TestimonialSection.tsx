@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Play, Quote } from 'lucide-react';
+import { Quote } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -23,39 +23,39 @@ const VimeoEmbed = () => (
 
 const TestimonialSection: React.FC = () => {
   return (
-    <section id="testimonial" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+    <section id="testimonial" className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 1, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-tight pt-2">
             Testimonial
           </h2>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
-            initial={{ opacity: 1, x: -30 }}
+            initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.35, ease: 'easeOut' }}
           >
-            <Card className="bg-white/10 backdrop-blur-lg border-white/20 shadow-2xl">
+            <Card className="bg-white/80 backdrop-blur-lg border-border/60 shadow-xl">
               <CardContent className="p-8">
                 <div className="flex items-start space-x-4">
                   <Quote className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <blockquote className="text-xl text-white leading-relaxed mb-6">
+                    <blockquote className="text-xl text-foreground leading-relaxed mb-6">
                       "Kaleidoscope didn't just help me get sober—it helped me rediscover who I was beneath the addiction. The personalized approach made all the difference."
                     </blockquote>
                     <div className="flex items-center space-x-3">
                       <div>
-                        <p className="font-semibold text-white">Bill</p>
-                        <Badge variant="secondary" className="bg-primary/20 text-primary-foreground border-primary/30">
+                        <p className="font-semibold text-foreground">Bill</p>
+                        <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
                           2 Years Sober
                         </Badge>
                       </div>
@@ -67,10 +67,10 @@ const TestimonialSection: React.FC = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 1, x: 30 }}
+            initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.35, delay: 0.1, ease: 'easeOut' }}
           >
             <VimeoEmbed />
           </motion.div>

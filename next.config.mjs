@@ -12,6 +12,17 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   
+  // Redirect /p/* to canonical
+  async redirects() {
+    return [
+      {
+        source: '/p/:path*',
+        destination: '/:path*',
+        permanent: false,
+      },
+    ];
+  },
+
   // Webpack optimizations
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {

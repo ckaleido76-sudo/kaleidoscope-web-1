@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronRight, Target, Lightbulb, Users } from 'lucide-react';
+import { Target, Lightbulb, Users } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
@@ -55,16 +55,16 @@ const MethodSection: React.FC = () => {
   ];
 
   return (
-    <section id="method" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+    <section id="method" className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 1, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-tight pt-2">
             The Kaleidoscope Method
           </h2>
           <p className="text-2xl text-text-primary font-light mb-6">
@@ -82,10 +82,10 @@ const MethodSection: React.FC = () => {
             return (
               <motion.div
                 key={phase.id}
-                initial={{ opacity: 1, y: 50 }}
+                initial={{ opacity: 0, y: 32 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.35, delay: index * 0.08, ease: 'easeOut' }}
                 className="group"
               >
                 <Card className="bg-gradient-to-br from-card-from to-card-to shadow-lg hover:shadow-xl transition-all duration-300 border-card-border h-full group-hover:scale-[1.02]">
@@ -127,10 +127,10 @@ const MethodSection: React.FC = () => {
                         {phase.benefits.map((benefit, benefitIndex) => (
                           <motion.li
                             key={benefitIndex}
-                            initial={{ opacity: 1, x: -20 }}
+                            initial={{ opacity: 0, x: -12 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.15, delay: benefitIndex * 0.05 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.2, delay: benefitIndex * 0.05, ease: 'easeOut' }}
                             className="flex items-start space-x-3 text-gray-700 text-sm"
                           >
                             <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></div>

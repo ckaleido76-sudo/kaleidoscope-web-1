@@ -21,34 +21,14 @@ export default function KaleidoscopePage() {
       </section>
       
       {/* Main Content Sections */}
-      <main className="w-full">
-        <div id="about" className="w-full">
-          <AboutSection />
-        </div>
-        
-        <div id="problem" className="w-full">
-          <ProblemSection />
-        </div>
-        
-        <div id="approach" className="w-full">
-          <ApproachSection />
-        </div>
-        
-        <div id="method" className="w-full">
-          <MethodSection />
-        </div>
-        
-        <div id="testimonial" className="w-full">
-          <TestimonialSection />
-        </div>
-        
-        <div id="cta" className="w-full">
-          <CTASection />
-        </div>
-        
-        <div id="book" className="w-full">
-          <BookSection />
-        </div>
+      <main id="main-content" role="main" className="w-full">
+        <AboutSection />
+        <ProblemSection />
+        <ApproachSection />
+        <MethodSection />
+        <TestimonialSection />
+        <CTASection />
+        <BookSection />
       </main>
       
       <Footer />

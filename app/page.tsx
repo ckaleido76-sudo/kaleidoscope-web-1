@@ -1,22 +1,22 @@
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+
 export default function Home() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-600 via-blue-600 to-teal-500">
+    <main id="main-content" role="main" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-muted to-card">
       <div className="text-center">
-        <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-white via-yellow-200 to-pink-200 bg-clip-text text-transparent animate-pulse">
-          Hello World
+        <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent">
+          Welcome
         </h1>
-        <p className="mt-4 text-xl md:text-2xl text-white/80">
-          Welcome to URL1234.com
+        <p className="mt-4 text-xl md:text-2xl text-foreground/70">
+          Explore the Kaleidoscope project
         </p>
         <div className="mt-8">
-          <a 
-            href="/kaleidoscope"
-            className="inline-block px-8 py-4 bg-white/20 hover:bg-white/30 text-white rounded-full text-lg font-medium transition-all duration-300 backdrop-blur-sm border border-white/30 hover:scale-105"
-          >
-            Visit Kaleidoscope Project →
-          </a>
+          <Button asChild size="lg" className="backdrop-blur-sm border border-border">
+            <Link href="/kaleidoscope">Visit Kaleidoscope Project →</Link>
+          </Button>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

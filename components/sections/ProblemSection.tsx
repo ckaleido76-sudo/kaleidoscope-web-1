@@ -6,16 +6,16 @@ import { motion } from 'framer-motion';
 const ProblemSection: React.FC = () => {
 
   return (
-    <section id="problem" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface">
+    <section id="problem" className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface">
       <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 1, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-tight pt-2">
             Traditional Alcohol Rehab Fails Nearly Everyone
           </h2>
           <h3 className="text-2xl md:text-3xl font-serif font-bold text-text-primary max-w-3xl mx-auto leading-relaxed">
@@ -26,17 +26,18 @@ const ProblemSection: React.FC = () => {
         {/* Statistics List */}
         <div className="max-w-4xl mx-auto mb-16">
           <motion.div
-            initial={{ opacity: 1, y: 30 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.4, ease: 'easeOut' }}
             className="space-y-8"
           >
             <motion.div
-              initial={{ opacity: 1, x: -20 }}
+              initial={{ opacity: 0, x: -16 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.2, delay: 0.05 }}
-              className="flex items-start p-6 bg-white/50 backdrop-blur-sm rounded-2xl border border-primary/10 shadow-lg"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.3, delay: 0.05, ease: 'easeOut' }}
+              className="flex items-start p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-primary/10 shadow-lg"
             >
               <div className="flex-shrink-0 w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-4 mt-1">
                 <div className="w-2 h-2 bg-white rounded-full" />
@@ -45,10 +46,11 @@ const ProblemSection: React.FC = () => {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 1, x: -20 }}
+              initial={{ opacity: 0, x: -16 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.2, delay: 0.1 }}
-              className="flex items-start p-6 bg-white/50 backdrop-blur-sm rounded-2xl border border-primary/10 shadow-lg"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.3, delay: 0.1, ease: 'easeOut' }}
+              className="flex items-start p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-primary/10 shadow-lg"
             >
               <div className="flex-shrink-0 w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-4 mt-1">
                 <div className="w-2 h-2 bg-white rounded-full" />
@@ -57,10 +59,11 @@ const ProblemSection: React.FC = () => {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 1, x: -20 }}
+              initial={{ opacity: 0, x: -16 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.2, delay: 0.15 }}
-              className="flex items-start p-6 bg-white/50 backdrop-blur-sm rounded-2xl border border-primary/10 shadow-lg"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.3, delay: 0.15, ease: 'easeOut' }}
+              className="flex items-start p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-primary/10 shadow-lg"
             >
               <div className="flex-shrink-0 w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-4 mt-1">
                 <div className="w-2 h-2 bg-white rounded-full" />
@@ -72,11 +75,11 @@ const ProblemSection: React.FC = () => {
 
         {/* Closing Statement */}
         <motion.div
-          initial={{ opacity: 1, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3 }}
-          className="text-center p-8 rounded-2xl bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
+          className="text-center p-8 rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20"
         >
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
             The industry will "treat" anyone — ready or not — fails to facilitate actual healing, then releases them into their old environment with inadequate support. It doesn't have to be this way.

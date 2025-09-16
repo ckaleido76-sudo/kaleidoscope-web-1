@@ -5,25 +5,25 @@ import { motion } from 'framer-motion';
 
 const ApproachSection: React.FC = () => {
   return (
-    <section id="approach" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-surface to-background">
+    <section id="approach" className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-surface to-background">
       <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 1, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
           className="text-center mb-16"
         >
-          <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-tight pt-2">
             <strong>Alcoholism is a Response to Trauma: We heal that.</strong>
-          </h3>
+          </h2>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 1, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
           className="max-w-4xl mx-auto"
         >
           <div className="text-lg text-text-secondary leading-relaxed mb-8">
