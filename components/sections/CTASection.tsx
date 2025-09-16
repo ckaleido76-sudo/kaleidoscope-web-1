@@ -2,31 +2,43 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, CheckCircle, ArrowRight } from 'lucide-react';
+import { Mail, CheckCircle, ArrowRight, Phone, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 
 const CTASection: React.FC = () => {
-  const [email, setEmail] = useState('');
+  const [formData, setFormData] = useState({
+    userType: '',
+    email: '',
+    state: '',
+    phone: '',
+    comments: '',
+    optInTexts: false
+  });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (!email.trim()) {
+
+    if (!formData.email.trim() || !formData.userType) {
       return;
     }
 
     setIsLoading(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1500));
-    
+
     setIsSubmitted(true);
     setIsLoading(false);
+  };
+
+  const handleInputChange = (field: string, value: string | boolean) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
   };
 
   if (isSubmitted) {
@@ -52,7 +64,7 @@ const CTASection: React.FC = () => {
               to discuss your personalized recovery journey.
             </p>
             
-            <div className="p-8 rounded-2xl bg-white border border-border max-w-2xl mx-auto">
+            <div className="p-8 rounded-2xl bg-card border border-border max-w-2xl mx-auto">
               <h3 className="text-2xl font-light text-foreground mb-4">What happens next?</h3>
               <div className="space-y-4 text-left">
                 <div className="flex items-start space-x-3">
@@ -95,23 +107,13 @@ const CTASection: React.FC = () => {
           transition={{ duration: 0.4, ease: 'easeOut' }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent mb-6 leading-tight pt-2">
+          <h2 className="text-4xl md:text-6xl font-serif font-bold bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent mb-6 leading-normal pt-2">
             Are <strong>You</strong> Ready for Complete Transformation?
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed mb-8">
             Get connected to the Kaleidoscope movement — register and we'll share updates, events and moments that matter
           </p>
           
-          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 mb-12">
-            <Badge variant="secondary" className="bg-secondary/20 text-secondary border-secondary/30 hover:bg-secondary/30">
-              <CheckCircle className="w-4 h-4 mr-2" />
-              Free consultation
-            </Badge>
-            <Badge variant="secondary" className="bg-accent/20 text-accent border-accent/30 hover:bg-accent/30">
-              <CheckCircle className="w-4 h-4 mr-2" />
-              100% confidential
-            </Badge>
-          </div>
         </motion.div>
 
         <motion.div
@@ -121,9 +123,31 @@ const CTASection: React.FC = () => {
           transition={{ duration: 0.4, delay: 0.05, ease: 'easeOut' }}
           className="max-w-2xl mx-auto"
         >
-          <Card className="p-4 sm:p-8 bg-white border border-border shadow-xl">
+          <Card className="p-4 sm:p-8 bg-card border border-border shadow-xl">
             <CardContent className="p-0">
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* User Type Picklist */}
+              <div>
+                <label htmlFor="userType" className="block text-text-primary font-medium mb-2">
+                  I am a: *
+                </label>
+                <select
+                  id="userType"
+                  value={formData.userType}
+                  onChange={(e) => handleInputChange('userType', e.target.value)}
+                  className="w-full px-4 py-3 sm:py-4 bg-form-bg backdrop-blur-sm border-form-border text-form-text rounded-lg h-auto text-base"
+                  required
+                >
+                  <option value="">Select one...</option>
+                  <option value="future-client">Future Client</option>
+                  <option value="friend-family">Friend or Family Member</option>
+                  <option value="investor-partner">Investor or Partner</option>
+                  <option value="treatment-center">Treatment Center</option>
+                  <option value="healer-employee">Healer or Future Employee</option>
+                </select>
+              </div>
+
+              {/* Email Address */}
               <div>
                 <label htmlFor="email" className="block text-text-primary font-medium mb-2">
                   Email Address *
@@ -133,8 +157,8 @@ const CTASection: React.FC = () => {
                   <Input
                     type="email"
                     id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    value={formData.email}
+                    onChange={(e) => handleInputChange('email', e.target.value)}
                     className="w-full pl-12 pr-4 py-3 sm:py-4 bg-form-bg backdrop-blur-sm border-form-border text-form-text placeholder-form-placeholder h-auto text-base"
                     placeholder="Enter email address"
                     required
@@ -142,11 +166,74 @@ const CTASection: React.FC = () => {
                 </div>
               </div>
 
+              {/* State (Optional) */}
+              <div>
+                <label htmlFor="state" className="block text-text-primary font-medium mb-2">
+                  State
+                </label>
+                <Input
+                  type="text"
+                  id="state"
+                  value={formData.state}
+                  onChange={(e) => handleInputChange('state', e.target.value)}
+                  className="w-full px-4 py-3 sm:py-4 bg-form-bg backdrop-blur-sm border-form-border text-form-text placeholder-form-placeholder h-auto text-base"
+                  placeholder="Enter your state"
+                />
+              </div>
+
+              {/* Phone (Optional) */}
+              <div>
+                <label htmlFor="phone" className="block text-text-primary font-medium mb-2">
+                  Phone
+                </label>
+                <div className="relative">
+                  <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-form-placeholder z-10" />
+                  <Input
+                    type="tel"
+                    id="phone"
+                    value={formData.phone}
+                    onChange={(e) => handleInputChange('phone', e.target.value)}
+                    className="w-full pl-12 pr-4 py-3 sm:py-4 bg-form-bg backdrop-blur-sm border-form-border text-form-text placeholder-form-placeholder h-auto text-base"
+                    placeholder="Enter phone number"
+                  />
+                </div>
+              </div>
+
+              {/* Text Messages Opt-in */}
+              <div className="flex items-start space-x-3">
+                <input
+                  type="checkbox"
+                  id="optInTexts"
+                  checked={formData.optInTexts}
+                  onChange={(e) => handleInputChange('optInTexts', e.target.checked)}
+                  className="mt-1 w-4 h-4 text-primary bg-form-bg border-form-border rounded focus:ring-primary"
+                />
+                <label htmlFor="optInTexts" className="text-text-primary text-sm">
+                  I opt in to receive text messages from Kaleidoscope
+                </label>
+              </div>
+
+              {/* Comments (Optional) */}
+              <div>
+                <label htmlFor="comments" className="block text-text-primary font-medium mb-2">
+                  Comments
+                </label>
+                <div className="relative">
+                  <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-form-placeholder z-10" />
+                  <Textarea
+                    id="comments"
+                    value={formData.comments}
+                    onChange={(e) => handleInputChange('comments', e.target.value)}
+                    className="w-full pl-12 pr-4 py-3 bg-form-bg backdrop-blur-sm border-form-border text-form-text placeholder-form-placeholder min-h-[100px] text-base resize-none"
+                    placeholder="Share any comments or questions..."
+                  />
+                </div>
+              </div>
 
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Button
                   type="submit"
-                  disabled={isLoading || !email.trim()}
+                  disabled={isLoading || !formData.email.trim() || !formData.userType}
                   className="w-full bg-primary hover:bg-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg font-medium shadow-lg hover:shadow-xl"
                   size="lg"
                 >
@@ -162,33 +249,13 @@ const CTASection: React.FC = () => {
               </motion.div>
 
               <p className="text-text-secondary text-sm text-center">
-                By submitting this form, you agree to receive communications from Kaleidoscope. 
+                By submitting this form, you agree to receive communications from Kaleidoscope.
                 Your information is completely confidential and will never be shared.
               </p>
             </form>
             </CardContent>
           </Card>
 
-          {/* Alternative Contact Options */}
-          <div className="mt-12 text-center">
-            <p className="text-text-primary text-lg mb-6">
-              Prefer to talk right now?
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
-              <div className="text-center space-y-2">
-                <p className="text-text-primary font-medium">Charlie Fiordalis</p>
-                <div className="space-y-1 text-text-secondary">
-                  <p>(e) <a href="mailto:cfiordalis@gmail.com" className="text-text-primary hover:underline hover:text-secondary">cfiordalis@gmail.com</a></p>
-                  <p>(c) <a href="tel:617-216-3990" className="text-text-primary hover:underline hover:text-secondary">617-216-3990</a></p>
-                  <p><a href="https://www.linkedin.com/in/cfiordalis" target="_blank" rel="noopener noreferrer" className="text-text-primary hover:underline hover:text-secondary break-all">https://www.linkedin.com/in/cfiordalis</a></p>
-                </div>
-              </div>
-              
-              <div className="text-text-secondary">
-                Available 24/7 • Completely confidential
-              </div>
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>

@@ -8,7 +8,7 @@ const VimeoEmbed = () => (
   <div className="aspect-video rounded-2xl overflow-hidden mb-8">
     <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
       <iframe
-        src="https://player.vimeo.com/video/1118398858?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&portrait=0&title=0&sidedock=0&pip=0&volume=0&speed=0&quality=0&fullscreen=0#t=10s"
+        src="https://player.vimeo.com/video/1118398858?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&portrait=0&title=0&sidedock=0&pip=0&volume=0&speed=0&quality=0&fullscreen=0"
         frameBorder="0"
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
@@ -30,7 +30,7 @@ const BookSection: React.FC = () => {
           transition={{ duration: 0.4, ease: 'easeOut' }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-tight pt-2">
+          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-normal pt-2">
             Smashed: Sober (with a twist)
           </h2>
         </motion.div>

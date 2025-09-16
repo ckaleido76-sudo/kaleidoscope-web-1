@@ -10,7 +10,7 @@ const VimeoEmbed = () => (
   <div className="aspect-video rounded-2xl overflow-hidden">
     <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
       <iframe 
-        src="https://player.vimeo.com/video/1118398603?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&portrait=0&title=0#t=15s" 
+        src="https://player.vimeo.com/video/1118398603?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&portrait=0&title=0" 
         frameBorder="0" 
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
         referrerPolicy="strict-origin-when-cross-origin" 
@@ -32,7 +32,7 @@ const TestimonialSection: React.FC = () => {
           transition={{ duration: 0.4, ease: 'easeOut' }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-tight pt-2">
+          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-normal pt-2">
             Testimonial
           </h2>
         </motion.div>
@@ -44,7 +44,7 @@ const TestimonialSection: React.FC = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.35, ease: 'easeOut' }}
           >
-            <Card className="bg-white/80 backdrop-blur-lg border-border/60 shadow-xl">
+            <Card className="bg-card/80 backdrop-blur-lg border-border/60 shadow-xl">
               <CardContent className="p-8">
                 <div className="flex items-start space-x-4">
                   <Quote className="w-8 h-8 text-primary flex-shrink-0 mt-1" />

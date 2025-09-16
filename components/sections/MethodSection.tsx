@@ -45,7 +45,7 @@ const MethodSection: React.FC = () => {
       id: 3,
       title: 'Integration',
       subtitle: 'Establishing your personal ForeverCare™ plan on the path to emotional mastery',
-      description: '',
+      description: 'Healing doesn\'t end when you leave our doors—it begins there. ForeverCare™ is our lifetime commitment to each client: personalized support, real-time digital tools, and a community that never lets go.',
       benefits: [
         'Hyper-personalized support, coaching, Telehealth services, community',
         'theTwist™ (app) is the "Mood Ring that *Changes Your Mood*" fusing art, technology and healing',
@@ -64,7 +64,7 @@ const MethodSection: React.FC = () => {
           transition={{ duration: 0.4, ease: 'easeOut' }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-tight pt-2">
+          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-normal pt-2">
             The Kaleidoscope Method
           </h2>
           <p className="text-2xl text-text-primary font-light mb-6">

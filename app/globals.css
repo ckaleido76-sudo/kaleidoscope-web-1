@@ -18,11 +18,11 @@
   --secondary-foreground: 254 95% 20%;
 
   /* Neutral UI palette (light mode) */
-  --background: 0 0% 100%;
+  --background: 254 95% 98%; /* 90% opacity #5B2CFA background */
   --foreground: 222.2 47.4% 11.2%;
-  --card: 0 0% 100%;
+  --card: 254 95% 98%; /* 90% opacity #5B2CFA background */
   --card-foreground: 222.2 47.4% 11.2%;
-  --popover: 0 0% 100%;
+  --popover: 254 95% 98%; /* 90% opacity #5B2CFA background */
   --popover-foreground: 222.2 47.4% 11.2%;
   --muted: 210 40% 96%;
   --muted-foreground: 215 16% 40%;
@@ -42,8 +42,8 @@
   --color-tertiary-2: #9823DE;
   --color-tertiary-3: #FF7024;
 
-  --color-background: #ffffff; /* Light background for content readability */
-  --color-surface: #f8fafc; /* Light surface */
+  --color-background: rgba(91, 44, 250, 0.1); /* 90% opacity #5B2CFA background */
+  --color-surface: rgba(91, 44, 250, 0.05); /* Light tinted surface */
 
   --color-text-primary: #0b1020;
   --color-text-secondary: #475569;
@@ -51,11 +51,11 @@
   --color-header-from: #6B46C1;
   --color-header-to: #5B2CFA;
 
-  --color-card-from: #ffffff;
-  --color-card-to: #fff7ed;
+  --color-card-from: rgba(91, 44, 250, 0.08);
+  --color-card-to: rgba(91, 44, 250, 0.12);
   --color-card-border: #FFBC44;
 
-  --color-form-bg: rgba(255, 255, 255, 0.65);
+  --color-form-bg: rgba(91, 44, 250, 0.15);
   --color-form-border: rgba(255, 188, 68, 0.3);
   --color-form-text: #0b1020;
   --color-form-placeholder: rgba(71, 85, 105, 0.8);
@@ -93,7 +93,7 @@
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 { font-weight: 300; line-height: 1.25; color: var(--color-text-primary); }
+h1, h2, h3, h4, h5, h6 { font-weight: 300; line-height: 1.4; color: var(--color-text-primary); }
 
 .hero-title {
   font-family: 'Heveria', var(--font-inter), system-ui, sans-serif;
