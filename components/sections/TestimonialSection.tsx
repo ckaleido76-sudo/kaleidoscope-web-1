@@ -10,7 +10,7 @@ const VimeoEmbed = () => (
   <div className="aspect-video rounded-2xl overflow-hidden">
     <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
       <iframe 
-        src="https://player.vimeo.com/video/1118398603?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&portrait=0&title=0" 
+        src="https://player.vimeo.com/video/1118398603?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&portrait=0&title=0#t=2s" 
         frameBorder="0" 
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
         referrerPolicy="strict-origin-when-cross-origin" 
@@ -54,10 +54,7 @@ const TestimonialSection: React.FC = () => {
                     </blockquote>
                     <div className="flex items-center space-x-3">
                       <div>
-                        <p className="font-semibold text-foreground">Bill</p>
-                        <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
-                          2 Years Sober
-                        </Badge>
+                        <p className="font-semibold text-foreground">~ Bill</p>
                       </div>
                     </div>
                   </div>

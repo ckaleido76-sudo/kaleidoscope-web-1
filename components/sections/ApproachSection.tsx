@@ -32,10 +32,6 @@ const ApproachSection: React.FC = () => {
             </p>
           </div>
           
-          <div className="mt-12 text-sm text-text-secondary space-y-2 text-right italic">
-            <p>1. Understanding Alcohol's Adverse Impact on Health (NIH, 2025)</p>
-            <p>2. AA critiques (Dodes, 2006)</p>
-          </div>
         </motion.div>
       </div>
     </section>

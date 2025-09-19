@@ -41,7 +41,7 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
     let width: number, height: number;
     let centerX: number, centerY: number;
     let time = 0;
-    let mouseX = 0, mouseY = 0;
+    // Removed mouse tracking - keep animation centered
     let active = false;
 
     const resize = () => {
@@ -57,16 +57,7 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
     resize();
     window.addEventListener('resize', resize);
     
-    let mouseUpdateThrottle = 0;
-    const handleMouseMove = (e: MouseEvent) => {
-      if (Date.now() - mouseUpdateThrottle < 16) return; // ~60fps throttle
-      mouseUpdateThrottle = Date.now();
-      const rect = canvas.getBoundingClientRect();
-      mouseX = (e.clientX - rect.left - centerX) / width;
-      mouseY = (e.clientY - rect.top - centerY) / height;
-    };
-    
-    document.addEventListener('mousemove', handleMouseMove);
+    // Mouse tracking removed - animation stays centered
     
     // Color system
     const getKaleidoscopeColor = (phase: number, layer = 0): string => {
@@ -155,7 +146,7 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
     
     const drawKaleidoscope = () => {
       ctx.save();
-      ctx.translate(centerX + mouseX * 30, centerY + mouseY * 30);
+      ctx.translate(centerX, centerY);
       ctx.rotate(time * 0.1);
       for (let i = 0; i < segments; i++) {
         ctx.save();
@@ -222,7 +213,7 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
 
     return () => {
       window.removeEventListener('resize', resize);
-      document.removeEventListener('mousemove', handleMouseMove);
+      // Mouse event listener removed
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
   }, [complexity, initialComplexity, initialSegments, initialSpeed, segments, speed]);

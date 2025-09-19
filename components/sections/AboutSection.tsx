@@ -7,7 +7,7 @@ const VimeoEmbed = () => (
   <div className="aspect-video rounded-xl overflow-hidden">
     <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
       <iframe 
-        src="https://player.vimeo.com/video/1118398541?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&portrait=0&title=0" 
+        src="https://player.vimeo.com/video/1118398541?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&portrait=0&title=0#t=2s" 
         frameBorder="0" 
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
         referrerPolicy="strict-origin-when-cross-origin" 
@@ -71,7 +71,7 @@ const AboutSection: React.FC = () => {
                 >
                   <div className="flex items-start">
                     <div className="w-3 h-3 bg-primary rounded-full mr-4 mt-2 flex-shrink-0" />
-                    <span>Relapse is <strong>not</strong> part of recovery: the system is what's failing, not you.</span>
+                    <span>Relapse is <strong>not</strong> part of recovery: the system is failing, not you.</span>
                   </div>
                 </motion.div>
                 <motion.div 
@@ -89,7 +89,7 @@ const AboutSection: React.FC = () => {
               </div>
               
               <p className="mt-6">
-                At Kaleidoscope, liberate you from the so-called "standard of care", addressing your issues at their core. We don't treat symptoms — we eliminate pain at the source and permanently support each soul's unique healing journey.
+                At Kaleidoscope, we liberate you from the so-called "standard of care", addressing your issues at their core. We don't treat symptoms — we eliminate pain at the source and permanently support each soul's unique healing journey.
               </p>
 
               <p>
