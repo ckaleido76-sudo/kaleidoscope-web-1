@@ -25,12 +25,15 @@ const CTASection: React.FC = () => {
     e.preventDefault();
 
     if (!formData.email.trim() || !formData.userType) {
+      console.log('[FORM] Validation failed');
       return;
     }
 
+    console.log('[FORM] Submitting form data:', formData);
     setIsLoading(true);
 
     try {
+      console.log('[FORM] Sending POST to /api/subscribe');
       const response = await fetch('/api/subscribe', {
         method: 'POST',
         headers: {
@@ -39,13 +42,21 @@ const CTASection: React.FC = () => {
         body: JSON.stringify(formData),
       });
 
+      console.log('[FORM] Response status:', response.status);
+      console.log('[FORM] Response OK:', response.ok);
+
+      const responseData = await response.json();
+      console.log('[FORM] Response data:', responseData);
+
       if (!response.ok) {
-        throw new Error('Subscription failed');
+        console.error('[FORM] Subscription failed:', responseData);
+        throw new Error(responseData.error || 'Subscription failed');
       }
 
+      console.log('[FORM] Success! Setting submitted state');
       setIsSubmitted(true);
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('[FORM] Error submitting form:', error);
       alert('There was an error submitting your information. Please try again.');
     } finally {
       setIsLoading(false);
