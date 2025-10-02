@@ -22,7 +22,7 @@ This website showcases Kaleidoscope Recovery's radical approach to alcohol recov
 - **Method Section**: Interactive 3-phase system explanation
 - **Testimonials**: Video placeholder with success metrics
 - **Book Section**: "Smashed" book promotion with 3D effects
-- **CTA Section**: Email capture with success animations
+- **CTA Section**: Newsletter signup with MailerLite integration
 - **Footer**: Comprehensive links and crisis support resources
 
 ### Technical Features
@@ -40,6 +40,7 @@ This website showcases Kaleidoscope Recovery's radical approach to alcohol recov
 - **Typography**: Epilogue font from Google Fonts
 - **Animations**: Framer Motion + Custom CSS animations
 - **Icons**: Lucide React
+- **Email Marketing**: MailerLite API integration
 - **Performance**: Built-in Next.js optimizations
 - **Deployment**: Vercel with edge functions
 
@@ -63,14 +64,26 @@ This website showcases Kaleidoscope Recovery's radical approach to alcohol recov
    npm install
    ```
 
-3. **Start development server**
+3. **Configure environment variables**
+
+   Create a `.env.local` file in the project root:
+   ```bash
+   MAILERLITE_API_KEY=your_api_key_here
+   MAILERLITE_GROUP_ID=your_group_id_here
+   ```
+
+   To get your MailerLite credentials:
+   - **API Key**: Go to [MailerLite Dashboard](https://dashboard.mailerlite.com) → Settings → Developer API
+   - **Group ID**: Go to Subscribers → Groups → Select your group
+
+4. **Start development server**
    ```bash
    npm run dev
    ```
 
-4. **Open in browser**
+5. **Open in browser**
    ```
-   http://localhost:3000
+   http://localhost:3004
    ```
 
 ## 📱 Development Commands
@@ -109,24 +122,49 @@ npm run typecheck    # Run TypeScript type checking
 
 ### Vercel Deployment (Recommended)
 
-The project is currently deployed at: **https://url1234.com**
+The project is currently deployed at: **https://kaleidoscope.life**
 
-1. **Connect to Vercel**
+1. **Configure Environment Variables in Vercel**
+
+   Go to your Vercel project → Settings → Environment Variables and add:
+   - `MAILERLITE_API_KEY` - Your MailerLite API key
+   - `MAILERLITE_GROUP_ID` - Your MailerLite group ID
+
+   Make sure to add these for all environments (Production, Preview, Development).
+
+2. **Connect to Vercel**
    ```bash
    # Install Vercel CLI
    npm i -g vercel
-   
+
    # Link to existing project
-   vercel link --project url1234-com
-   
+   vercel link
+
    # Deploy
    vercel --prod
    ```
 
-2. **GitHub Integration**
-   - Connected to GitHub repository: `devenspear/Kaleidoscope`
+3. **GitHub Integration**
+   - Connected to GitHub repository: `ckaleido76-sudo/kaleidoscope-web-1`
    - Auto-deployment on push to main branch
    - Branch previews for pull requests
+
+### MailerLite Setup
+
+Before deploying, ensure you've created the following custom fields in MailerLite:
+- `user_type` (TEXT)
+- `comments` (TEXT)
+- `opt_in_texts` (TEXT)
+- `state` (TEXT) - should already exist
+- `phone` (TEXT) - should already exist
+
+The signup form captures:
+- Email (required)
+- User Type: Future Client, Friend/Family, Investor/Partner, Treatment Center, or Healer/Employee
+- State (optional)
+- Phone (optional)
+- Comments (optional)
+- SMS Opt-in (optional)
 
 ## 🔒 Security & Performance Features
 
@@ -148,6 +186,13 @@ The project is currently deployed at: **https://url1234.com**
 
 ## 🐛 Recent Fixes & Updates
 
+### MailerLite Integration (October 2025)
+- ✅ Integrated MailerLite API for newsletter subscriptions
+- ✅ Created API route `/api/subscribe` for form submissions
+- ✅ Updated main page to display full content directly (removed splash page)
+- ✅ Configured custom fields: user_type, comments, opt_in_texts, state, phone
+- ✅ Added environment variable configuration for API credentials
+
 ### Mobile UX Improvements
 - ✅ Fixed hero animation control panel visibility on mobile
 - ✅ Control panel now starts minimized and hides when scrolling
@@ -161,9 +206,9 @@ The project is currently deployed at: **https://url1234.com**
 
 ## 🔗 Links
 
-- **Live Site**: https://url1234.com
-- **GitHub Repository**: https://github.com/devenspear/Kaleidoscope
-- **Vercel Dashboard**: https://vercel.com/deven-projects/url1234-com
+- **Live Site**: https://kaleidoscope.life
+- **GitHub Repository**: https://github.com/ckaleido76-sudo/kaleidoscope-web-1
+- **Development Repository**: https://github.com/devenspear/Kaleidoscope
 
 ## 📞 Support
 
