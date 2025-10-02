@@ -13,12 +13,12 @@ export default function Home() {
     <div className="overflow-x-hidden">
       {/* Hero Section - 16:9 Aspect Ratio */}
       <section id="hero" className="w-full aspect-video relative">
-        <KaleidoscopeHero 
+        <KaleidoscopeHero
           title="kaleidoscope"
           subtitle="Kaleidoscope completely transforms the lives of people who struggle with alcohol, and the people who love them."
         />
       </section>
-      
+
       {/* Main Content Sections */}
       <main id="main-content" role="main" className="w-full">
         <AboutSection />
@@ -29,7 +29,7 @@ export default function Home() {
         <CTASection />
         <BookSection />
       </main>
-      
+
       <Footer />
     </div>
   );
