@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
-  console.log('[API] Subscribe endpoint called');
+  console.log('[API] Subscribe endpoint called - version 2.0');
 
   try {
     const body = await request.json();
