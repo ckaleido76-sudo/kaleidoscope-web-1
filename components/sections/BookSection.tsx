@@ -21,7 +21,7 @@ const VimeoEmbed = () => (
 
 const BookSection: React.FC = () => {
   return (
-    <section id="book" className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-background">
+    <section id="book" className="scroll-mt-24 py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -30,7 +30,7 @@ const BookSection: React.FC = () => {
           transition={{ duration: 0.4, ease: 'easeOut' }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-normal pt-2">
+          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-tight md:leading-loose md:pt-2 md:pb-2">
             Smashed: Sober (with a twist)
           </h2>
         </motion.div>
@@ -50,8 +50,8 @@ const BookSection: React.FC = () => {
 
           <div className="flex justify-center">
             <motion.a
-              href="/smashed-book.pdf"
-              download="Smashed - Sober with a twist.pdf"
+              href="/Noel_Rihm_Smashed_Sober_with_a_twist.pdf"
+              download="Noel_Rihm_Smashed_Sober_with_a_twist.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex bg-primary hover:bg-primary/90 text-white px-12 py-4 rounded-full text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-primary/25 items-center space-x-3"

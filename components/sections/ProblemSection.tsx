@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const ProblemSection: React.FC = () => {
 
   return (
-    <section id="problem" className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface">
+    <section id="problem" className="scroll-mt-24 py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -15,7 +15,7 @@ const ProblemSection: React.FC = () => {
           transition={{ duration: 0.4, ease: 'easeOut' }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-relaxed py-4">
+          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-tight md:leading-loose md:pt-2 md:pb-2">
             Traditional Alcohol Rehab Fails Nearly Everyone
           </h2>
           <h3 className="text-2xl md:text-3xl font-serif font-bold text-text-primary max-w-3xl mx-auto leading-relaxed">
@@ -81,7 +81,7 @@ const ProblemSection: React.FC = () => {
           transition={{ duration: 0.4, ease: 'easeOut' }}
           className="text-center p-8 rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20"
         >
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed mb-6">
+          <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed mb-4">
             The treatment industry is an endless cycle of catch and release. It admits patients who aren't ready, failing to facilitate actual healing and releases them into their old environment with inadequate support.
           </p>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed font-semibold">
@@ -95,7 +95,7 @@ const ProblemSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.3, delay: 0.1, ease: 'easeOut' }}
-          className="mt-8 text-right max-w-3xl mx-auto space-y-2"
+          className="mt-8 text-right space-y-2"
         >
           <p className="text-sm text-text-secondary">1. Understanding Alcohol's Adverse Impact on Health (NIH, 2025)</p>
           <p className="text-sm text-text-secondary">2. AA critiques (Dodes, 2006)</p>

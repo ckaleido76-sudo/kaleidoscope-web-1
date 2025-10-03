@@ -7,7 +7,7 @@ const VimeoEmbed = () => (
   <div className="aspect-video rounded-xl overflow-hidden">
     <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
       <iframe 
-        src="https://player.vimeo.com/video/1118398541?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&portrait=0&title=0#t=2s" 
+        src="https://player.vimeo.com/video/1118398541?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&portrait=0&title=0" 
         frameBorder="0" 
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
         referrerPolicy="strict-origin-when-cross-origin" 
@@ -21,7 +21,7 @@ const VimeoEmbed = () => (
 const AboutSection: React.FC = () => {
 
   return (
-    <section id="about" className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-background">
+    <section id="about" className="scroll-mt-24 py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-6xl mx-auto">
         {/* Centered Header */}
         <motion.div
@@ -31,7 +31,7 @@ const AboutSection: React.FC = () => {
           transition={{ duration: 0.4, ease: 'easeOut' }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-normal py-4">
+          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-tight md:leading-loose md:pt-4 md:pb-4">
             What is Kaleidoscope?
           </h2>
         </motion.div>
