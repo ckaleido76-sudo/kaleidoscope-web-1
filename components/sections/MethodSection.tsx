@@ -68,7 +68,7 @@ const MethodSection: React.FC = () => {
             The Kaleidoscope Method
           </h2>
           <p className="text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed">
-            Kaleidoscope only works with people who are ready, facilitates sustained healing, and provides support to help you maintain your bliss. We don't look away from the trauma science that should be reshaping the entire mental health spectrum; we're hosting an outcomes-based, human-first, trauma-informed revolution. Kaleidoscope provides a three-phase experience for the suffering soul and their family:
+            At Kaleidoscope three things set us apart: We only work with those who are ready. We facilitate real healing. We never let go.
           </p>
         </motion.div>
 
