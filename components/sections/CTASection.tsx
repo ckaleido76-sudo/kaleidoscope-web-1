@@ -150,7 +150,7 @@ const CTASection: React.FC = () => {
           transition={{ duration: 0.4, ease: 'easeOut' }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent mb-6 leading-normal pt-2">
+          <h2 className="text-4xl md:text-6xl font-serif font-bold bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent mb-6 leading-[1.1] tracking-tight">
             Are <strong>You</strong> Ready for Complete Transformation?
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed mb-8">
@@ -178,7 +178,7 @@ const CTASection: React.FC = () => {
                   id="userType"
                   value={formData.userType}
                   onChange={(e) => handleInputChange('userType', e.target.value)}
-                  className="w-full px-4 py-3 sm:py-4 bg-form-bg backdrop-blur-sm border-form-border text-form-text rounded-lg h-auto text-base"
+                  className="w-full px-4 py-3 sm:py-4 bg-form-bg backdrop-blur-sm border-form-border text-form-text rounded-lg min-h-[52px] sm:min-h-[60px] text-base"
                   required
                 >
                   <option value="">Select one...</option>

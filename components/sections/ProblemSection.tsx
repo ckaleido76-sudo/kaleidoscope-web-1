@@ -15,8 +15,8 @@ const ProblemSection: React.FC = () => {
           transition={{ duration: 0.4, ease: 'easeOut' }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-tight md:leading-loose md:pt-2 md:pb-2">
-            Traditional Alcohol Rehab Fails Nearly Everyone
+          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-[1.1] tracking-tight">
+            Traditional Alcohol Rehab Fails<br />Nearly Everyone
           </h2>
           <h3 className="text-2xl md:text-3xl font-serif font-bold text-text-primary max-w-3xl mx-auto leading-relaxed">
             The statistics are staggering:
