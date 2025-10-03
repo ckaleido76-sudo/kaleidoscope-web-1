@@ -55,9 +55,14 @@ This website showcases Kaleidoscope Recovery's radical approach to alcohol recov
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/devenspear/Kaleidoscope.git
-   cd Kaleidoscope1.0
+   git clone https://github.com/ckaleido76-sudo/kaleidoscope-web-1.git
+   cd Kaleidoscope1.2
    ```
+
+   **⚠️ IMPORTANT**: Always use the `Kaleidoscope1.2` directory for development.
+   - This is the primary development environment
+   - Connected to GitHub repository: `ckaleido76-sudo/kaleidoscope-web-1`
+   - Auto-deploys to Vercel on push to main branch
 
 2. **Install dependencies**
    ```bash
@@ -83,8 +88,10 @@ This website showcases Kaleidoscope Recovery's radical approach to alcohol recov
 
 5. **Open in browser**
    ```
-   http://localhost:3004
+   http://localhost:3005
    ```
+
+   Note: Port may vary if 3005 is in use. Check terminal output for actual port.
 
 ## 📱 Development Commands
 
@@ -186,12 +193,20 @@ The signup form captures:
 
 ## 🐛 Recent Fixes & Updates
 
+### Content & Typography Updates (October 2025)
+- ✅ Updated Method section with concise tagline: "At Kaleidoscope three things set us apart: We only work with those who are ready. We facilitate real healing. We never let go."
+- ✅ Fixed header typography descender clipping with `leading-[1.1]` and `tracking-tight`
+- ✅ Standardized form field heights using `min-h-[52px] sm:min-h-[60px]`
+- ✅ Added animated success message with sequential affirmations
+- ✅ Consolidated all formatting improvements (py-20 padding, video timestamps, trademarks)
+
 ### MailerLite Integration (October 2025)
 - ✅ Integrated MailerLite API for newsletter subscriptions
 - ✅ Created API route `/api/subscribe` for form submissions
 - ✅ Updated main page to display full content directly (removed splash page)
 - ✅ Configured custom fields: user_type, comments, opt_in_texts, state, phone
 - ✅ Added environment variable configuration for API credentials
+- ✅ Restored state dropdown with all 50 US states + DC
 
 ### Mobile UX Improvements
 - ✅ Fixed hero animation control panel visibility on mobile
@@ -208,7 +223,16 @@ The signup form captures:
 
 - **Live Site**: https://kaleidoscope.life
 - **GitHub Repository**: https://github.com/ckaleido76-sudo/kaleidoscope-web-1
-- **Development Repository**: https://github.com/devenspear/Kaleidoscope
+- **Local Development Path**: `/Users/devenspear/VibeCodingProjects/Kaleidoscope1.2`
+
+## 📝 Project Structure
+
+**⚠️ CRITICAL**: This project (`Kaleidoscope1.2`) is the ONLY active development version.
+
+- **Active Project**: `Kaleidoscope1.2` (this directory)
+- **GitHub Remote**: `ckaleido76-sudo/kaleidoscope-web-1`
+- **Live Deployment**: `https://kaleidoscope.life` (Vercel)
+- **Legacy Project**: `Kaleidoscope1.0` (deprecated - do not use)
 
 ## 📞 Support
 
