@@ -42,10 +42,13 @@ export async function POST(request: NextRequest) {
       payload.fields = customFields;
     }
 
-    // Add group if provided (must be a valid group ID from MailerLite)
-    if (process.env.MAILERLITE_GROUP_ID) {
-      payload.groups = [process.env.MAILERLITE_GROUP_ID];
-    }
+    // Note: Groups are optional. If you want to add subscribers to a group,
+    // get the correct group ID from MailerLite dashboard: Subscribers → Groups → Click group → Check URL
+    // The group ID should be a string of numbers like "123456789"
+    // For now, we'll skip groups to avoid the "invalid group" error
+    // if (process.env.MAILERLITE_GROUP_ID) {
+    //   payload.groups = [process.env.MAILERLITE_GROUP_ID];
+    // }
 
     console.log('Sending to MailerLite:', JSON.stringify(payload, null, 2));
 
