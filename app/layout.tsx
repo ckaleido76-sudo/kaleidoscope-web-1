@@ -55,11 +55,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kaleidoscope Recovery - A Radical Recovery Solution",
     description: "Break free from drinking and heal the pain beneath it. 85% success rate with our trauma-informed 3-phase method.",
-    url: "https://kaleidoscope-recovery.com",
+    url: "https://kaleidoscope.life",
     siteName: "Kaleidoscope Recovery",
     images: [
       {
-        url: "/og-image.svg", // Using SVG for placeholder
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Kaleidoscope Recovery - Transforming lives through radical recovery",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kaleidoscope Recovery - A Radical Recovery Solution",
     description: "Break free from drinking and heal the pain beneath it. 85% success rate with our trauma-informed approach.",
-    images: ["/og-image.svg"], // Using SVG for placeholder
+    images: ["/og-image.png"],
   },
 };
 
@@ -87,7 +87,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#FFFFFF" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body className={`${epilogue.variable} ${inter.variable} ${playfair.variable} antialiased font-sans`}>
