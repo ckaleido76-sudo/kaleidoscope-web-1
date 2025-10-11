@@ -71,35 +71,46 @@ const CTASection: React.FC = () => {
             <div className="inline-flex items-center justify-center w-24 h-24 bg-green-500 rounded-full mb-8">
               <CheckCircle className="w-12 h-12 text-white" />
             </div>
-            
+
             <h2 className="text-4xl md:text-6xl font-light bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent mb-6">
-              You're One Step Closer
+              Thank You. Your Healing Journey Just Began. Can you feel the shift?
             </h2>
-            
-            <p className="text-xl text-foreground/80 mb-8 max-w-2xl mx-auto">
-              Thank you for taking this important step. A member of our care team will reach out within 24 hours 
-              to discuss your personalized recovery journey.
-            </p>
-            
-            <div className="p-8 rounded-2xl bg-card border border-border max-w-2xl mx-auto">
-              <h3 className="text-2xl font-light text-foreground mb-4">What happens next?</h3>
-              <div className="space-y-4 text-left">
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-foreground/80">Confidential consultation call (30 minutes)</span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-foreground/80">Personalized assessment and treatment plan</span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-foreground/80">Insurance verification and financial options</span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-foreground/80">Immediate support resources</span>
-                </div>
+
+            <div className="text-xl text-foreground/80 mb-8 max-w-2xl mx-auto space-y-6 text-left">
+              <p>
+                You've taken the first step toward something extraordinary. At Kaleidoscope, we believe transformation isn't about willpower or white-knuckled sobriety - it's about relief, connection, and finally living free of the pain that alcohol tries to cover.
+              </p>
+
+              <p>
+                Whether you're here for yourself, someone you love, or because you believe in our mission, you now belong to a movement that is rewriting what recovery means. Keep an eye on your inbox - we'll be sending you the next step soon.
+              </p>
+
+              <p className="font-medium">
+                For now, pause and take this in:
+              </p>
+
+              <div className="font-semibold text-2xl text-center space-y-2">
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                >
+                  You are not broken.
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 1.2 }}
+                >
+                  You are not powerless.
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 1.6 }}
+                >
+                  You are not alone.
+                </motion.p>
               </div>
             </div>
           </motion.div>

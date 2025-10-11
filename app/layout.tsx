@@ -30,12 +30,12 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Kaleidoscope Recovery - A Radical Recovery Solution",
-  description: "Break free from drinking and heal the pain beneath it. Our 3-phase trauma-informed approach achieves 85% success rates with lifetime ForeverCare™ support.",
-  keywords: "alcohol recovery, addiction treatment, trauma therapy, rehab alternative, sobriety support",
-  authors: [{ name: "Kaleidoscope Recovery Team" }],
-  creator: "Kaleidoscope Recovery",
-  publisher: "Kaleidoscope Recovery",
+  title: "Kaleidoscope - Are You Ready?",
+  description: "Kaleidoscope is a radical approach for people who are truly ready to be free of their drinking problem, and the pain and trauma behind it.",
+  keywords: "alcohol recovery, addiction treatment, trauma therapy, alternative rehab, sobriety",
+  authors: [{ name: "Kaleidoscope Ventures, LLC" }],
+  creator: "Kaleidoscope Ventures, LLC",
+  publisher: "Kaleidoscope Ventures, LLC",
   formatDetection: {
     email: false,
     address: false,
@@ -53,16 +53,16 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Kaleidoscope Recovery - A Radical Recovery Solution",
-    description: "Break free from drinking and heal the pain beneath it. 85% success rate with our trauma-informed 3-phase method.",
+    title: "Kaleidoscope - Are You Ready",
+    description: "Kaleidoscope is a radical approach for people who are truly ready to be free of their drinking problem, and the pain and trauma behind it.",
     url: "https://kaleidoscope.life",
-    siteName: "Kaleidoscope Recovery",
+    siteName: "Kaleidoscope Ventures, LLC",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Kaleidoscope Recovery - Transforming lives through radical recovery",
+        alt: "Kaleidoscope - Are You Ready",
       },
     ],
     locale: "en_US",
@@ -70,8 +70,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kaleidoscope Recovery - A Radical Recovery Solution",
-    description: "Break free from drinking and heal the pain beneath it. 85% success rate with our trauma-informed approach.",
+    title: "Kaleidoscope - Are You Ready",
+    description: "Kaleidoscope is a radical approach for people who are truly ready to be free of their drinking problem, and the pain and trauma behind it.",
     images: ["/og-image.png"],
   },
 };
