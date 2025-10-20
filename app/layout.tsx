@@ -30,9 +30,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Kaleidoscope - Are You Ready?",
+  title: "Kaleidoscope. Are You Ready?",
   description: "Kaleidoscope is a radical approach for people who are truly ready to be free of their drinking problem, and the pain and trauma behind it.",
-  keywords: "alcohol recovery, addiction treatment, trauma therapy, alternative rehab, sobriety",
+  keywords: "addiction treatment, trauma therapy, alternative rehab, sobriety, mental health",
   authors: [{ name: "Kaleidoscope Ventures, LLC" }],
   creator: "Kaleidoscope Ventures, LLC",
   publisher: "Kaleidoscope Ventures, LLC",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Kaleidoscope - Are You Ready",
+    title: "Kaleidoscope. Are You Ready?",
     description: "Kaleidoscope is a radical approach for people who are truly ready to be free of their drinking problem, and the pain and trauma behind it.",
     url: "https://kaleidoscope.life",
     siteName: "Kaleidoscope Ventures, LLC",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Kaleidoscope - Are You Ready",
+        alt: "Kaleidoscope. Are You Ready?",
       },
     ],
     locale: "en_US",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kaleidoscope - Are You Ready",
+    title: "Kaleidoscope. Are You Ready?",
     description: "Kaleidoscope is a radical approach for people who are truly ready to be free of their drinking problem, and the pain and trauma behind it.",
     images: ["/og-image.png"],
   },

@@ -12,10 +12,10 @@ const Footer: React.FC = () => {
           <div className="flex items-center space-x-3">
             <Mail className="w-5 h-5 text-primary flex-shrink-0" />
             <a
-              href="mailto:connect@thetwist.ai"
+              href="mailto:connect@kaleidoscope.life"
               className="text-text-primary hover:text-primary transition-colors text-lg"
             >
-              connect@thetwist.ai
+              connect@kaleidoscope.life
             </a>
           </div>
 
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
 
           {/* Copyright */}
           <div className="text-sm text-text-secondary">
-            <p>© 2025 Kaleidoscope, LLC. All rights reserved.</p>
+            <p>© 2025 Kaleidoscope Ventures, LLC. All rights reserved.</p>
           </div>
         </div>
       </div>
