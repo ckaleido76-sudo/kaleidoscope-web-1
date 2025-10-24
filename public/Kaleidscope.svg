@@ -4,99 +4,99 @@
   <defs>
     <style>
       .st0 {
-        fill: #8a3ce0;
+        fill: #5B2CFA;
       }
 
       .st1 {
-        fill: #8d0ae6;
+        fill: #5B2CFA;
       }
 
       .st2 {
-        fill: #8c07e0;
+        fill: #5B2CFA;
       }
 
       .st3 {
-        fill: #8e27f9;
+        fill: #5B2CFA;
       }
 
       .st4 {
-        fill: #8104e0;
+        fill: #5B2CFA;
       }
 
       .st5 {
-        fill: #8b17e0;
+        fill: #5B2CFA;
       }
 
       .st6 {
-        fill: #8a3de0;
+        fill: #5B2CFA;
       }
 
       .st7 {
-        fill: #8403e0;
+        fill: #5B2CFA;
       }
 
       .st8 {
-        fill: #8d09e6;
+        fill: #5B2CFA;
       }
 
       .st9 {
-        fill: #6b1dec;
+        fill: #5B2CFA;
       }
 
       .st10 {
-        fill: #630ee1;
+        fill: #5B2CFA;
       }
 
       .st11 {
-        fill: #8a4ae0;
+        fill: #5B2CFA;
       }
 
       .st12 {
-        fill: #8960e0;
+        fill: #5B2CFA;
       }
 
       .st13 {
-        fill: #8c01e0;
+        fill: #5B2CFA;
       }
 
       .st14 {
-        fill: #8d18ef;
+        fill: #5B2CFA;
       }
 
       .st15 {
-        fill: #7009e1;
+        fill: #5B2CFA;
       }
 
       .st16 {
-        fill: #8967e0;
+        fill: #5B2CFA;
       }
 
       .st17 {
-        fill: #8b1fe0;
+        fill: #5B2CFA;
       }
 
       .st18 {
-        fill: #8a3ee0;
+        fill: #5B2CFA;
       }
 
       .st19 {
-        fill: #8b27e0;
+        fill: #5B2CFA;
       }
 
       .st20 {
-        fill: #862bfa;
+        fill: #5B2CFA;
       }
 
       .st21 {
-        fill: #8b19e0;
+        fill: #5B2CFA;
       }
 
       .st22 {
-        fill: #7c26f5;
+        fill: #5B2CFA;
       }
 
       .st23 {
-        fill: #8b29e0;
+        fill: #5B2CFA;
       }
 
       .st24 {
@@ -153,339 +153,339 @@
       }
 
       .st37 {
-        fill: #8e23f7;
+        fill: #5B2CFA;
       }
 
       .st38 {
-        fill: #8b1be0;
+        fill: #5B2CFA;
       }
 
       .st39 {
-        fill: #8c4cf0;
+        fill: #5B2CFA;
       }
 
       .st40 {
-        fill: #8c05e0;
+        fill: #5B2CFA;
       }
 
       .st41 {
-        fill: #8e22f6;
+        fill: #5B2CFA;
       }
 
       .st42 {
-        fill: #7220ef;
+        fill: #5B2CFA;
       }
 
       .st43 {
-        fill: #8f2efe;
+        fill: #5B2CFA;
       }
 
       .st44 {
-        fill: #8e24f7;
+        fill: #5B2CFA;
       }
 
       .st45 {
-        fill: #8a5ce7;
+        fill: #5B2CFA;
       }
 
       .st46 {
-        fill: #895be0;
+        fill: #5B2CFA;
       }
 
       .st47 {
-        fill: #8a46e0;
+        fill: #5B2CFA;
       }
 
       .st48 {
-        fill: #7906e0;
+        fill: #5B2CFA;
       }
 
       .st49 {
-        fill: #8b26e0;
+        fill: #5B2CFA;
       }
 
       .st50 {
-        fill: #5e16e5;
+        fill: #5B2CFA;
       }
 
       .st51 {
-        fill: #8b24e0;
+        fill: #5B2CFA;
       }
 
       .st52 {
-        fill: #8d42f5;
+        fill: #5B2CFA;
       }
 
       .st53 {
-        fill: #895ae0;
+        fill: #5B2CFA;
       }
 
       .st54 {
-        fill: #5811e1;
+        fill: #5B2CFA;
       }
 
       .st55 {
-        fill: #8e1ef4;
+        fill: #5B2CFA;
       }
 
       .st56 {
-        fill: #8b1ae0;
+        fill: #5B2CFA;
       }
 
       .st57 {
-        fill: #8a60e4;
+        fill: #5B2CFA;
       }
 
       .st58 {
-        fill: #6c0be1;
+        fill: #5B2CFA;
       }
 
       .st59 {
-        fill: #8e3df8;
+        fill: #5B2CFA;
       }
 
       .st60 {
-        fill: #8a3ae0;
+        fill: #5B2CFA;
       }
 
       .st61 {
-        fill: #8b34e0;
+        fill: #5B2CFA;
       }
 
       .st62 {
-        fill: #7925f4;
+        fill: #5B2CFA;
       }
 
       .st63 {
-        fill: #8c10e0;
+        fill: #5B2CFA;
       }
 
       .st64 {
-        fill: #8901e0;
+        fill: #5B2CFA;
       }
 
       .st65 {
-        fill: #8c4af1;
+        fill: #5B2CFA;
       }
 
       .st66 {
-        fill: #8f31fe;
+        fill: #5B2CFA;
       }
 
       .st67 {
-        fill: #8a5fe5;
+        fill: #5B2CFA;
       }
 
       .st68 {
-        fill: #5a14e3;
+        fill: #5B2CFA;
       }
 
       .st69 {
-        fill: #8957e0;
+        fill: #5B2CFA;
       }
 
       .st70 {
-        fill: #6017e6;
+        fill: #5B2CFA;
       }
 
       .st71 {
-        fill: #8b20e0;
+        fill: #5B2CFA;
       }
 
       .st72 {
-        fill: #8c00e0;
+        fill: #5B2CFA;
       }
 
       .st73 {
-        fill: #660de1;
+        fill: #5B2CFA;
       }
 
       .st74 {
-        fill: #5c10e1;
+        fill: #5B2CFA;
       }
 
       .st75 {
-        fill: #8966e0;
+        fill: #5B2CFA;
       }
 
       .st76 {
-        fill: #6a1ceb;
+        fill: #5B2CFA;
       }
 
       .st77 {
-        fill: #8c0de0;
+        fill: #5B2CFA;
       }
 
       .st78 {
-        fill: #8f34fd;
+        fill: #5B2CFA;
       }
 
       .st79 {
-        fill: #8b18e0;
+        fill: #5B2CFA;
       }
 
       .st80 {
-        fill: #8b58e9;
+        fill: #5B2CFA;
       }
 
       .st81 {
-        fill: #8b23e0;
+        fill: #5B2CFA;
       }
 
       .st82 {
-        fill: #8c48f2;
+        fill: #5B2CFA;
       }
 
       .st83 {
-        fill: #8b00e0;
+        fill: #5B2CFA;
       }
 
       .st84 {
-        fill: #8d3ff7;
+        fill: #5B2CFA;
       }
 
       .st85 {
-        fill: #8d12eb;
+        fill: #5B2CFA;
       }
 
       .st86 {
-        fill: #8c50ed;
+        fill: #5B2CFA;
       }
 
       .st87 {
-        fill: #8a56e0;
+        fill: #5B2CFA;
       }
 
       .st88 {
-        fill: #8a4fe0;
+        fill: #5B2CFA;
       }
 
       .st89 {
-        fill: #8e36fc;
+        fill: #5B2CFA;
       }
 
       .st90 {
-        fill: #7109e0;
+        fill: #5B2CFA;
       }
 
       .st91 {
-        fill: #600fe1;
+        fill: #5B2CFA;
       }
 
       .st92 {
-        fill: #7508e0;
+        fill: #5B2CFA;
       }
 
       .st93 {
-        fill: #7422f1;
+        fill: #5B2CFA;
       }
 
       .st94 {
-        fill: #8e38fb;
+        fill: #5B2CFA;
       }
 
       .st95 {
-        fill: #8f2ffe;
+        fill: #5B2CFA;
       }
 
       .st96 {
-        fill: #8a40e0;
+        fill: #5B2CFA;
       }
 
       .st97 {
-        fill: #8b59e8;
+        fill: #5B2CFA;
       }
 
       .st98 {
-        fill: #6218e7;
+        fill: #5B2CFA;
       }
 
       .st99 {
-        fill: #6319e8;
+        fill: #5B2CFA;
       }
 
       .st100 {
-        fill: #6c1dec;
+        fill: #5B2CFA;
       }
 
       .st101 {
-        fill: #8b2be0;
+        fill: #5B2CFA;
       }
 
       .st102 {
-        fill: #8b57e9;
+        fill: #5B2CFA;
       }
 
       .st103 {
-        fill: #8a36e0;
+        fill: #5B2CFA;
       }
 
       .st104 {
-        fill: #8a4be0;
+        fill: #5B2CFA;
       }
 
       .st105 {
-        fill: #8a51e0;
+        fill: #5B2CFA;
       }
 
       .st106 {
-        fill: #8d43f5;
+        fill: #5B2CFA;
       }
 
       .st107 {
-        fill: #7f28f7;
+        fill: #5B2CFA;
       }
 
       .st108 {
-        fill: #832af9;
+        fill: #5B2CFA;
       }
 
       .st109 {
-        fill: #6f1fee;
+        fill: #5B2CFA;
       }
 
       .st110 {
-        fill: #8b2efd;
+        fill: #5B2CFA;
       }
 
       .st111 {
-        fill: #7807e0;
+        fill: #5B2CFA;
       }
 
       .st112 {
-        fill: #895ce0;
+        fill: #5B2CFA;
       }
 
       .st113 {
-        fill: #7b06e0;
+        fill: #5B2CFA;
       }
 
       .st114 {
-        fill: #8d41f6;
+        fill: #5B2CFA;
       }
 
       .st115 {
-        fill: #8c4def;
+        fill: #5B2CFA;
       }
 
       .st116 {
-        fill: #8004e0;
+        fill: #5B2CFA;
       }
 
       .st117 {
-        fill: #8c2efd;
+        fill: #5B2CFA;
       }
 
       .st118 {
-        fill: #8a61e4;
+        fill: #5B2CFA;
       }
 
       .st119 {
-        fill: #8c0ee0;
+        fill: #5B2CFA;
       }
 
       .st120 {
-        fill: #852bfa;
+        fill: #5B2CFA;
       }
 
       .st121 {
@@ -493,435 +493,435 @@
       }
 
       .st122 {
-        fill: #8961e0;
+        fill: #5B2CFA;
       }
 
       .st123 {
-        fill: #701fee;
+        fill: #5B2CFA;
       }
 
       .st124 {
-        fill: #8b21e0;
+        fill: #5B2CFA;
       }
 
       .st125 {
-        fill: #8e1af1;
+        fill: #5B2CFA;
       }
 
       .st126 {
-        fill: #8d10ea;
+        fill: #5B2CFA;
       }
 
       .st127 {
-        fill: #8d15ed;
+        fill: #5B2CFA;
       }
 
       .st128 {
-        fill: #8c11e0;
+        fill: #5B2CFA;
       }
 
       .st129 {
-        fill: #8d45f4;
+        fill: #5B2CFA;
       }
 
       .st130 {
-        fill: #8502e0;
+        fill: #5B2CFA;
       }
 
       .st131 {
-        fill: #5713e2;
+        fill: #5B2CFA;
       }
 
       .st132 {
-        fill: #8c09e0;
+        fill: #5B2CFA;
       }
 
       .st133 {
-        fill: #8c0ce0;
+        fill: #5B2CFA;
       }
 
       .st134 {
-        fill: #6e0ae1;
+        fill: #5B2CFA;
       }
 
       .st135 {
-        fill: #7607e0;
+        fill: #5B2CFA;
       }
 
       .st136 {
-        fill: #7209e0;
+        fill: #5B2CFA;
       }
 
       .st137 {
-        fill: #8f30ff;
+        fill: #5B2CFA;
       }
 
       .st138 {
-        fill: #8203e0;
+        fill: #5B2CFA;
       }
 
       .st139 {
-        fill: #6f0ae1;
+        fill: #5B2CFA;
       }
 
       .st140 {
-        fill: #5712e1;
+        fill: #5B2CFA;
       }
 
       .st141 {
-        fill: #8c0ae0;
+        fill: #5B2CFA;
       }
 
       .st142 {
-        fill: #8b52ec;
+        fill: #5B2CFA;
       }
 
       .st143 {
-        fill: #8129f8;
+        fill: #5B2CFA;
       }
 
       .st144 {
-        fill: #8a53e0;
+        fill: #5B2CFA;
       }
 
       .st145 {
-        fill: #8a41e0;
+        fill: #5B2CFA;
       }
 
       .st146 {
-        fill: #8a5be7;
+        fill: #5B2CFA;
       }
 
       .st147 {
-        fill: #8c49f1;
+        fill: #5B2CFA;
       }
 
       .st148 {
-        fill: #8963e0;
+        fill: #5B2CFA;
       }
 
       .st149 {
-        fill: #8e35fc;
+        fill: #5B2CFA;
       }
 
       .st150 {
-        fill: #7120ef;
+        fill: #5B2CFA;
       }
 
       .st151 {
-        fill: #681bea;
+        fill: #5B2CFA;
       }
 
       .st152 {
-        fill: #8d16ee;
+        fill: #5B2CFA;
       }
 
       .st153 {
-        fill: #8e3afa;
+        fill: #5B2CFA;
       }
 
       .st154 {
-        fill: #5b10e1;
+        fill: #5B2CFA;
       }
 
       .st155 {
-        fill: #8303e0;
+        fill: #5B2CFA;
       }
 
       .st156 {
-        fill: #8a55e0;
+        fill: #5B2CFA;
       }
 
       .st157 {
-        fill: #8c08e0;
+        fill: #5B2CFA;
       }
 
       .st158 {
-        fill: #8d13ec;
+        fill: #5B2CFA;
       }
 
       .st159 {
-        fill: #7a25f4;
+        fill: #5B2CFA;
       }
 
       .st160 {
-        fill: #7d05e0;
+        fill: #5B2CFA;
       }
 
       .st161 {
-        fill: #8a45e0;
+        fill: #5B2CFA;
       }
 
       .st162 {
-        fill: #8e1ff4;
+        fill: #5B2CFA;
       }
 
       .st163 {
-        fill: #8b30e0;
+        fill: #5B2CFA;
       }
 
       .st164 {
-        fill: #8958e0;
+        fill: #5B2CFA;
       }
 
       .st165 {
-        fill: #8c04e3;
+        fill: #5B2CFA;
       }
 
       .st166 {
-        fill: #892dfc;
+        fill: #5B2CFA;
       }
 
       .st167 {
-        fill: #8e3bf9;
+        fill: #5B2CFA;
       }
 
       .st168 {
-        fill: #8e20f5;
+        fill: #5B2CFA;
       }
 
       .st169 {
-        fill: #5c15e4;
+        fill: #5B2CFA;
       }
 
       .st170 {
-        fill: #8e3ef7;
+        fill: #5B2CFA;
       }
 
       .st171 {
-        fill: #610ee1;
+        fill: #5B2CFA;
       }
 
       .st172 {
-        fill: #5813e2;
+        fill: #5B2CFA;
       }
 
       .st173 {
-        fill: #571dff;
+        fill: #5B2CFA;
       }
 
       .st174 {
-        fill: #8a50e0;
+        fill: #5B2CFA;
       }
 
       .st175 {
-        fill: #5b15e4;
+        fill: #5B2CFA;
       }
 
       .st176 {
-        fill: #8c01e1;
+        fill: #5B2CFA;
       }
 
       .st177 {
-        fill: #8a5ee5;
+        fill: #5B2CFA;
       }
 
       .st178 {
-        fill: #8a63e3;
+        fill: #5B2CFA;
       }
 
       .st179 {
-        fill: #8b1de0;
+        fill: #5B2CFA;
       }
 
       .st180 {
-        fill: #6d0ae1;
+        fill: #5B2CFA;
       }
 
       .st181 {
-        fill: #7c05e0;
+        fill: #5B2CFA;
       }
 
       .st182 {
-        fill: #7824f3;
+        fill: #5B2CFA;
       }
 
       .st183 {
-        fill: #8a3fe0;
+        fill: #5B2CFA;
       }
 
       .st184 {
-        fill: #8f2afb;
+        fill: #5B2CFA;
       }
 
       .st185 {
-        fill: #5f0fe1;
+        fill: #5B2CFA;
       }
 
       .st186 {
-        fill: #8a4ee0;
+        fill: #5B2CFA;
       }
 
       .st187 {
-        fill: #8e26f9;
+        fill: #5B2CFA;
       }
 
       .st188 {
-        fill: #8c4bf0;
+        fill: #5B2CFA;
       }
 
       .st189 {
-        fill: #8967e1;
+        fill: #5B2CFA;
       }
 
       .st190 {
-        fill: #8d44f4;
+        fill: #5B2CFA;
       }
 
       .st191 {
-        fill: #670ce1;
+        fill: #5B2CFA;
       }
 
       .st192 {
-        fill: #640de1;
+        fill: #5B2CFA;
       }
 
       .st193 {
-        fill: #7523f2;
+        fill: #5B2CFA;
       }
 
       .st194 {
-        fill: #620ee1;
+        fill: #5B2CFA;
       }
 
       .st195 {
-        fill: #7e05e0;
+        fill: #5B2CFA;
       }
 
       .st196 {
-        fill: #8b12e0;
+        fill: #5B2CFA;
       }
 
       .st197 {
-        fill: #7e27f6;
+        fill: #5B2CFA;
       }
 
       .st198 {
-        fill: #8b2ce0;
+        fill: #5B2CFA;
       }
 
       .st199 {
-        fill: #8962e0;
+        fill: #5B2CFA;
       }
 
       .st200 {
-        fill: #6b0be1;
+        fill: #5B2CFA;
       }
 
       .st201 {
-        fill: #8c06e4;
+        fill: #5B2CFA;
       }
 
       .st202 {
-        fill: #8d0fe9;
+        fill: #5B2CFA;
       }
 
       .st203 {
-        fill: #8702e0;
+        fill: #5B2CFA;
       }
 
       .st204 {
-        fill: #7724f3;
+        fill: #5B2CFA;
       }
 
       .st205 {
-        fill: #8c02e1;
+        fill: #5B2CFA;
       }
 
       .st206 {
-        fill: #8b2fe0;
+        fill: #5B2CFA;
       }
 
       .st207 {
-        fill: #8a43e0;
+        fill: #5B2CFA;
       }
 
       .st208 {
-        fill: #5a11e1;
+        fill: #5B2CFA;
       }
 
       .st209 {
-        fill: #6e1eed;
+        fill: #5B2CFA;
       }
 
       .st210 {
-        fill: #6d1eed;
+        fill: #5B2CFA;
       }
 
       .st211 {
-        fill: #8c4eee;
+        fill: #5B2CFA;
       }
 
       .st212 {
-        fill: #8b54eb;
+        fill: #5B2CFA;
       }
 
       .st213 {
-        fill: #8d0de8;
+        fill: #5B2CFA;
       }
 
       .st214 {
-        fill: #7a06e0;
+        fill: #5B2CFA;
       }
 
       .st215 {
-        fill: #8a4ce0;
+        fill: #5B2CFA;
       }
 
       .st216 {
-        fill: #8a54e0;
+        fill: #5B2CFA;
       }
 
       .st217 {
-        fill: #8d40f6;
+        fill: #5B2CFA;
       }
 
       .st218 {
-        fill: #8b53eb;
+        fill: #5B2CFA;
       }
 
       .st219 {
-        fill: #8e37fb;
+        fill: #5B2CFA;
       }
 
       .st220 {
-        fill: #872cfb;
+        fill: #5B2CFA;
       }
 
       .st221 {
-        fill: #6118e7;
+        fill: #5B2CFA;
       }
 
       .st222 {
-        fill: #882cfb;
+        fill: #5B2CFA;
       }
 
       .st223 {
-        fill: #8a38e0;
+        fill: #5B2CFA;
       }
 
       .st224 {
-        fill: #8a49e0;
+        fill: #5B2CFA;
       }
 
       .st225 {
-        fill: #671bea;
+        fill: #5B2CFA;
       }
 
       .st226 {
-        fill: #8e25f8;
+        fill: #5B2CFA;
       }
 
       .st227 {
-        fill: #8e21f6;
+        fill: #5B2CFA;
       }
 
       .st228 {
-        fill: #8801e0;
+        fill: #5B2CFA;
       }
 
       .st229 {
-        fill: #8c4cef;
+        fill: #5B2CFA;
       }
 
       .st36 {
@@ -929,435 +929,435 @@
       }
 
       .st230 {
-        fill: #8964e2;
+        fill: #5B2CFA;
       }
 
       .st231 {
-        fill: #8c07e4;
+        fill: #5B2CFA;
       }
 
       .st232 {
-        fill: #8a47e0;
+        fill: #5B2CFA;
       }
 
       .st233 {
-        fill: #8c0fe0;
+        fill: #5B2CFA;
       }
 
       .st234 {
-        fill: #8c06e0;
+        fill: #5B2CFA;
       }
 
       .st235 {
-        fill: #8b13e0;
+        fill: #5B2CFA;
       }
 
       .st236 {
-        fill: #8f29fb;
+        fill: #5B2CFA;
       }
 
       .st237 {
-        fill: #650de1;
+        fill: #5B2CFA;
       }
 
       .st238 {
-        fill: #895de0;
+        fill: #5B2CFA;
       }
 
       .st239 {
-        fill: #8f33fd;
+        fill: #5B2CFA;
       }
 
       .st240 {
-        fill: #8966e1;
+        fill: #5B2CFA;
       }
 
       .st241 {
-        fill: #8c08e5;
+        fill: #5B2CFA;
       }
 
       .st242 {
-        fill: #7b26f5;
+        fill: #5B2CFA;
       }
 
       .st243 {
-        fill: #8e19f0;
+        fill: #5B2CFA;
       }
 
       .st244 {
-        fill: #8a34e0;
+        fill: #5B2CFA;
       }
 
       .st245 {
-        fill: #5914e3;
+        fill: #5B2CFA;
       }
 
       .st246 {
-        fill: #8f2bfc;
+        fill: #5B2CFA;
       }
 
       .st247 {
-        fill: #8a39e0;
+        fill: #5B2CFA;
       }
 
       .st248 {
-        fill: #8d14ed;
+        fill: #5B2CFA;
       }
 
       .st249 {
-        fill: #8964e0;
+        fill: #5B2CFA;
       }
 
       .st250 {
-        fill: #8028f7;
+        fill: #5B2CFA;
       }
 
       .st251 {
-        fill: #8c05e3;
+        fill: #5B2CFA;
       }
 
       .st252 {
-        fill: #8d47f2;
+        fill: #5B2CFA;
       }
 
       .st253 {
-        fill: #5f17e6;
+        fill: #5B2CFA;
       }
 
       .st254 {
-        fill: #8d17ef;
+        fill: #5B2CFA;
       }
 
       .st255 {
-        fill: #8e1df3;
+        fill: #5B2CFA;
       }
 
       .st256 {
-        fill: #6a0be1;
+        fill: #5B2CFA;
       }
 
       .st257 {
-        fill: #5d16e5;
+        fill: #5B2CFA;
       }
 
       .st258 {
-        fill: #8b2ee0;
+        fill: #5B2CFA;
       }
 
       .st259 {
-        fill: #8f32fe;
+        fill: #5B2CFA;
       }
 
       .st260 {
-        fill: #7707e0;
+        fill: #5B2CFA;
       }
 
       .st261 {
-        fill: #8b25e0;
+        fill: #5B2CFA;
       }
 
       .st262 {
-        fill: #8a5de6;
+        fill: #5B2CFA;
       }
 
       .st263 {
-        fill: #8a2dfc;
+        fill: #5B2CFA;
       }
 
       .st264 {
-        fill: #691ceb;
+        fill: #5B2CFA;
       }
 
       .st265 {
-        fill: #8b31e0;
+        fill: #5B2CFA;
       }
 
       .st266 {
-        fill: #8a35e0;
+        fill: #5B2CFA;
       }
 
       .st267 {
-        fill: #5612e1;
+        fill: #5B2CFA;
       }
 
       .st268 {
-        fill: #8959e0;
+        fill: #5B2CFA;
       }
 
       .st269 {
-        fill: #8e39fa;
+        fill: #5B2CFA;
       }
 
       .st270 {
-        fill: #8c4fee;
+        fill: #5B2CFA;
       }
 
       .st271 {
-        fill: #8d0ee9;
+        fill: #5B2CFA;
       }
 
       .st272 {
-        fill: #8602e0;
+        fill: #5B2CFA;
       }
 
       .st273 {
-        fill: #651ae9;
+        fill: #5B2CFA;
       }
 
       .st274 {
-        fill: #8a37e0;
+        fill: #5B2CFA;
       }
 
       .st275 {
-        fill: #8b15e0;
+        fill: #5B2CFA;
       }
 
       .st276 {
-        fill: #8965e2;
+        fill: #5B2CFA;
       }
 
       .st277 {
-        fill: #8a4de0;
+        fill: #5B2CFA;
       }
 
       .st278 {
-        fill: #8e1bf2;
+        fill: #5B2CFA;
       }
 
       .st279 {
-        fill: #5e0fe1;
+        fill: #5B2CFA;
       }
 
       .st280 {
-        fill: #8e3cf8;
+        fill: #5B2CFA;
       }
 
       .st281 {
-        fill: #8a5ae8;
+        fill: #5B2CFA;
       }
 
       .st282 {
-        fill: #7d27f6;
+        fill: #5B2CFA;
       }
 
       .st283 {
-        fill: #8a01e0;
+        fill: #5B2CFA;
       }
 
       .st284 {
-        fill: #8d11eb;
+        fill: #5B2CFA;
       }
 
       .st285 {
-        fill: #680ce1;
+        fill: #5B2CFA;
       }
 
       .st286 {
-        fill: #895fe0;
+        fill: #5B2CFA;
       }
 
       .st287 {
-        fill: #690ce1;
+        fill: #5B2CFA;
       }
 
       .st288 {
-        fill: #8968e0;
+        fill: #5B2CFA;
       }
 
       .st289 {
-        fill: #8c0be0;
+        fill: #5B2CFA;
       }
 
       .st290 {
-        fill: #8b51ed;
+        fill: #5B2CFA;
       }
 
       .st291 {
-        fill: #8e2ffe;
+        fill: #5B2CFA;
       }
 
       .st292 {
-        fill: #8c04e0;
+        fill: #5B2CFA;
       }
 
       .st293 {
-        fill: #8c02e0;
+        fill: #5B2CFA;
       }
 
       .st294 {
-        fill: #8b2de0;
+        fill: #5B2CFA;
       }
 
       .st295 {
-        fill: #7221f0;
+        fill: #5B2CFA;
       }
 
       .st296 {
-        fill: #8a3be0;
+        fill: #5B2CFA;
       }
 
       .st297 {
-        fill: #8b2ae0;
+        fill: #5B2CFA;
       }
 
       .st298 {
-        fill: #8b28e0;
+        fill: #5B2CFA;
       }
 
       .st299 {
-        fill: #8d2ffe;
+        fill: #5B2CFA;
       }
 
       .st300 {
-        fill: #8a62e3;
+        fill: #5B2CFA;
       }
 
       .st301 {
-        fill: #895ee0;
+        fill: #5B2CFA;
       }
 
       .st302 {
-        fill: #8b32e0;
+        fill: #5B2CFA;
       }
 
       .st303 {
-        fill: #8b22e0;
+        fill: #5B2CFA;
       }
 
       .st304 {
-        fill: #8e18f0;
+        fill: #5B2CFA;
       }
 
       .st305 {
-        fill: #842af9;
+        fill: #5B2CFA;
       }
 
       .st306 {
-        fill: #7322f1;
+        fill: #5B2CFA;
       }
 
       .st307 {
-        fill: #8d46f3;
+        fill: #5B2CFA;
       }
 
       .st308 {
-        fill: #6419e8;
+        fill: #5B2CFA;
       }
 
       .st309 {
-        fill: #8a48e0;
+        fill: #5B2CFA;
       }
 
       .st310 {
-        fill: #8b56ea;
+        fill: #5B2CFA;
       }
 
       .st311 {
-        fill: #5d10e1;
+        fill: #5B2CFA;
       }
 
       .st312 {
-        fill: #8b1ee0;
+        fill: #5B2CFA;
       }
 
       .st313 {
-        fill: #8f2dfd;
+        fill: #5B2CFA;
       }
 
       .st314 {
-        fill: #8a44e0;
+        fill: #5B2CFA;
       }
 
       .st315 {
-        fill: #8b33e0;
+        fill: #5B2CFA;
       }
 
       .st316 {
-        fill: #5911e1;
+        fill: #5B2CFA;
       }
 
       .st317 {
-        fill: #8b55ea;
+        fill: #5B2CFA;
       }
 
       .st318 {
-        fill: #8c03e0;
+        fill: #5B2CFA;
       }
 
       .st319 {
-        fill: #8229f8;
+        fill: #5B2CFA;
       }
 
       .st320 {
-        fill: #8a52e0;
+        fill: #5B2CFA;
       }
 
       .st321 {
-        fill: #8c03e2;
+        fill: #5B2CFA;
       }
 
       .st322 {
-        fill: #8e1cf2;
+        fill: #5B2CFA;
       }
 
       .st323 {
-        fill: #8b14e0;
+        fill: #5B2CFA;
       }
 
       .st324 {
-        fill: #8b1ce0;
+        fill: #5B2CFA;
       }
 
       .st325 {
-        fill: #8f28fa;
+        fill: #5B2CFA;
       }
 
       .st326 {
-        fill: #8965e0;
+        fill: #5B2CFA;
       }
 
       .st327 {
-        fill: #8f2cfc;
+        fill: #5B2CFA;
       }
 
       .st328 {
-        fill: #7f04e0;
+        fill: #5B2CFA;
       }
 
       .st329 {
-        fill: #7308e0;
+        fill: #5B2CFA;
       }
 
       .st330 {
-        fill: #8a42e0;
+        fill: #5B2CFA;
       }
 
       .st331 {
-        fill: #7408e0;
+        fill: #5B2CFA;
       }
 
       .st332 {
-        fill: #8d0be7;
+        fill: #5B2CFA;
       }
 
       .st333 {
-        fill: #8d0ce8;
+        fill: #5B2CFA;
       }
 
       .st334 {
-        fill: #8b16e0;
+        fill: #5B2CFA;
       }
 
       .st335 {
-        fill: #7109e1;
+        fill: #5B2CFA;
       }
 
       .st336 {
-        fill: #661ae9;
+        fill: #5B2CFA;
       }
 
       .st337 {
-        fill: #7623f2;
+        fill: #5B2CFA;
       }
     </style>
     <linearGradient id="Degradado_sin_nombre_7" data-name="Degradado sin nombre 7" x1="1079.03" y1="400.29" x2="1083.14" y2="296.42" gradientUnits="userSpaceOnUse">

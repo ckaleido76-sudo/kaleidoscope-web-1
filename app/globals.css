@@ -18,11 +18,11 @@
   --secondary-foreground: 254 95% 20%;
 
   /* Neutral UI palette (light mode) */
-  --background: 254 95% 98%; /* 90% opacity #5B2CFA background */
+  --background: 254 95% 92%; /* Darker purple background for better contrast */
   --foreground: 222.2 47.4% 11.2%;
-  --card: 254 95% 98%; /* 90% opacity #5B2CFA background */
+  --card: 254 95% 92%; /* Darker purple background for better contrast */
   --card-foreground: 222.2 47.4% 11.2%;
-  --popover: 254 95% 98%; /* 90% opacity #5B2CFA background */
+  --popover: 254 95% 92%; /* Darker purple background for better contrast */
   --popover-foreground: 222.2 47.4% 11.2%;
   --muted: 210 40% 96%;
   --muted-foreground: 215 16% 40%;

@@ -151,7 +151,7 @@ const CTASection: React.FC = () => {
           transition={{ duration: 0.4, delay: 0.05, ease: 'easeOut' }}
           className="max-w-2xl mx-auto"
         >
-          <Card className="p-4 sm:p-8 bg-card border border-border shadow-xl">
+          <Card className="p-4 sm:p-8 bg-white/90 backdrop-blur-md border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-300">
             <CardContent className="p-0">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* User Type Picklist */}
@@ -163,7 +163,7 @@ const CTASection: React.FC = () => {
                   id="userType"
                   value={formData.userType}
                   onChange={(e) => handleInputChange('userType', e.target.value)}
-                  className="w-full px-4 py-3 sm:py-4 bg-form-bg backdrop-blur-sm border-form-border text-form-text rounded-lg h-auto text-base"
+                  className="w-full px-4 py-3 sm:py-4 bg-form-bg backdrop-blur-sm border border-form-border text-form-text rounded-lg min-h-[52px] sm:min-h-[60px] text-base appearance-none"
                   required
                 >
                   <option value="">Select one...</option>
@@ -187,7 +187,7 @@ const CTASection: React.FC = () => {
                     id="email"
                     value={formData.email}
                     onChange={(e) => handleInputChange('email', e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 sm:py-4 bg-form-bg backdrop-blur-sm border-form-border text-form-text placeholder-form-placeholder h-auto text-base"
+                    className="w-full pl-12 pr-4 py-3 sm:py-4 bg-form-bg backdrop-blur-sm border border-form-border text-form-text placeholder-form-placeholder min-h-[52px] sm:min-h-[60px] text-base"
                     placeholder="Enter email address"
                     required
                   />
@@ -203,7 +203,7 @@ const CTASection: React.FC = () => {
                   id="state"
                   value={formData.state}
                   onChange={(e) => handleInputChange('state', e.target.value)}
-                  className="w-full px-4 py-3 sm:py-4 bg-form-bg backdrop-blur-sm border-form-border text-form-text rounded-lg h-auto text-base"
+                  className="w-full px-4 py-3 sm:py-4 bg-form-bg backdrop-blur-sm border border-form-border text-form-text rounded-lg min-h-[52px] sm:min-h-[60px] text-base appearance-none"
                 >
                   <option value="">Select state...</option>
                   <option value="AL">AL - Alabama</option>
@@ -272,7 +272,7 @@ const CTASection: React.FC = () => {
                     id="phone"
                     value={formData.phone}
                     onChange={(e) => handleInputChange('phone', e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 sm:py-4 bg-form-bg backdrop-blur-sm border-form-border text-form-text placeholder-form-placeholder h-auto text-base"
+                    className="w-full pl-12 pr-4 py-3 sm:py-4 bg-form-bg backdrop-blur-sm border border-form-border text-form-text placeholder-form-placeholder min-h-[52px] sm:min-h-[60px] text-base"
                     placeholder="Enter phone number"
                   />
                 </div>

@@ -37,7 +37,7 @@ const ProblemSection: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.3, delay: 0.05, ease: 'easeOut' }}
-              className="flex items-start p-6 bg-card/80 backdrop-blur-sm rounded-2xl border border-primary/10 shadow-lg"
+              className="flex items-start p-6 bg-white/90 backdrop-blur-md rounded-2xl border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-300"
             >
               <div className="flex-shrink-0 w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-4 mt-1">
                 <div className="w-2 h-2 bg-card rounded-full" />
@@ -50,7 +50,7 @@ const ProblemSection: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.3, delay: 0.1, ease: 'easeOut' }}
-              className="flex items-start p-6 bg-card/80 backdrop-blur-sm rounded-2xl border border-primary/10 shadow-lg"
+              className="flex items-start p-6 bg-white/90 backdrop-blur-md rounded-2xl border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-300"
             >
               <div className="flex-shrink-0 w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-4 mt-1">
                 <div className="w-2 h-2 bg-card rounded-full" />
@@ -63,7 +63,7 @@ const ProblemSection: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.3, delay: 0.15, ease: 'easeOut' }}
-              className="flex items-start p-6 bg-card/80 backdrop-blur-sm rounded-2xl border border-primary/10 shadow-lg"
+              className="flex items-start p-6 bg-white/90 backdrop-blur-md rounded-2xl border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-300"
             >
               <div className="flex-shrink-0 w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-4 mt-1">
                 <div className="w-2 h-2 bg-card rounded-full" />
@@ -79,7 +79,7 @@ const ProblemSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.4, ease: 'easeOut' }}
-          className="text-center p-8 rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20"
+          className="text-center p-8 rounded-2xl bg-white/90 backdrop-blur-md border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-300"
         >
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed mb-6">
             The treatment industry is an endless cycle of catch and release. It admits patients who aren't ready, failing to facilitate actual healing and releases them into their old environment with inadequate support.

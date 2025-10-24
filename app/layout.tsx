@@ -32,7 +32,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Kaleidoscope. Are You Ready?",
   description: "Kaleidoscope is a radical approach for people who are truly ready to be free of their drinking problem, and the pain and trauma behind it.",
-  keywords: "addiction treatment, trauma therapy, alternative rehab, sobriety, mental health",
+  keywords: "alcohol, addiction treatment, trauma therapy, alternative rehab, sobriety",
   authors: [{ name: "Kaleidoscope Ventures, LLC" }],
   creator: "Kaleidoscope Ventures, LLC",
   publisher: "Kaleidoscope Ventures, LLC",

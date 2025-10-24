@@ -11,32 +11,26 @@ const KaleidoscopeLogo: React.FC<KaleidoscopeLogoProps> = ({
   size = 'md',
   showText = true
 }) => {
+  // Height-based sizing to fit menu bar (PNG logo includes text)
   const sizeMap = {
-    sm: { width: 24, height: 14, textSize: 'text-sm' },
-    md: { width: 40, height: 22, textSize: 'text-lg' },
-    lg: { width: 64, height: 36, textSize: 'text-2xl' },
-    xl: { width: 1000, height: 562, textSize: 'text-4xl' }
+    sm: { height: 24 },
+    md: { height: 40 },
+    lg: { height: 56 },
+    xl: { height: 80 }
   };
 
-  const { width, height, textSize } = sizeMap[size];
+  const { height } = sizeMap[size];
 
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
-      {/* Official Kaleidoscope Logo SVG */}
+    <div className={`flex items-center ${className}`}>
+      {/* Horizontal Kaleidoscope Logo PNG */}
       <img
-        src="/Kaleidscope.svg"
+        src="/Kaleidoscope_logo_Horz.png"
         alt="Kaleidoscope"
-        width={width}
         height={height}
-        className="flex-shrink-0"
-        style={{ maxWidth: 'none' }}
+        className="h-auto flex-shrink-0"
+        style={{ height: `${height}px`, width: 'auto' }}
       />
-
-      {showText && (
-        <span className={`font-brand-primary font-bold ${textSize} text-white lowercase tracking-wide`}>
-          kaleidoscope
-        </span>
-      )}
     </div>
   );
 };

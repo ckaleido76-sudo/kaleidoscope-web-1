@@ -85,7 +85,7 @@ const MethodSection: React.FC = () => {
                 transition={{ duration: 0.35, delay: index * 0.08, ease: 'easeOut' }}
                 className="group"
               >
-                <Card className="bg-gradient-to-br from-card-from to-card-to shadow-lg hover:shadow-xl transition-all duration-300 border-card-border h-full group-hover:scale-[1.02]">
+                <Card className="bg-white/90 backdrop-blur-md shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 h-full group-hover:scale-[1.02]">
                   <CardHeader className="text-center pb-4">
                     <div className="flex flex-col items-center space-y-4">
                       <div className="relative">

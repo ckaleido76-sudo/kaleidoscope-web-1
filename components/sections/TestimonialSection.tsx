@@ -44,7 +44,7 @@ const TestimonialSection: React.FC = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.35, ease: 'easeOut' }}
           >
-            <Card className="bg-card/80 backdrop-blur-lg border-border/60 shadow-xl">
+            <Card className="bg-white/90 backdrop-blur-md border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-300">
               <CardContent className="p-8">
                 <div className="flex items-start space-x-4">
                   <Quote className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
