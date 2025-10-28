@@ -47,15 +47,15 @@ export async function POST(request: NextRequest) {
     // To update: Go to MailerLite → Groups → Click group → Copy ID from URL
     const GROUP_IDS: Record<string, string> = {
       'future-client': '167252022478767457',      // Future Clients
-      'friend-family': 'YOUR_GROUP_ID_HERE',      // Friends & Family Members
-      'investor-partner': 'YOUR_GROUP_ID_HERE',   // Investors & Partners
-      'treatment-center': 'YOUR_GROUP_ID_HERE',   // Treatment Centers
-      'healer-employee': 'YOUR_GROUP_ID_HERE'     // Healers & Future Employees
+      'friend-family': '167252039302121459',      // Friends & Family Members
+      'investor-partner': '167347781190551424',   // Investors & Partners
+      'treatment-center': '167347809411924997',   // Treatment Centers
+      'healer-employee': '167347824711698065'     // Healers & Future Employees
     };
 
     // Add subscriber to appropriate group based on userType
     const groupId = GROUP_IDS[userType];
-    if (groupId && groupId !== 'YOUR_GROUP_ID_HERE') {
+    if (groupId) {
       payload.groups = [groupId];
     }
 
