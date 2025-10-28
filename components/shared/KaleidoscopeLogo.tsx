@@ -14,7 +14,7 @@ const KaleidoscopeLogo: React.FC<KaleidoscopeLogoProps> = ({
   // Height-based sizing to fit menu bar (PNG logo includes text)
   const sizeMap = {
     sm: { height: 24 },
-    md: { height: 40 },
+    md: { height: 48 },  // Increased by 20% from 40px for better visibility
     lg: { height: 56 },
     xl: { height: 80 }
   };

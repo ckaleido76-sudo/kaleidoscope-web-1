@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef } from 'react';
 import styles from './KaleidoscopeHero.module.css';
-import KaleidoscopeLogo from '@/components/shared/KaleidoscopeLogo';
 
 interface KaleidoscopeHeroProps {
   title?: string;
@@ -222,14 +221,6 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
     <div className={styles.heroContainer}>
       <h1 className="sr-only">Kaleidoscope Recovery — a radical recovery solution</h1>
       <canvas ref={canvasRef} className={styles.canvas} aria-hidden />
-      
-      <div className="absolute inset-0 flex items-center justify-center z-20">
-        <KaleidoscopeLogo
-          size="xl"
-          showText={false}
-        />
-      </div>
-      
     </div>
   );
 };
