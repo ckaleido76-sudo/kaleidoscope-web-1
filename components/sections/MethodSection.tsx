@@ -64,7 +64,7 @@ const MethodSection: React.FC = () => {
           transition={{ duration: 0.4, ease: 'easeOut' }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-normal pt-2">
+          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-normal py-4">
             The Kaleidoscope Method
           </h2>
           <p className="text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed">
