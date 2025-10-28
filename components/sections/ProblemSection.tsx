@@ -79,7 +79,7 @@ const ProblemSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.4, ease: 'easeOut' }}
-          className="text-center p-8 rounded-2xl bg-white/90 backdrop-blur-md border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-300"
+          className="text-center p-8"
         >
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed mb-6">
             The treatment industry is an endless cycle of catch and release. It admits patients who aren't ready, failing to facilitate actual healing and releases them into their old environment with inadequate support.
