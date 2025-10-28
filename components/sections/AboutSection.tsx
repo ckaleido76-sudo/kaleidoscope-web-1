@@ -7,7 +7,7 @@ const VimeoEmbed = () => (
   <div className="aspect-video rounded-xl overflow-hidden">
     <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
       <iframe
-        src="https://player.vimeo.com/video/1118398541?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&portrait=0&title=0&controls=0#t=2s"
+        src="https://player.vimeo.com/video/1118398541?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&portrait=0&title=0&transparent=0&color=5B2CFA#t=2s"
         frameBorder="0"
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
