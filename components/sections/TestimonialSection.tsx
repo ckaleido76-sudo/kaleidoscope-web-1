@@ -3,17 +3,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 
 const VimeoEmbed = () => (
   <div className="aspect-video rounded-2xl overflow-hidden">
     <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
-      <iframe 
-        src="https://player.vimeo.com/video/1118398603?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&portrait=0&title=0#t=2s" 
-        frameBorder="0" 
-        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-        referrerPolicy="strict-origin-when-cross-origin" 
+      <iframe
+        src="https://player.vimeo.com/video/1118398603?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&portrait=0&title=0&controls=0#t=2s"
+        frameBorder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
         title="Kaleidoscope - Bills Story - H264 - 1920x1080P - V02"
       />
@@ -44,23 +42,21 @@ const TestimonialSection: React.FC = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.35, ease: 'easeOut' }}
           >
-            <Card className="bg-white/90 backdrop-blur-md border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="flex items-start space-x-4">
-                  <Quote className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <blockquote className="text-xl text-foreground leading-relaxed mb-6">
-                      "Kaleidoscope didn't just help me get sober—it helped me rediscover who I was beneath the addiction. The personalized approach made all the difference."
-                    </blockquote>
-                    <div className="flex items-center space-x-3">
-                      <div>
-                        <p className="font-semibold text-foreground">~ Bill</p>
-                      </div>
+            <div className="p-8">
+              <div className="flex items-start space-x-4">
+                <Quote className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
+                <div>
+                  <blockquote className="text-xl text-foreground leading-relaxed mb-6">
+                    "Kaleidoscope didn't just help me get sober—it helped me rediscover who I was beneath the addiction. The personalized approach made all the difference."
+                  </blockquote>
+                  <div className="flex items-center space-x-3">
+                    <div>
+                      <p className="font-semibold text-foreground">~ Bill</p>
                     </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div
