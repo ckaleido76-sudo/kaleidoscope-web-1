@@ -69,7 +69,7 @@ const Header: React.FC = () => {
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleAnchorClick(e, item.href)}
-                  className="text-foreground/80 hover:text-primary px-3 py-2 text-sm font-normal transition-colors duration-300 relative group"
+                  className="text-primary hover:text-primary/80 px-3 py-2 text-base font-medium transition-colors duration-300 relative group"
                 >
                   {item.name}
                   <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
@@ -121,7 +121,7 @@ const Header: React.FC = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleAnchorClick(e, item.href)}
-                className="text-foreground hover:text-primary text-base font-normal transition-colors duration-300 py-2"
+                className="text-primary hover:text-primary/80 text-base font-medium transition-colors duration-300 py-2"
               >
                 {item.name}
               </a>
