@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Check for API credentials
-    if (!process.env.MAILERLITE_API_KEY || !process.env.MAILERLITE_GROUP_ID) {
+    if (!process.env.MAILERLITE_API_KEY) {
       console.error('MailerLite credentials not configured');
       return NextResponse.json(
         { error: 'Service not configured' },
@@ -42,13 +42,22 @@ export async function POST(request: NextRequest) {
       payload.fields = customFields;
     }
 
-    // Note: Groups are optional. If you want to add subscribers to a group,
-    // get the correct group ID from MailerLite dashboard: Subscribers → Groups → Click group → Check URL
-    // The group ID should be a string of numbers like "123456789"
-    // For now, we'll skip groups to avoid the "invalid group" error
-    // if (process.env.MAILERLITE_GROUP_ID) {
-    //   payload.groups = [process.env.MAILERLITE_GROUP_ID];
-    // }
+    // Map userType to MailerLite Group IDs
+    // These IDs are from your MailerLite dashboard (not sensitive, just identifiers)
+    // To update: Go to MailerLite → Groups → Click group → Copy ID from URL
+    const GROUP_IDS: Record<string, string> = {
+      'future-client': '167252022478767457',      // Future Clients
+      'friend-family': 'YOUR_GROUP_ID_HERE',      // Friends & Family Members
+      'investor-partner': 'YOUR_GROUP_ID_HERE',   // Investors & Partners
+      'treatment-center': 'YOUR_GROUP_ID_HERE',   // Treatment Centers
+      'healer-employee': 'YOUR_GROUP_ID_HERE'     // Healers & Future Employees
+    };
+
+    // Add subscriber to appropriate group based on userType
+    const groupId = GROUP_IDS[userType];
+    if (groupId && groupId !== 'YOUR_GROUP_ID_HERE') {
+      payload.groups = [groupId];
+    }
 
     console.log('Sending to MailerLite:', JSON.stringify(payload, null, 2));
 

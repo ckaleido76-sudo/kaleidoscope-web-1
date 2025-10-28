@@ -69,12 +69,20 @@ This website showcases Kaleidoscope Recovery's radical approach to alcohol recov
    Create a `.env.local` file in the project root:
    ```bash
    MAILERLITE_API_KEY=your_api_key_here
-   MAILERLITE_GROUP_ID=your_group_id_here
    ```
 
-   To get your MailerLite credentials:
-   - **API Key**: Go to [MailerLite Dashboard](https://dashboard.mailerlite.com) → Settings → Developer API
-   - **Group ID**: Go to Subscribers → Groups → Select your group
+   To get your MailerLite API key:
+   - Go to [MailerLite Dashboard](https://dashboard.mailerlite.com) → Settings → Developer API
+   - Copy your API key
+
+   **Group Configuration:**
+   Group IDs are configured directly in `app/api/subscribe/route.ts` (they're not sensitive).
+   The form automatically assigns subscribers to groups based on their selection:
+   - "Future Client" → Future Clients group
+   - "Friend or Family Member" → Friends & Family Members group
+   - "Investor or Partner" → Investors & Partners group
+   - "Treatment Center" → Treatment Centers group
+   - "Healer or Future Employee" → Healers & Future Employees group
 
 4. **Start development server**
    ```bash
@@ -127,10 +135,11 @@ The project is currently deployed at: **https://kaleidoscope.life**
 1. **Configure Environment Variables in Vercel**
 
    Go to your Vercel project → Settings → Environment Variables and add:
-   - `MAILERLITE_API_KEY` - Your MailerLite API key
-   - `MAILERLITE_GROUP_ID` - Your MailerLite group ID
+   - `MAILERLITE_API_KEY` - Your MailerLite API key (from Settings → Developer API)
 
-   Make sure to add these for all environments (Production, Preview, Development).
+   Make sure to add this for all environments (Production, Preview, Development).
+
+   **Note:** Group IDs are configured directly in the code (`app/api/subscribe/route.ts`), not as environment variables.
 
 2. **Connect to Vercel**
    ```bash
