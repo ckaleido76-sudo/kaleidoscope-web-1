@@ -156,7 +156,7 @@ const CTASection: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* User Type Picklist */}
               <div>
-                <label htmlFor="userType" className="block text-text-primary font-medium mb-2">
+                <label htmlFor="userType" className="block text-text-primary text-base font-medium mb-2">
                   I am a: *
                 </label>
                 <select
@@ -177,7 +177,7 @@ const CTASection: React.FC = () => {
 
               {/* Email Address */}
               <div>
-                <label htmlFor="email" className="block text-text-primary font-medium mb-2">
+                <label htmlFor="email" className="block text-text-primary text-base font-medium mb-2">
                   Email Address *
                 </label>
                 <div className="relative">
@@ -196,7 +196,7 @@ const CTASection: React.FC = () => {
 
               {/* State (Optional) */}
               <div>
-                <label htmlFor="state" className="block text-text-primary font-medium mb-2">
+                <label htmlFor="state" className="block text-text-primary text-base font-medium mb-2">
                   State
                 </label>
                 <select
@@ -262,7 +262,7 @@ const CTASection: React.FC = () => {
 
               {/* Phone (Optional) */}
               <div>
-                <label htmlFor="phone" className="block text-text-primary font-medium mb-2">
+                <label htmlFor="phone" className="block text-text-primary text-base font-medium mb-2">
                   Phone
                 </label>
                 <div className="relative">
@@ -287,14 +287,14 @@ const CTASection: React.FC = () => {
                   onChange={(e) => handleInputChange('optInTexts', e.target.checked)}
                   className="mt-1 w-4 h-4 text-primary bg-form-bg border-form-border rounded focus:ring-primary"
                 />
-                <label htmlFor="optInTexts" className="text-text-primary text-sm">
+                <label htmlFor="optInTexts" className="text-text-primary text-base font-medium">
                   I opt in to receive text messages from Kaleidoscope
                 </label>
               </div>
 
               {/* Comments (Optional) */}
               <div>
-                <label htmlFor="comments" className="block text-text-primary font-medium mb-2">
+                <label htmlFor="comments" className="block text-text-primary text-base font-medium mb-2">
                   Comments
                 </label>
                 <div className="relative">
