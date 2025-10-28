@@ -26,7 +26,7 @@ const ApproachSection: React.FC = () => {
           transition={{ duration: 0.4, ease: 'easeOut' }}
           className="max-w-4xl mx-auto"
         >
-          <div className="text-lg text-text-secondary leading-relaxed mb-8">
+          <div className="text-xl text-text-secondary leading-relaxed mb-8">
             <p>
               Kaleidoscope was born from a personal truth. After decades of insider experience with failed treatment and hollow promises, our founder recognized what most refuse to admit: Alcoholism is not a disease, it's a conditioned response to pain and trauma. Even immense pain and trauma can be extinguished; then, we help you reclaim your life. We only work with people who are truly ready — those who are willing to do whatever it takes to stop drinking and start living. And, we never let go.
             </p>

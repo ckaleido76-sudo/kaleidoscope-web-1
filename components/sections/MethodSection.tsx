@@ -67,7 +67,7 @@ const MethodSection: React.FC = () => {
           <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-header-from to-header-to bg-clip-text text-transparent leading-normal py-4">
             The Kaleidoscope Method
           </h2>
-          <p className="text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed">
             Kaleidoscope only works with people who are ready, facilitates sustained healing, and provides support to help you maintain your bliss. We don't look away from the trauma science that should be reshaping the entire mental health spectrum; we're hosting an outcomes-based, human-first, trauma-informed revolution. Kaleidoscope provides a three-phase experience for the suffering soul and their family:
           </p>
         </motion.div>
@@ -111,7 +111,7 @@ const MethodSection: React.FC = () => {
                   <CardContent className="space-y-4">
                     {phase.description && (
                       <>
-                        <p className="text-gray-600 text-base leading-relaxed text-center">
+                        <p className="text-gray-600 text-lg leading-relaxed text-center">
                           {phase.description}
                         </p>
                         <Separator />

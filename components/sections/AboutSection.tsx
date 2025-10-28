@@ -44,7 +44,7 @@ const AboutSection: React.FC = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.35, ease: 'easeOut' }}
           >
-            <div className="space-y-6 text-text-secondary text-lg leading-relaxed">
+            <div className="space-y-6 text-text-secondary text-xl leading-relaxed">
               <p>
                 Kaleidoscope is a radical approach for people who are truly ready to be free of their drinking problem, and the pain and trauma behind it. We guide individuals through three hyper-personalized phases: intensive preparation, immersive healing, and permanent integration support. We are purpose-built for holistic transformation.
               </p>
