@@ -169,14 +169,7 @@ const KaleidoscopeHero: React.FC<KaleidoscopeHeroProps> = ({
     };
     
     const drawBackground = () => {
-      const bgGradient = ctx.createRadialGradient(
-        centerX, centerY, 0,
-        centerX, centerY, Math.max(width, height) * 1.5
-      );
-      bgGradient.addColorStop(0, '#ede9fe');
-      bgGradient.addColorStop(0.5, '#c7b8ff');
-      bgGradient.addColorStop(1, '#a99aff');
-      ctx.fillStyle = bgGradient;
+      ctx.fillStyle = '#EEEBFD';
       ctx.fillRect(0, 0, width, height);
       if (time % 0.1 < 0.02) {
         ctx.globalAlpha = 0.02;

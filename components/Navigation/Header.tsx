@@ -40,9 +40,9 @@ const Header: React.FC = () => {
   return (
     <header className={cn(
       'fixed top-0 left-0 right-0 z-[90] transition-all duration-300',
-      isScrolled 
-        ? 'bg-white/70 backdrop-blur-md border-b border-border' 
-        : 'bg-transparent'
+      isScrolled
+        ? 'bg-background/70 backdrop-blur-md border-b border-border'
+        : 'bg-background'
     )}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -110,11 +110,11 @@ const Header: React.FC = () => {
       {/* Mobile Navigation Menu */}
       <div className={cn(
         'md:hidden transition-all duration-300 ease-in-out',
-        isMenuOpen 
-          ? 'max-h-96 opacity-100 visible' 
+        isMenuOpen
+          ? 'max-h-96 opacity-100 visible'
           : 'max-h-0 opacity-0 invisible overflow-hidden'
       )}>
-        <div className="px-4 pt-2 pb-6 bg-white/90 backdrop-blur-md border-t border-border">
+        <div className="px-4 pt-2 pb-6 bg-background/90 backdrop-blur-md border-t border-border">
           <div className="flex flex-col space-y-2">
             {navItems.map((item) => (
               <a

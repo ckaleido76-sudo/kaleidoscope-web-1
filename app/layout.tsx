@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   title: "Kaleidoscope. Are You Ready?",
   description: "Kaleidoscope is a radical approach for people who are truly ready to be free of their drinking problem, and the pain and trauma behind it.",
   keywords: "alcohol, addiction treatment, trauma therapy, alternative rehab, sobriety",
-  authors: [{ name: "Kaleidoscope Ventures, LLC" }],
-  creator: "Kaleidoscope Ventures, LLC",
-  publisher: "Kaleidoscope Ventures, LLC",
+  authors: [{ name: "Kaleidoscope Ventures, Inc." }],
+  creator: "Kaleidoscope Ventures, Inc.",
+  publisher: "Kaleidoscope Ventures, Inc.",
   formatDetection: {
     email: false,
     address: false,
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: "Kaleidoscope. Are You Ready?",
     description: "Kaleidoscope is a radical approach for people who are truly ready to be free of their drinking problem, and the pain and trauma behind it.",
     url: "https://kaleidoscope.life",
-    siteName: "Kaleidoscope Ventures, LLC",
+    siteName: "Kaleidoscope Ventures, Inc.",
     images: [
       {
         url: "/og-image.png",

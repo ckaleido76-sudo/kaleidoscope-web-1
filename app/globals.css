@@ -18,11 +18,11 @@
   --secondary-foreground: 254 95% 20%;
 
   /* Neutral UI palette (light mode) */
-  --background: 254 95% 92%; /* Darker purple background for better contrast */
+  --background: 249 81% 96%; /* Light purple #EEEBFD */
   --foreground: 222.2 47.4% 11.2%;
-  --card: 254 95% 92%; /* Darker purple background for better contrast */
+  --card: 249 81% 96%; /* Light purple #EEEBFD */
   --card-foreground: 222.2 47.4% 11.2%;
-  --popover: 254 95% 92%; /* Darker purple background for better contrast */
+  --popover: 249 81% 96%; /* Light purple #EEEBFD */
   --popover-foreground: 222.2 47.4% 11.2%;
   --muted: 210 40% 96%;
   --muted-foreground: 215 16% 40%;
@@ -42,8 +42,8 @@
   --color-tertiary-2: #9823DE;
   --color-tertiary-3: #FF7024;
 
-  --color-background: rgba(91, 44, 250, 0.1); /* 90% opacity #5B2CFA background */
-  --color-surface: rgba(91, 44, 250, 0.05); /* Light tinted surface */
+  --color-background: #EEEBFD; /* Light purple matching site background */
+  --color-surface: #f5f3ff; /* Even lighter tinted surface */
 
   --color-text-primary: #0b1020;
   --color-text-secondary: #475569;

@@ -21,7 +21,7 @@ const VimeoEmbed = () => (
 
 const BookSection: React.FC = () => {
   return (
-    <section id="book" className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-background">
+    <section id="book" className="scroll-mt-24 py-8 md:py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -50,7 +50,7 @@ const BookSection: React.FC = () => {
 
           <div className="flex justify-center">
             <motion.a
-              href="/smashed-book.pdf"
+              href="/SMASHED%20final%20.pdf"
               download="Smashed - Sober with a twist.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

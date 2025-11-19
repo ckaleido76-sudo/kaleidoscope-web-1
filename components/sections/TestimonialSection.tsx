@@ -21,7 +21,7 @@ const VimeoEmbed = () => (
 
 const TestimonialSection: React.FC = () => {
   return (
-    <section id="testimonial" className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-background">
+    <section id="testimonial" className="scroll-mt-24 py-8 md:py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

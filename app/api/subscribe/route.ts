@@ -3,12 +3,12 @@ import { NextRequest, NextResponse } from 'next/server';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { email, userType, state, phone, comments, optInTexts } = body;
+    const { email, firstName, lastName, userType, state, phone, comments, optInTexts } = body;
 
     // Validate required fields
-    if (!email || !userType) {
+    if (!email || !userType || !firstName || !lastName) {
       return NextResponse.json(
-        { error: 'Email and user type are required' },
+        { error: 'Email, first name, last name, and user type are required' },
         { status: 400 }
       );
     }
@@ -23,24 +23,23 @@ export async function POST(request: NextRequest) {
     }
 
     // Prepare payload for MailerLite
-    // Note: Custom fields must be created in MailerLite dashboard first
+    // Note: first_name and last_name are standard MailerLite fields
+    // Custom fields must be created in MailerLite dashboard first
     const payload: any = {
-      email
+      email,
+      fields: {
+        name: firstName,
+        last_name: lastName
+      }
     };
 
-    // Only add fields object if we have custom fields to send
-    const customFields: Record<string, string> = {};
-
-    if (userType) customFields.user_type = userType;
-    if (state) customFields.state = state;
-    if (phone) customFields.phone = phone;
-    if (comments) customFields.comments = comments;
-    if (optInTexts !== undefined) customFields.opt_in_texts = optInTexts ? 'Yes' : 'No';
-
-    // Only include fields if we have any
-    if (Object.keys(customFields).length > 0) {
-      payload.fields = customFields;
-    }
+    // Add custom fields to the existing fields object
+    // These custom fields must be created in MailerLite dashboard first
+    if (userType) payload.fields.user_type = userType;
+    if (state) payload.fields.state = state;
+    if (phone) payload.fields.phone = phone;
+    if (comments) payload.fields.comments = comments;
+    if (optInTexts !== undefined) payload.fields.opt_in_texts = optInTexts ? 'Yes' : 'No';
 
     // Map userType to MailerLite Group IDs
     // These IDs are from your MailerLite dashboard (not sensitive, just identifiers)

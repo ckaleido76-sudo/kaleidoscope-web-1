@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const ProblemSection: React.FC = () => {
 
   return (
-    <section id="problem" className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface">
+    <section id="problem" className="scroll-mt-24 py-8 md:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

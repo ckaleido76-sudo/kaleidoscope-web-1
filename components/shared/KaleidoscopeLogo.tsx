@@ -29,7 +29,11 @@ const KaleidoscopeLogo: React.FC<KaleidoscopeLogoProps> = ({
         alt="Kaleidoscope"
         height={height}
         className="h-auto flex-shrink-0"
-        style={{ height: `${height}px`, width: 'auto' }}
+        style={{
+          height: `${height}px`,
+          width: 'auto',
+          filter: 'brightness(0) saturate(100%) invert(25%) sepia(91%) saturate(3084%) hue-rotate(251deg) brightness(89%) contrast(102%)'
+        }}
       />
     </div>
   );

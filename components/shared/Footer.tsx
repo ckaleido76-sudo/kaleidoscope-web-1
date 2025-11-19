@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
 
           {/* Copyright */}
           <div className="text-sm text-text-secondary">
-            <p>© 2025 Kaleidoscope Ventures, LLC. All rights reserved.</p>
+            <p>© 2025 Kaleidoscope Ventures, Inc. All rights reserved.</p>
           </div>
         </div>
       </div>

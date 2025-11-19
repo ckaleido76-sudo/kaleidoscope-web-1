@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, CheckCircle, ArrowRight, Phone, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -12,6 +12,8 @@ import { Textarea } from '@/components/ui/textarea';
 const CTASection: React.FC = () => {
   const [formData, setFormData] = useState({
     userType: '',
+    firstName: '',
+    lastName: '',
     email: '',
     state: '',
     phone: '',
@@ -20,11 +22,19 @@ const CTASection: React.FC = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  // Scroll to top of section when thank you page is displayed
+  useEffect(() => {
+    if (isSubmitted && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [isSubmitted]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!formData.email.trim() || !formData.userType) {
+    if (!formData.email.trim() || !formData.userType || !formData.firstName.trim() || !formData.lastName.trim()) {
       return;
     }
 
@@ -60,7 +70,7 @@ const CTASection: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <section id="cta" className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-background">
+      <section ref={sectionRef} id="cta" className="scroll-mt-24 py-8 md:py-20 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
@@ -120,7 +130,7 @@ const CTASection: React.FC = () => {
   }
 
   return (
-    <section id="cta" className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
+    <section ref={sectionRef} id="cta" className="scroll-mt-24 py-8 md:py-20 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
       {/* Background Animation (subtle) */}
       <div className="absolute inset-0 opacity-10 pointer-events-none" aria-hidden>
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
@@ -173,6 +183,38 @@ const CTASection: React.FC = () => {
                   <option value="treatment-center">Treatment Center</option>
                   <option value="healer-employee">Healer or Future Employee</option>
                 </select>
+              </div>
+
+              {/* First Name */}
+              <div>
+                <label htmlFor="firstName" className="block text-text-primary text-base font-medium mb-2">
+                  First Name *
+                </label>
+                <Input
+                  type="text"
+                  id="firstName"
+                  value={formData.firstName}
+                  onChange={(e) => handleInputChange('firstName', e.target.value)}
+                  className="w-full px-4 py-3 sm:py-4 bg-form-bg backdrop-blur-sm border border-form-border text-form-text placeholder-form-placeholder min-h-[52px] sm:min-h-[60px] text-base"
+                  placeholder="Enter your first name"
+                  required
+                />
+              </div>
+
+              {/* Last Name */}
+              <div>
+                <label htmlFor="lastName" className="block text-text-primary text-base font-medium mb-2">
+                  Last Name *
+                </label>
+                <Input
+                  type="text"
+                  id="lastName"
+                  value={formData.lastName}
+                  onChange={(e) => handleInputChange('lastName', e.target.value)}
+                  className="w-full px-4 py-3 sm:py-4 bg-form-bg backdrop-blur-sm border border-form-border text-form-text placeholder-form-placeholder min-h-[52px] sm:min-h-[60px] text-base"
+                  placeholder="Enter your last name"
+                  required
+                />
               </div>
 
               {/* Email Address */}
@@ -312,7 +354,7 @@ const CTASection: React.FC = () => {
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Button
                   type="submit"
-                  disabled={isLoading || !formData.email.trim() || !formData.userType}
+                  disabled={isLoading || !formData.email.trim() || !formData.userType || !formData.firstName.trim() || !formData.lastName.trim()}
                   className="w-full bg-primary hover:bg-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg font-medium shadow-lg hover:shadow-xl"
                   size="lg"
                 >
