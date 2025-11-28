@@ -23,18 +23,24 @@ const Footer: React.FC = () => {
           <div>
             <p className="text-text-secondary mb-4">Follow us</p>
             <div className="flex space-x-4 justify-center">
-              <button
-                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-text-secondary transition-all duration-300 transform hover:scale-105 hover:bg-primary/20 cursor-not-allowed opacity-50"
-                disabled aria-disabled
+              <a
+                href="https://www.instagram.com/kaleido.scope_life/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-text-secondary transition-all duration-300 transform hover:scale-105 hover:bg-primary/20 hover:text-primary"
+                aria-label="Follow us on Instagram"
               >
                 <Instagram className="w-5 h-5" />
-              </button>
-              <button
-                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-text-secondary transition-all duration-300 transform hover:scale-105 hover:bg-primary/20 cursor-not-allowed opacity-50"
-                disabled aria-disabled
+              </a>
+              <a
+                href="https://www.linkedin.com/company/kaleidoscopelife/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-text-secondary transition-all duration-300 transform hover:scale-105 hover:bg-primary/20 hover:text-primary"
+                aria-label="Follow us on LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
-              </button>
+              </a>
             </div>
           </div>
 
