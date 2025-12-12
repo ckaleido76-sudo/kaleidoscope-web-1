@@ -82,7 +82,7 @@ const ProblemSection: React.FC = () => {
           className="text-center p-8"
         >
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed mb-6">
-            The treatment industry is an endless cycle of catch and release. It admits patients who aren't ready, failing to facilitate actual healing and releases them into their old environment with inadequate support.
+            The treatment industry is an endless cycle of catch and release. It admits patients who aren't ready, fails to facilitate actual healing and releases them into their old environment with inadequate support.
           </p>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed font-semibold">
             It doesn't have to be this way.
