@@ -5,9 +5,13 @@ import { motion } from 'framer-motion';
 import { Mail, CheckCircle, ArrowRight, Phone, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import ReCAPTCHA from 'react-google-recaptcha';
+
+// Feature flag for CAPTCHA - easily toggle via environment variable
+const ENABLE_CAPTCHA = process.env.NEXT_PUBLIC_ENABLE_CAPTCHA === 'true';
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '';
 
 const CTASection: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -18,11 +22,15 @@ const CTASection: React.FC = () => {
     state: '',
     phone: '',
     comments: '',
-    optInTexts: false
+    optInTexts: false,
+    honeypot: ''  // Hidden field for bot detection
   });
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [captchaError, setCaptchaError] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   // Scroll to top of section when thank you page is displayed
   useEffect(() => {
@@ -33,8 +41,15 @@ const CTASection: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setCaptchaError(false);
 
     if (!formData.email.trim() || !formData.userType || !formData.firstName.trim() || !formData.lastName.trim()) {
+      return;
+    }
+
+    // Validate CAPTCHA if enabled
+    if (ENABLE_CAPTCHA && !captchaToken) {
+      setCaptchaError(true);
       return;
     }
 
@@ -46,7 +61,10 @@ const CTASection: React.FC = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          captchaToken: ENABLE_CAPTCHA ? captchaToken : undefined,
+        }),
       });
 
       const responseData = await response.json();
@@ -59,8 +77,20 @@ const CTASection: React.FC = () => {
     } catch (error) {
       console.error('Error submitting form:', error);
       alert('There was an error submitting your information. Please try again.');
+      // Reset CAPTCHA on error so user can try again
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset();
+        setCaptchaToken(null);
+      }
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const handleCaptchaChange = (token: string | null) => {
+    setCaptchaToken(token);
+    if (token) {
+      setCaptchaError(false);
     }
   };
 
@@ -351,10 +381,39 @@ const CTASection: React.FC = () => {
                 </div>
               </div>
 
+              {/* Honeypot field - hidden from users, catches bots */}
+              <div className="absolute -left-[9999px]" aria-hidden="true">
+                <label htmlFor="website">Website</label>
+                <input
+                  type="text"
+                  id="website"
+                  name="website"
+                  value={formData.honeypot}
+                  onChange={(e) => handleInputChange('honeypot', e.target.value)}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </div>
+
+              {/* reCAPTCHA - conditionally rendered based on environment variable */}
+              {ENABLE_CAPTCHA && RECAPTCHA_SITE_KEY && (
+                <div className="flex flex-col items-center space-y-2">
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey={RECAPTCHA_SITE_KEY}
+                    onChange={handleCaptchaChange}
+                    onExpired={() => setCaptchaToken(null)}
+                  />
+                  {captchaError && (
+                    <p className="text-red-500 text-sm">Please complete the CAPTCHA verification</p>
+                  )}
+                </div>
+              )}
+
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Button
                   type="submit"
-                  disabled={isLoading || !formData.email.trim() || !formData.userType || !formData.firstName.trim() || !formData.lastName.trim()}
+                  disabled={isLoading || !formData.email.trim() || !formData.userType || !formData.firstName.trim() || !formData.lastName.trim() || (ENABLE_CAPTCHA && !captchaToken)}
                   className="w-full bg-primary hover:bg-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg font-medium shadow-lg hover:shadow-xl"
                   size="lg"
                 >
