@@ -1,6 +1,6 @@
 # Kaleidoscope Recovery Website
 
-A revolutionary recovery solution website built with Next.js 15, featuring trauma-informed healing approaches and the innovative 3-phase Kaleidoscope Method.
+A revolutionary recovery solution website built with Next.js 16, featuring trauma-informed healing approaches and the innovative 3-phase Kaleidoscope Method.
 
 ## 🎯 Project Overview
 
@@ -35,7 +35,7 @@ This website showcases Kaleidoscope Recovery's radical approach to alcohol recov
 
 ## 🛠 Tech Stack
 
-- **Framework**: Next.js 15+ (App Router)
+- **Framework**: Next.js 16+ (App Router, Turbopack)
 - **Styling**: Tailwind CSS with custom design system
 - **Typography**: Epilogue font from Google Fonts
 - **Animations**: Framer Motion + Custom CSS animations
@@ -68,12 +68,23 @@ This website showcases Kaleidoscope Recovery's radical approach to alcohol recov
 
    Create a `.env.local` file in the project root:
    ```bash
+   # Required
    MAILERLITE_API_KEY=your_api_key_here
+
+   # Optional - reCAPTCHA (disabled by default)
+   NEXT_PUBLIC_ENABLE_CAPTCHA=false
+   NEXT_PUBLIC_RECAPTCHA_SITE_KEY=your_site_key
+   RECAPTCHA_SECRET_KEY=your_secret_key
    ```
 
-   To get your MailerLite API key:
+   **MailerLite API Key:**
    - Go to [MailerLite Dashboard](https://dashboard.mailerlite.com) → Settings → Developer API
    - Copy your API key
+
+   **reCAPTCHA (Optional):**
+   - Get keys from [Google reCAPTCHA Admin](https://www.google.com/recaptcha/admin)
+   - Set `NEXT_PUBLIC_ENABLE_CAPTCHA=true` to enable
+   - Set to `false` to disable (form works without CAPTCHA)
 
    **Group Configuration:**
    Group IDs are configured directly in `app/api/subscribe/route.ts` (they're not sensitive).
@@ -177,9 +188,20 @@ The signup form captures:
 
 ## 🔒 Security & Performance Features
 
+### Form Security
+- **Rate Limiting**: 5 requests per minute per IP address
+- **Honeypot Field**: Hidden field to catch bot submissions
+- **reCAPTCHA Support**: Optional Google reCAPTCHA v2 (toggle via environment variable)
+- **Sanitized Errors**: API errors don't expose internal details
+- **PII Protection**: No personal data logged in production
+
+### Infrastructure Security
 - Content Security Policy headers
-- XSS protection mechanisms  
-- CSRF protection for forms
+- XSS protection mechanisms
+- X-Frame-Options: DENY
+- Referrer-Policy: strict-origin-when-cross-origin
+
+### Performance
 - **Lighthouse Performance**: 90+
 - **First Contentful Paint**: < 1.5s
 - **Time to Interactive**: < 3.5s
@@ -212,6 +234,20 @@ The signup form captures:
 - ✅ Removed unused imports and variables
 - ✅ Optimized scroll event handlers with proper cleanup
 - ✅ Enhanced mobile responsiveness across all sections
+
+### Next.js 16 Upgrade (December 2025)
+- ✅ Upgraded from Next.js 15.5.9 to 16.1.0
+- ✅ Migrated to Turbopack (new default bundler in Next.js 16)
+- ✅ Updated next.config.mjs with Turbopack configuration
+- ✅ Build time improved with Turbopack optimizations
+
+### Form Security Enhancements (December 2025)
+- ✅ Added rate limiting (5 requests/min per IP) to prevent spam
+- ✅ Implemented honeypot field for bot detection
+- ✅ Added optional reCAPTCHA v2 with environment toggle
+- ✅ Sanitized API error responses (no internal details exposed)
+- ✅ Removed PII logging in production environment
+- ✅ Created `lib/rate-limit.ts` utility for in-memory rate limiting
 
 ## 🔗 Links
 
